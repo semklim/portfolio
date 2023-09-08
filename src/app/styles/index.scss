@@ -1,0 +1,38 @@
+@import './reset';
+@import './variables/global';
+@import './themes/normal';
+@import './themes/dark';
+
+* {
+  transition:
+    background-color var(--transition-color),
+    color var(--transition-color);
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.app {
+  font: var(--font-m);
+
+  background: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+}

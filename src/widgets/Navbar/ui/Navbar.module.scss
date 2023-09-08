@@ -1,0 +1,36 @@
+.header {
+  padding: 0 var(--header-padding);
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
+}
+
+.nav {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: var(--header-padding);
+}
+
+.nav__button {
+  color: var(--bg-color);
+}
+
+.nav__link {
+  color: inherit;
+}
+
+.nav__link:hover {
+}

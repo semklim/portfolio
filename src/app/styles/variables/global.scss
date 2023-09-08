@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;700&display=swap');
+:root {
+  --transition-color: 0.3s;
+  --font-family-main: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  /* --------------------------------- NavBar --------------------------------- */
+
+  --navbar-height: 56px;
+  --header-padding: 20px;
+}
