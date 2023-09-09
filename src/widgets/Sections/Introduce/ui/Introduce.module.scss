@@ -1,0 +1,7 @@
+.introduce {
+  color: inherit;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  background-image: var(--introducebg);
+  background-size: cover;
+}

@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import { classNames } from '@/shared/libs';
 import { Navbar } from '@/widgets/Navbar';
 
@@ -11,7 +13,12 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
       <div className="main-container">
-        <AppRouter />
+        {useMemo(
+          () => (
+            <AppRouter />
+          ),
+          [],
+        )}
       </div>
     </div>
   );
