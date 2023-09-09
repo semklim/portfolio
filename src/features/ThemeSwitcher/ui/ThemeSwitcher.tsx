@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { useTheme } from '@/app/provider/theme';
 import { Theme } from '@/app/provider/theme/lib/themeContext';
 import { classNames } from '@/shared/libs';
@@ -8,7 +10,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
   const checked = theme === Theme.DARK;
   return (
@@ -17,6 +19,6 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       <span className={classNames(cls.slider, {}, [cls.round, className])} />
     </label>
   );
-};
+});
 
 export { ThemeSwitcher };

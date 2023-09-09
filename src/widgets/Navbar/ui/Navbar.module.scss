@@ -1,4 +1,7 @@
+@import '../../../app/styles/media/media';
+
 .header {
+  position: relative;
   padding: 0 var(--header-padding);
   width: 100%;
   height: var(--navbar-height);
@@ -6,6 +9,7 @@
 }
 
 .nav {
+  position: relative;
   width: inherit;
   height: inherit;
   display: flex;
@@ -13,7 +17,7 @@
   align-items: center;
 }
 
-.nav__logo {
+.nav__logo img {
   width: 50px;
   aspect-ratio: 1;
 }
@@ -22,6 +26,14 @@
   display: flex;
   align-items: center;
   column-gap: var(--header-padding);
+  transition:
+    background-color var(--transition-color),
+    color var(--transition-color),
+    left 0.5s 0.1s;
+}
+
+.show__nav_buttons {
+  left: calc(100% - 300px) !important;
 }
 
 .nav__button {
@@ -32,5 +44,4 @@
   color: inherit;
 }
 
-.nav__link:hover {
-}
+@include mobile();

@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { memo, useState } from 'react';
+
 import { HamburgerButton, ThemeSwitcher } from '@/features';
 import react from '@/shared/assets/icons/react.svg';
 import { classNames } from '@/shared/libs';
@@ -9,7 +11,10 @@ interface NavbarProps {
   className?: string;
 }
 
-const Navbar = ({ className }: NavbarProps) => {
+const Navbar = memo(({ className }: NavbarProps) => {
+  const [isOpened, setIsOpened] = useState(false);
+  const toggle = () => setIsOpened((prev) => !prev);
+
   return (
     <header className={classNames(cls.header, {}, [className])}>
       <nav className={cls.nav}>
@@ -18,7 +23,7 @@ const Navbar = ({ className }: NavbarProps) => {
             <img src={react} alt="react" width="50" height="50" />
           </h1>
         </div>
-        <ul className={cls.nav__buttons}>
+        <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })}>
           <li className={cls.nav__button}>
             <a className={cls.nav__link} href="#">
               Home
@@ -40,10 +45,10 @@ const Navbar = ({ className }: NavbarProps) => {
             <ThemeSwitcher />
           </li>
         </ul>
-        <HamburgerButton />
+        <HamburgerButton isOpened={isOpened} onClick={toggle} />
       </nav>
     </header>
   );
-};
+});
 
 export { Navbar };

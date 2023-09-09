@@ -1,0 +1,27 @@
+@mixin mobile() {
+  @media (max-width: 900px) {
+    .display_none {
+      display: block;
+    }
+    .nav__buttons {
+      padding-top: var(--navbar-height);
+      top: 0px;
+      left: 100%;
+      position: fixed;
+      flex-direction: column;
+      width: 300px;
+      background: var(--inverted-bg-color);
+      z-index: 2;
+    }
+
+    .nav__button:not(.nav__buttons li:last-child) {
+      width: 90%;
+      text-align: center;
+      line-height: 3;
+      border-bottom: 1px solid var(--bg-color);
+    }
+    .nav__buttons li:last-child {
+      margin: 20px 0;
+    }
+  }
+}
