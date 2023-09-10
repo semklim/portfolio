@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, memo, useEffect, useState } from 'react';
 
 import { classNames } from '@/shared/libs';
+import { AppButton } from '@/shared/ui/AppButton/AppButton';
 
 import cls from './HamburgerButton.module.scss';
 
@@ -17,14 +18,14 @@ const HamburgerButton = memo((props: HamburgerButtonProps) => {
   }, [isOpened]);
 
   return (
-    <button
+    <AppButton
       type="button"
       className={classNames(cls['btn-hamburger'], {}, [className, cls.display_none])}
       {...otherProps}>
       <div className={cls['hamburger-box']}>
         <div className={classNames(cls['hamburger-inner'], { [cls.close]: open }, [])} />
       </div>
-    </button>
+    </AppButton>
   );
 });
 
