@@ -28,6 +28,7 @@
 
     /* -------------------------------- INTRODUCE ------------------------------- */
     .descriptionBox {
+      padding: 0;
       text-align: center;
     }
 
@@ -50,7 +51,7 @@
       display: none;
     }
 
-    .getResume button {
+    .getResume a {
       margin: 0;
     }
   }

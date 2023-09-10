@@ -40,7 +40,9 @@ const Introduce = memo((props: IntroduceProps) => {
           </a>
         </div>
         <div className={cls.getResume}>
-          <button type="button">Resume</button>
+          <a href="https://docs.google.com/document/d/17pzcuF4Qx3HiF_p7B355-31J8d9tOqwz/edit?usp=sharing&ouid=108059482767559103522&rtpof=true&sd=true">
+            Resume
+          </a>
         </div>
       </h1>
       <div className={cls['svg-wrapper']}>

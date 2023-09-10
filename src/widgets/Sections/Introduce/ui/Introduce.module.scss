@@ -56,7 +56,8 @@
   width: 40px;
 }
 
-.getResume button {
+.getResume a {
+  display: inline-block;
   padding: 20px 40px;
   border-radius: 5px;
   background: var(--primary-color);
