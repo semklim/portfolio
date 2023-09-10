@@ -1,17 +1,21 @@
+import { memo } from 'react';
+
 import { classNames } from '@/shared/libs';
 
 import cls from './Introduce.module.scss';
 
-interface IntroduceProps {
+interface IntroduceProps extends React.HTMLProps<HTMLElement> {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const Introduce = ({ className }: IntroduceProps) => {
+const Introduce = memo((props: IntroduceProps) => {
+  const { className, children, ...otherProps } = props;
   return (
-    <section className={classNames(cls.introduce, {}, [className])}>
-      <h1>Introduce</h1>
+    <section className={classNames(cls.introduce, {}, [className])} {...otherProps}>
+      {children}
     </section>
   );
-};
+});
 
 export { Introduce };
