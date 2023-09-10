@@ -1,0 +1,36 @@
+#freepik_stories-programming:not(.animated) .animable {
+  opacity: 0;
+}
+#freepik_stories-programming.animated #freepik--background-complete--inject-12 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown;
+  animation-delay: 0s;
+}
+#freepik_stories-programming.animated #freepik--Screens--inject-12 {
+  animation:
+    1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown,
+    3s Infinite linear floating;
+  animation-delay: 0s, 1s;
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

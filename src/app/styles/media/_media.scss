@@ -1,3 +1,5 @@
+@use '../text-border/text-border' as *;
+
 @mixin mobile() {
   @media (max-width: 900px) {
     .display_none {
@@ -22,6 +24,34 @@
     }
     .nav__buttons li:last-child {
       margin: 20px 0;
+    }
+
+    /* -------------------------------- INTRODUCE ------------------------------- */
+    .descriptionBox {
+      text-align: center;
+    }
+
+    .descriptionMe {
+      padding: 20px 0;
+      border-radius: 10px;
+    }
+
+    .linksToSocial {
+      justify-content: center;
+    }
+
+    .linksToSocial > a {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 30px 0;
+    }
+
+    .svg-wrapper {
+      display: none;
+    }
+
+    .getResume button {
+      margin: 0;
     }
   }
 }

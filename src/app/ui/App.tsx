@@ -12,14 +12,12 @@ const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <div className="main-container">
-        {useMemo(
-          () => (
-            <AppRouter />
-          ),
-          [],
-        )}
-      </div>
+      {useMemo(
+        () => (
+          <AppRouter />
+        ),
+        [],
+      )}
     </div>
   );
 };

@@ -2,10 +2,11 @@
   --bg-color: #374151;
   --inverted-bg-color: #fff;
 
-  --primary-color: #049604;
-  --secondary-color: #04ff04;
+  --primary-color: var(--gray-700);
+  --secondary-color: var(--sky-500);
   --navbar-links-color: var(--bg-color);
 
   /* ---------------------------- Introduce Section ---------------------------- */
+  --color-description: white;
   --introducebg: url(@/shared/assets/bg/cloudDarkBg.png);
 }

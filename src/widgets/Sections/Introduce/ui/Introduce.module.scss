@@ -1,7 +1,71 @@
+@use '@/app/styles/text-border/text-border' as *;
+@use '@/app/styles/media/media' as *;
 .introduce {
-  color: inherit;
+  padding: 0 20px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: calc(100vh - var(--navbar-height));
   background-image: var(--introducebg);
   background-size: cover;
 }
+
+.svg-wrapper {
+  width: 40rem;
+}
+
+.descriptionBox {
+  padding-left: 20px;
+  color: var(--secondary-color);
+}
+
+.introduceMe {
+  color: var(--primary-color);
+  display: block;
+  font-weight: 900;
+  font-size: 3.75rem;
+  line-height: 1;
+  text-shadow: stroke(2, #fff);
+}
+
+.introduceMe:nth-child(2) {
+  color: var(--secondary-color);
+  margin-top: 30px;
+  text-shadow: none;
+}
+
+.descriptionMe {
+  color: var(--color-description);
+  max-width: 36rem;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-shadow: stroke(1, var(--bg-color));
+}
+
+.linksToSocial {
+  display: flex;
+}
+
+.link {
+  margin: 2rem 1.25rem 0 0;
+}
+
+.imgOfLink {
+  width: 40px;
+}
+
+.getResume button {
+  padding: 20px 40px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: white;
+  /* font-variant-caps: unicase; */
+  font-variant: all-petite-caps;
+  font-weight: 900;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+@include mobile();
