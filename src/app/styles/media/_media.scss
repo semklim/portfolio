@@ -27,28 +27,40 @@
     }
 
     /* -------------------------------- INTRODUCE ------------------------------- */
+
+    .imgOfLink {
+      width: 60px;
+    }
+
+    .svg-wrapper {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    /* -------------------------------- INTRODUCE ------------------------------- */
     .descriptionBox {
       padding: 0;
       text-align: center;
     }
-
     .descriptionMe {
-      padding: 20px 0;
+      padding-top: 20px;
       border-radius: 10px;
     }
 
     .linksToSocial {
       justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
     }
 
     .linksToSocial > a {
-      margin-top: 0;
+      margin: 0;
       margin-bottom: 0;
-      padding: 30px 0;
     }
 
-    .svg-wrapper {
-      display: none;
+    .imgOfLink {
+      width: 50px;
     }
 
     .getResume a {
