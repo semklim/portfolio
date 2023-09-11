@@ -11,7 +11,7 @@ interface IntroduceImgProps extends SVGAttributes<HTMLOrSVGElement> {
 
 const IntroduceImg = (props: IntroduceImgProps) => {
   const { className, ...otherProps } = props;
-  return <SvgProgerammer className={classNames('animated', {}, [className])} {...otherProps} />;
+  return <SvgProgerammer className={classNames('animated', {}, [className, 'colors'])} {...otherProps} />;
 };
 
 export { IntroduceImg };

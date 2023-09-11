@@ -1,3 +1,11 @@
+.colors {
+  color: var(--inverted-bg-color);
+}
+
+.programmer-accent-color {
+  color: var(--bg-color);
+}
+
 #freepik_stories-programming:not(.animated) .animable {
   opacity: 0;
 }
