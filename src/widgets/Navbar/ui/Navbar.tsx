@@ -50,7 +50,7 @@ const Navbar = memo(({ className }: NavbarProps) => {
         </div>
         <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })} onClick={closeMenu}>
           <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#">
+            <a className={cls.nav__link} href="#home">
               Home
             </a>
           </li>

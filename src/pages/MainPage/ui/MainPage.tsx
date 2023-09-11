@@ -1,10 +1,11 @@
 import { Page } from '@/widgets/Page';
-import { Introduce } from '@/widgets/Sections';
+import { About, Introduce } from '@/widgets/Sections';
 
 const MainPage = () => {
   return (
     <Page>
       <Introduce />
+      <About />
     </Page>
   );
 };

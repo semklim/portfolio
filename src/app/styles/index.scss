@@ -8,6 +8,7 @@
     background var(--transition-color),
     color var(--transition-color),
     fill var(--transition-color);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
   font: var(--font-m);
 
   background: var(--bg-color);
-  color: var(--primary-color);
+  color: var(--inverted-bg-color);
 
   min-height: 100vh;
 }

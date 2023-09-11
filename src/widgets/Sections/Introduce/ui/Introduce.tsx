@@ -13,7 +13,7 @@ interface IntroduceProps extends React.HTMLProps<HTMLElement> {
 const Introduce = memo((props: IntroduceProps) => {
   const { className, children, ...otherProps } = props;
   return (
-    <section className={classNames(cls.introduce, {}, [className])} {...otherProps}>
+    <section id="home" className={classNames(cls.introduce, {}, [className])} {...otherProps}>
       <h1 className={cls.descriptionBox}>
         <span className={cls.introduceMe}>Hi, I&rsquo;m Roman</span>
         <span className={cls.introduceMe}>Front End Developer</span>

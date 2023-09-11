@@ -1,0 +1,56 @@
+.about {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.aboutMe,
+.aboutTech {
+  width: inherit;
+}
+
+.subTitle {
+  width: inherit;
+}
+
+.subTitleDescription {
+  width: inherit;
+}
+
+.cardsOfTech {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  width: 12rem;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--gray-50);
+}
+
+.cardImg {
+  width: 3rem;
+}
+
+.cardTitle {
+  margin-left: 1rem;
+  color: black;
+}
