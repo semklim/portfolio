@@ -1,0 +1,35 @@
+@mixin mediaAbout() {
+  @media (max-width: 550px) {
+    .about {
+      padding: 0 1.2rem;
+    }
+
+    .cardsOfTech {
+      justify-content: center;
+    }
+    .card {
+      margin: 1rem 0.5rem;
+      width: 10rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .card {
+      padding: 0.5rem;
+      width: auto;
+    }
+
+    .cardTitle {
+      margin: 0;
+      font-size: 0;
+      transition: 0.2s;
+      font-weight: 700;
+    }
+
+    .cardCheckBox:checked ~ .cardTitle {
+      margin-left: 1rem;
+      font-size: 16px;
+    }
+  }
+}

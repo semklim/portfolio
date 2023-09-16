@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import { techStack } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
 
 import cls from './About.module.scss';
@@ -5,8 +7,6 @@ import cls from './About.module.scss';
 interface AboutProps {
   className?: string;
 }
-
-const techList = new Array(16).fill(1);
 
 const About = ({ className }: AboutProps) => {
   return (
@@ -29,15 +29,14 @@ const About = ({ className }: AboutProps) => {
         </p>
       </div>
       <div className={cls.cardsOfTech}>
-        {techList.map((el, i) => (
+        {techStack.map(({ name, link }) => (
           // eslint-disable-next-line react/no-array-index-key
-          <div key={i} className={cls.card}>
-            <img
-              className={cls.cardImg}
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="Typescript"
-            />
-            <h4 className={cls.cardTitle}>Typescript</h4>
+          <div key={name} className={cls.card}>
+            <input className={cls.cardCheckBox} type="radio" name="showTitle" id={`tech${name}`} />
+            <label htmlFor={`tech${name}`}>
+              <img className={cls.cardImg} src={link} alt={name} />
+            </label>
+            <h4 className={cls.cardTitle}>{name}</h4>
           </div>
         ))}
       </div>

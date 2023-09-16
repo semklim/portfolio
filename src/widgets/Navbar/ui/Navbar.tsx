@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { memo, useState } from 'react';
 
 import { HamburgerButton, ThemeSwitcher } from '@/features';
-import react from '@/shared/assets/icons/react.svg';
+import react from '@/shared/assets/techStack/React.svg';
 import { classNames } from '@/shared/libs';
 
 import cls from './Navbar.module.scss';
