@@ -12,7 +12,10 @@
   padding: 0 20px;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--primary-color-about);
 }
 
 .aboutMe,
@@ -21,11 +24,21 @@
 }
 
 .subTitle {
-  width: inherit;
+  width: max-content;
+  margin-top: 3rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: var(--accent-color-about);
+  border-bottom: 2px solid white;
 }
 
 .subTitleDescription {
-  width: inherit;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: justify;
+  color: var(--primary-color-about);
 }
 
 .cardsOfTech {

@@ -11,15 +11,14 @@ const techList = new Array(16).fill(1);
 const About = ({ className }: AboutProps) => {
   return (
     <section id="about" className={classNames(cls.about, {}, [className])}>
-      <h2 className={cls.title}>About</h2>
+      <h2 className={cls.title}>About Me</h2>
       <div className={cls.aboutMe}>
         <h3 className={cls.subTitle}>A bit of me</h3>
         <p className={cls.subTitleDescription}>
-          I&rsquo;m a self-taught web developer and Mobile App Developer with experience in designing new features from
-          ideation to production, implementation of wireframes and design flows into high performance software
-          applications. I take into consideration the user experience while writing reusable and efficient code. I
-          passionately combine good design, technology, and innovation in all my projects, which I like to accompany
-          from the first idea to release.Currently, I&rsquo;m focused on the backend development.
+          I&rsquo;m a Front end developer with experience in designing new features from ideation to production. I take
+          into consideration the user experience while writing reusable and efficient code. I passionately combine good
+          design, technology, and innovation in all my projects, which I like to accompany from the first idea to
+          release.
         </p>
       </div>
       <div className={cls.aboutTech}>

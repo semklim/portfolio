@@ -9,4 +9,8 @@
   /* ---------------------------- Introduce Section ---------------------------- */
   --color-description: white;
   --introducebg: url(@/shared/assets/bg/cloudDarkBg.png);
+
+  /* -------------------------------- ABOUT ME -------------------------------- */
+  --primary-color-about: var(--inverted-bg-color);
+  --accent-color-about: var(--blue-400);
 }
