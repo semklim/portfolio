@@ -1,4 +1,4 @@
-import airbnb from '@/shared/assets/techStack/AirBnB.svg';
+import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
 import css from '@/shared/assets/techStack/CSS.svg';
