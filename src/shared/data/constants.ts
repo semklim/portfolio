@@ -26,6 +26,12 @@ type Tech = {
   name: string;
   link: string;
 };
+
+type AboutMe = {
+  title: string;
+  desc: string;
+};
+
 export const techStack: Tech[] = [
   { name: 'Angular', link: angular },
   { name: 'React', link: react },
@@ -50,4 +56,16 @@ export const techStack: Tech[] = [
   { name: 'MongoDb', link: mongodb },
   { name: 'Firebase', link: firebase },
   { name: 'Thunder', link: thunder },
+];
+
+export const aboutMe: AboutMe[] = [
+  {
+    title: 'A bit of me',
+    desc: "I'm a Front end developer with experience in designing new features from ideation to production. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.",
+  },
+
+  {
+    title: 'Technologies and Tools',
+    desc: 'Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.',
+  },
 ];
