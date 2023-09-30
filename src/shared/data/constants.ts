@@ -4,8 +4,8 @@ import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/c
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
 import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
 import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
+import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle.webp';
 import towersBattleVideo from '@/shared/assets/projects/towersBattle/towersBattle_light.mp4';
-import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle_light.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
