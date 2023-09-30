@@ -1,9 +1,10 @@
 .projects {
   width: 100%;
-  padding: 3rem 20px;
+  padding: 2rem 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: var(--projects-bg-color);
 }
 
@@ -13,13 +14,12 @@
 
 .title {
   text-align: center;
-  padding: 1rem 0 0;
   font: var(--font-title);
   font-weight: 700;
 }
 
 .subTitle {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font: var(--font-sub-title);
   color: var(--accent-color-project-card);
 }
@@ -37,10 +37,13 @@
 }
 
 .projectCard {
-  flex: 300px 1 1;
-  min-width: 300px;
-  max-width: 500px;
+  flex: 400px 1 1;
+  max-width: 400px;
   padding: 10px;
   background: var(--project-card-bg-color);
   border-radius: 10px;
+}
+
+.showMoreBtn {
+  margin-top: 2rem;
 }

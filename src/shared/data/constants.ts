@@ -4,6 +4,8 @@ import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/c
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
 import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
 import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
+import towersBattleVideo from '@/shared/assets/projects/towersBattle/towersBattle_light.mp4';
+import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle_light.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -139,6 +141,18 @@ export const projects: ProjectsInfo[] = [
     techs: [html, css, javascript, electron],
     architectPatterns: [],
     usedApi: ['Spotify Web Api'],
+    imgs: [],
+  },
+  {
+    title: 'Towers Battle',
+    desc: 'This is a canvas game. All you need is yourself and a friend. Each of you decides which tower to choose and then hits the play button. The winner is the one whose tower survives. The whole game is based on randomness.',
+    mainImg: towersBattleImg,
+    video: towersBattleVideo,
+    gitLink: 'https://github.com/semklim/Towers_Battle',
+    deployed: 'https://semklim.github.io/Towers_Battle/',
+    techs: [html, css, javascript],
+    architectPatterns: [],
+    usedApi: [],
     imgs: [],
   },
 ];
