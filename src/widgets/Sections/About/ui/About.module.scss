@@ -56,7 +56,8 @@
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
-  background-color: var(--gray-50);
+  color: var(--bg-color);
+  background-color: var(--inverted-bg-color);
 }
 
 .cardCheckBox {
@@ -69,7 +70,6 @@
 
 .cardTitle {
   margin-left: 1rem;
-  color: black;
 }
 
 @include mediaAbout();

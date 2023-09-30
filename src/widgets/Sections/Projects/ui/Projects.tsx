@@ -11,6 +11,18 @@ interface ProjectsProps {
   className?: string;
 }
 
+const animation = {
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+    },
+  },
+  hidden: { opacity: 0, y: 100 },
+};
+
 const Projects = memo(({ className }: ProjectsProps) => {
   return (
     <section id="projects" className={classNames(cls.projects, {}, [className])}>
@@ -23,10 +35,7 @@ const Projects = memo(({ className }: ProjectsProps) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+          variants={animation}
           className={cls.projectsCard}>
           {projects.map((project) => (
             <ProjectCard project={project} key={project.title} className={classNames(cls.projectCard)} />
