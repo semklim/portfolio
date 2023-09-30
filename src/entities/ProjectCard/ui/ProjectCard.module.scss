@@ -1,0 +1,49 @@
+.wrapper {
+  width: inherit;
+}
+
+.cardHeader {
+}
+
+.content {
+  width: 100%;
+}
+
+.cardFooter {
+  border: 2px solid var(--primary-color);
+  border-top: none;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--project-card-text-color);
+}
+
+.cardFooterTitle {
+  padding: 10px 0 20px;
+}
+
+.cardFooterTitle,
+.cardFooterDescription {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.cardFooterTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.cardFooterDescription {
+  font-size: larger;
+  line-height: 1.5;
+}
+
+.showMore {
+  display: block;
+  padding-top: 5px;
+}

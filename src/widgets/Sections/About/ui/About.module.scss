@@ -3,7 +3,7 @@
 .about {
   padding: 0 2rem;
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: var(--max-width-content);
   min-height: calc(100vh - var(--navbar-height));
   display: flex;
   flex-direction: column;
@@ -14,10 +14,9 @@
   padding: 0 20px;
   width: 100%;
   text-align: center;
-  font-size: 3rem;
+  font: var(--font-title);
   font-weight: 700;
-  line-height: normal;
-  color: var(--primary-color-about);
+  color: var(--def-contrast-text-color);
 }
 
 .subSectionTitle {
@@ -25,13 +24,13 @@
 }
 
 .subTitle {
-  width: max-content;
   margin-top: 3rem;
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 2.25rem;
+  font: var(--font-sub-title);
   color: var(--accent-color-about);
-  border-bottom: 2px solid white;
+}
+
+.subTitle__txt {
+  border-bottom: 2px solid var(--gray-50);
 }
 
 .subTitleDescription {
@@ -39,7 +38,7 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-align: justify;
-  color: var(--primary-color-about);
+  color: var(--def-contrast-text-color);
 }
 
 .cardsOfTech {

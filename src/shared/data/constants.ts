@@ -1,3 +1,5 @@
+import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
+import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -16,20 +18,39 @@ import npm from '@/shared/assets/techStack/npm.svg';
 import react from '@/shared/assets/techStack/React.svg';
 import redux from '@/shared/assets/techStack/Redux.svg';
 import reduxSaga from '@/shared/assets/techStack/Redux-Saga.svg';
+import rxjs from '@/shared/assets/techStack/Rxjs.svg';
 import sass from '@/shared/assets/techStack/SASS.svg';
 import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
 import webpack from '@/shared/assets/techStack/Webpack.svg';
 
-type Tech = {
+export type Tech = {
   name: string;
   link: string;
 };
 
-type AboutMe = {
+export type AboutMe = {
   title: string;
   desc: string;
+};
+
+export type ArchitectPatterns = {
+  name: string;
+  link: string | null;
+};
+
+export type ProjectsInfo = {
+  mainImg: string;
+  imgs: string[] | [];
+  title: string;
+  desc: string;
+  gitLink: string;
+  deployed: string | null;
+  video: string | undefined;
+  techs: string[] | [];
+  usedApi: string[] | [];
+  architectPatterns: ArchitectPatterns[] | [];
 };
 
 export const techStack: Tech[] = [
@@ -67,5 +88,71 @@ export const aboutMe: AboutMe[] = [
   {
     title: 'Technologies and Tools',
     desc: 'Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops.',
+  },
+];
+
+export const projects: ProjectsInfo[] = [
+  {
+    title: 'BrShoes',
+    desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
+    mainImg: brShoesImg,
+    video: brShoesVideo,
+    gitLink: 'https://github.com/semklim/BrShop_angular',
+    deployed: 'https://brshoes.pp.ua/',
+    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
+    architectPatterns: [
+      {
+        name: 'Observer',
+        link: 'https://www.patterns.dev/posts/observer-pattern',
+      },
+      {
+        name: 'Module',
+        link: 'https://www.patterns.dev/posts/module-pattern',
+      },
+    ],
+    usedApi: ['Intersection Web Api'],
+    imgs: [],
+  },
+  {
+    title: 'BrShoes',
+    desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
+    mainImg: brShoesImg,
+    video: brShoesVideo,
+    gitLink: 'https://github.com/semklim/BrShop_angular',
+    deployed: 'https://brshoes.pp.ua/',
+    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
+    architectPatterns: [
+      {
+        name: 'Observer',
+        link: 'https://www.patterns.dev/posts/observer-pattern',
+      },
+      {
+        name: 'Module',
+        link: 'https://www.patterns.dev/posts/module-pattern',
+      },
+    ],
+    usedApi: ['Intersection Web Api'],
+    imgs: [],
+  },
+  {
+    title: 'BrShoes',
+    desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
+    mainImg: brShoesImg,
+    video: brShoesVideo,
+    gitLink: 'https://github.com/semklim/BrShop_angular',
+    deployed: 'https://brshoes.pp.ua/',
+    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
+    architectPatterns: [
+      {
+        name: 'Observer',
+        link: 'https://www.patterns.dev/posts/observer-pattern',
+      },
+      {
+        name: 'Module',
+        link: 'https://www.patterns.dev/posts/module-pattern',
+      },
+    ],
+    usedApi: ['Intersection Web Api'],
+    imgs: [],
   },
 ];

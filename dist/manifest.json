@@ -1,0 +1,255 @@
+{
+  "_constants.b70dfd88.js": {
+    "assets": [
+      "assets/brshoes.edfdf20a.mp4",
+      "assets/brshoes_light.7a5e911c.webp",
+      "assets/images/Airbnb.2dfd018e.svg",
+      "assets/images/Angular.8be939aa.svg",
+      "assets/images/Bootstrap.07788d6d.svg",
+      "assets/images/CSS.073ca080.svg",
+      "assets/images/Electronjs.058f5906.svg",
+      "assets/images/ESLint.485cf619.svg",
+      "assets/images/Express.713a791f.svg",
+      "assets/images/Firebase.21cda531.svg",
+      "assets/images/Git.3e788624.svg",
+      "assets/images/HTML.8c75694e.svg",
+      "assets/images/Javascript.d5147d05.svg",
+      "assets/images/Jest.2423c075.svg",
+      "assets/images/MongoDb.64a21d47.svg",
+      "assets/images/Nodejs.9717fb4b.svg",
+      "assets/images/npm.c6cde6f5.svg",
+      "assets/images/Redux.677b8479.svg",
+      "assets/images/Redux-Saga.4c97d4f7.svg",
+      "assets/images/Rxjs.4a823775.svg",
+      "assets/images/SASS.946670be.svg",
+      "assets/images/Thunder.f34e0ae0.svg",
+      "assets/images/Typescript.ec953d09.svg",
+      "assets/images/Vite.8ce09b94.svg",
+      "assets/images/Webpack.07240acb.svg"
+    ],
+    "file": "js/constants.b70dfd88.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.css": {
+    "file": "style/index.e968b485.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "assets": [
+      "assets/images/React.d0e9dc0b.svg",
+      "assets/cloudBg.82beeb29.webp",
+      "assets/cloudDarkBg.7d0872e6.webp"
+    ],
+    "css": [
+      "style/index.e968b485.css"
+    ],
+    "dynamicImports": [
+      "src/pages/MainPage/ui/MainPage.tsx"
+    ],
+    "file": "js/index.cbd6625b.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/pages/MainPage/ui/MainPage.css": {
+    "file": "style/MainPage.d79da007.css",
+    "src": "src/pages/MainPage/ui/MainPage.css"
+  },
+  "src/pages/MainPage/ui/MainPage.tsx": {
+    "css": [
+      "style/MainPage.d79da007.css"
+    ],
+    "dynamicImports": [
+      "src/widgets/Sections/About/ui/About.tsx",
+      "src/widgets/Sections/Introduce/ui/Introduce.tsx",
+      "src/widgets/Sections/Projects/ui/Projects.tsx"
+    ],
+    "file": "js/MainPage.69a9bebe.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/MainPage/ui/MainPage.tsx"
+  },
+  "src/shared/assets/bg/cloudBg.webp": {
+    "file": "assets/cloudBg.82beeb29.webp",
+    "src": "src/shared/assets/bg/cloudBg.webp"
+  },
+  "src/shared/assets/bg/cloudDarkBg.webp": {
+    "file": "assets/cloudDarkBg.7d0872e6.webp",
+    "src": "src/shared/assets/bg/cloudDarkBg.webp"
+  },
+  "src/shared/assets/progeramer/programming/programming-not-css.svg": {
+    "file": "assets/images/programming-not-css.286d92ec.svg",
+    "src": "src/shared/assets/progeramer/programming/programming-not-css.svg"
+  },
+  "src/shared/assets/projects/brShoes/brshoes.mp4": {
+    "file": "assets/brshoes.edfdf20a.mp4",
+    "src": "src/shared/assets/projects/brShoes/brshoes.mp4"
+  },
+  "src/shared/assets/projects/brShoes/brshoes_light.webp": {
+    "file": "assets/brshoes_light.7a5e911c.webp",
+    "src": "src/shared/assets/projects/brShoes/brshoes_light.webp"
+  },
+  "src/shared/assets/socials/github.svg": {
+    "file": "assets/images/github.f98e60b8.svg",
+    "src": "src/shared/assets/socials/github.svg"
+  },
+  "src/shared/assets/socials/instagram.svg": {
+    "file": "assets/images/instagram.3a703010.svg",
+    "src": "src/shared/assets/socials/instagram.svg"
+  },
+  "src/shared/assets/socials/linkedin.svg": {
+    "file": "assets/images/linkedin.a69bf286.svg",
+    "src": "src/shared/assets/socials/linkedin.svg"
+  },
+  "src/shared/assets/techStack/Airbnb.svg": {
+    "file": "assets/images/Airbnb.2dfd018e.svg",
+    "src": "src/shared/assets/techStack/Airbnb.svg"
+  },
+  "src/shared/assets/techStack/Angular.svg": {
+    "file": "assets/images/Angular.8be939aa.svg",
+    "src": "src/shared/assets/techStack/Angular.svg"
+  },
+  "src/shared/assets/techStack/Bootstrap.svg": {
+    "file": "assets/images/Bootstrap.07788d6d.svg",
+    "src": "src/shared/assets/techStack/Bootstrap.svg"
+  },
+  "src/shared/assets/techStack/CSS.svg": {
+    "file": "assets/images/CSS.073ca080.svg",
+    "src": "src/shared/assets/techStack/CSS.svg"
+  },
+  "src/shared/assets/techStack/ESLint.svg": {
+    "file": "assets/images/ESLint.485cf619.svg",
+    "src": "src/shared/assets/techStack/ESLint.svg"
+  },
+  "src/shared/assets/techStack/Electronjs.svg": {
+    "file": "assets/images/Electronjs.058f5906.svg",
+    "src": "src/shared/assets/techStack/Electronjs.svg"
+  },
+  "src/shared/assets/techStack/Express.svg": {
+    "file": "assets/images/Express.713a791f.svg",
+    "src": "src/shared/assets/techStack/Express.svg"
+  },
+  "src/shared/assets/techStack/Firebase.svg": {
+    "file": "assets/images/Firebase.21cda531.svg",
+    "src": "src/shared/assets/techStack/Firebase.svg"
+  },
+  "src/shared/assets/techStack/Git.svg": {
+    "file": "assets/images/Git.3e788624.svg",
+    "src": "src/shared/assets/techStack/Git.svg"
+  },
+  "src/shared/assets/techStack/HTML.svg": {
+    "file": "assets/images/HTML.8c75694e.svg",
+    "src": "src/shared/assets/techStack/HTML.svg"
+  },
+  "src/shared/assets/techStack/Javascript.svg": {
+    "file": "assets/images/Javascript.d5147d05.svg",
+    "src": "src/shared/assets/techStack/Javascript.svg"
+  },
+  "src/shared/assets/techStack/Jest.svg": {
+    "file": "assets/images/Jest.2423c075.svg",
+    "src": "src/shared/assets/techStack/Jest.svg"
+  },
+  "src/shared/assets/techStack/MongoDb.svg": {
+    "file": "assets/images/MongoDb.64a21d47.svg",
+    "src": "src/shared/assets/techStack/MongoDb.svg"
+  },
+  "src/shared/assets/techStack/Nodejs.svg": {
+    "file": "assets/images/Nodejs.9717fb4b.svg",
+    "src": "src/shared/assets/techStack/Nodejs.svg"
+  },
+  "src/shared/assets/techStack/React.svg": {
+    "file": "assets/images/React.d0e9dc0b.svg",
+    "src": "src/shared/assets/techStack/React.svg"
+  },
+  "src/shared/assets/techStack/Redux-Saga.svg": {
+    "file": "assets/images/Redux-Saga.4c97d4f7.svg",
+    "src": "src/shared/assets/techStack/Redux-Saga.svg"
+  },
+  "src/shared/assets/techStack/Redux.svg": {
+    "file": "assets/images/Redux.677b8479.svg",
+    "src": "src/shared/assets/techStack/Redux.svg"
+  },
+  "src/shared/assets/techStack/Rxjs.svg": {
+    "file": "assets/images/Rxjs.4a823775.svg",
+    "src": "src/shared/assets/techStack/Rxjs.svg"
+  },
+  "src/shared/assets/techStack/SASS.svg": {
+    "file": "assets/images/SASS.946670be.svg",
+    "src": "src/shared/assets/techStack/SASS.svg"
+  },
+  "src/shared/assets/techStack/Thunder.svg": {
+    "file": "assets/images/Thunder.f34e0ae0.svg",
+    "src": "src/shared/assets/techStack/Thunder.svg"
+  },
+  "src/shared/assets/techStack/Typescript.svg": {
+    "file": "assets/images/Typescript.ec953d09.svg",
+    "src": "src/shared/assets/techStack/Typescript.svg"
+  },
+  "src/shared/assets/techStack/Vite.svg": {
+    "file": "assets/images/Vite.8ce09b94.svg",
+    "src": "src/shared/assets/techStack/Vite.svg"
+  },
+  "src/shared/assets/techStack/Webpack.svg": {
+    "file": "assets/images/Webpack.07240acb.svg",
+    "src": "src/shared/assets/techStack/Webpack.svg"
+  },
+  "src/shared/assets/techStack/npm.svg": {
+    "file": "assets/images/npm.c6cde6f5.svg",
+    "src": "src/shared/assets/techStack/npm.svg"
+  },
+  "src/widgets/Sections/About/ui/About.css": {
+    "file": "style/About.dbd6993d.css",
+    "src": "src/widgets/Sections/About/ui/About.css"
+  },
+  "src/widgets/Sections/About/ui/About.tsx": {
+    "css": [
+      "style/About.dbd6993d.css"
+    ],
+    "file": "js/About.57fba0f9.js",
+    "imports": [
+      "index.html",
+      "_constants.b70dfd88.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/widgets/Sections/About/ui/About.tsx"
+  },
+  "src/widgets/Sections/Introduce/ui/Introduce.css": {
+    "file": "style/Introduce.044ce4e7.css",
+    "src": "src/widgets/Sections/Introduce/ui/Introduce.css"
+  },
+  "src/widgets/Sections/Introduce/ui/Introduce.tsx": {
+    "assets": [
+      "assets/images/github.f98e60b8.svg",
+      "assets/images/instagram.3a703010.svg",
+      "assets/images/linkedin.a69bf286.svg"
+    ],
+    "css": [
+      "style/Introduce.044ce4e7.css"
+    ],
+    "file": "js/Introduce.bc05392d.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/widgets/Sections/Introduce/ui/Introduce.tsx"
+  },
+  "src/widgets/Sections/Projects/ui/Projects.css": {
+    "file": "style/Projects.5eddc92e.css",
+    "src": "src/widgets/Sections/Projects/ui/Projects.css"
+  },
+  "src/widgets/Sections/Projects/ui/Projects.tsx": {
+    "css": [
+      "style/Projects.5eddc92e.css"
+    ],
+    "file": "js/Projects.3a895406.js",
+    "imports": [
+      "index.html",
+      "_constants.b70dfd88.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/widgets/Sections/Projects/ui/Projects.tsx"
+  }
+}

@@ -1,5 +1,8 @@
 import { memo } from 'react';
 
+import gitHub from '@/shared/assets/socials/github.svg';
+import instagram from '@/shared/assets/socials/instagram.svg';
+import linkedin from '@/shared/assets/socials/linkedin.svg';
 import { classNames } from '@/shared/libs';
 import { IntroduceImg } from '@/shared/ui/IntroduceImg';
 
@@ -22,13 +25,13 @@ const Introduce = memo((props: IntroduceProps) => {
         </p>
         <div className={cls.linksToSocial}>
           <a href="https://www.instagram.com/roman_klimashenko/" className={cls.link} title="Instagram">
-            <img className={cls.imgOfLink} src="https://img.icons8.com/doodle/240/instagram-new.png" alt="Instagram" />
+            <img className={cls.imgOfLink} src={instagram} width={40} height={40} alt="Instagram" />
           </a>
           <a href="https://github.com/semklim" className={cls.link} title="gitHub">
-            <img className={cls.imgOfLink} src="https://img.icons8.com/doodle/240/github--v1.png" alt="gitHub" />
+            <img className={cls.imgOfLink} src={gitHub} width={40} height={40} alt="gitHub" />
           </a>
           <a href="www.linkedin.com/in/roman-klymashenko-a2a483238" className={cls.link} title="LinkedIn">
-            <img className={cls.imgOfLink} src="https://img.icons8.com/doodle/240/linkedin--v2.png" alt="linkedIn" />
+            <img className={cls.imgOfLink} src={linkedin} width={40} height={40} alt="linkedIn" />
           </a>
         </div>
         <div className={cls.getResume}>
@@ -45,4 +48,4 @@ const Introduce = memo((props: IntroduceProps) => {
   );
 });
 
-export { Introduce };
+export default Introduce;

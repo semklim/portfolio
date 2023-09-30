@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #fff;
+  --bg-color: var(--gray-50);
   --inverted-bg-color: #374151;
 
   --primary-color: var(--sky-700);
@@ -9,9 +9,15 @@
   /* ---------------------------- Introduce Section ---------------------------- */
   --color-description: var(--secondary-color);
 
-  --introducebg: url(@/shared/assets/bg/cloudBg.png);
+  --introducebg: url(@/shared/assets/bg/cloudBg.webp);
 
   /* -------------------------------- ABOUT ME -------------------------------- */
-  --primary-color-about: black;
+  --def-contrast-text-color: black;
   --accent-color-about: var(--primary-color);
+
+  /* -------------------------------- PROJECTS -------------------------------- */
+  --projects-bg-color: var(--inverted-bg-color);
+  --project-card-bg-color: var(--gray-100);
+  --project-card-text-color: var(--gray-900);
+  --accent-color-project-card: var(--blue-400);
 }

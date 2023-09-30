@@ -2,8 +2,8 @@ import './Loader.scss';
 
 const Loader = () => {
   return (
-    <div className=".loaderBody">
-      <svg className=".pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <div className="loaderBody">
+      <svg className="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
             <stop offset="0%" stopColor="hsl(313,90%,55%)" />
@@ -15,7 +15,7 @@ const Loader = () => {
           </linearGradient>
         </defs>
         <circle
-          className=".pl__ring"
+          className="pl__ring"
           cx="100"
           cy="100"
           r="82"
@@ -28,7 +28,7 @@ const Loader = () => {
           transform="rotate(-90,100,100)"
         />
         <line
-          className=".pl__ball"
+          className="pl__ball"
           stroke="url(#pl-grad2)"
           x1="100"
           y1="18"
