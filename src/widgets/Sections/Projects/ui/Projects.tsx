@@ -28,8 +28,8 @@ const Projects = memo(({ className }: ProjectsProps) => {
             hidden: { opacity: 0, scale: 0 },
           }}
           className={cls.projectsCard}>
-          {projects.map((project, i) => (
-            <ProjectCard project={project} key={i} className={classNames(cls.projectCard)} />
+          {projects.map((project) => (
+            <ProjectCard project={project} key={project.title} className={classNames(cls.projectCard)} />
           ))}
         </motion.div>
       </div>

@@ -1,5 +1,9 @@
-import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
+import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
+import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
+import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
+import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
+import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -99,7 +103,7 @@ export const projects: ProjectsInfo[] = [
     video: brShoesVideo,
     gitLink: 'https://github.com/semklim/BrShop_angular',
     deployed: 'https://brshoes.pp.ua/',
-    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
+    techs: [angular, rxjs, bootstrap, firebase, jest, eslint, airbnb],
     architectPatterns: [
       {
         name: 'Observer',
@@ -114,45 +118,27 @@ export const projects: ProjectsInfo[] = [
     imgs: [],
   },
   {
-    title: 'BrShoes',
-    desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
-    mainImg: brShoesImg,
-    video: brShoesVideo,
-    gitLink: 'https://github.com/semklim/BrShop_angular',
-    deployed: 'https://brshoes.pp.ua/',
-    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
-    architectPatterns: [
-      {
-        name: 'Observer',
-        link: 'https://www.patterns.dev/posts/observer-pattern',
-      },
-      {
-        name: 'Module',
-        link: 'https://www.patterns.dev/posts/module-pattern',
-      },
-    ],
-    usedApi: ['Intersection Web Api'],
+    title: 'Currency Convertor',
+    desc: 'Simple currency conversion app designed with simplicity in mind. You gain access to a world of 145+ currencies. Powered by FastForex API, it delivers real-time exchange rates. The intuitive Angular interface ensures effortless and precise currency conversion.',
+    mainImg: currencyConvertorImg,
+    video: currencyConvertorVideo,
+    gitLink: 'https://github.com/semklim/currency-converter-forex',
+    deployed: 'https://currency-converter-forex.web.app/',
+    techs: [angular, rxjs, firebase, eslint, airbnb],
+    architectPatterns: [],
+    usedApi: ['fastforex API'],
     imgs: [],
   },
   {
-    title: 'BrShoes',
-    desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
-    mainImg: brShoesImg,
-    video: brShoesVideo,
-    gitLink: 'https://github.com/semklim/BrShop_angular',
-    deployed: 'https://brshoes.pp.ua/',
-    techs: [angular, rxjs, bootstrap, electron, firebase, jest, eslint, airbnb],
-    architectPatterns: [
-      {
-        name: 'Observer',
-        link: 'https://www.patterns.dev/posts/observer-pattern',
-      },
-      {
-        name: 'Module',
-        link: 'https://www.patterns.dev/posts/module-pattern',
-      },
-    ],
-    usedApi: ['Intersection Web Api'],
+    title: 'Spotify Demo',
+    desc: 'This project is a exam project that aims to help me and my command learn how to use the Spotify Web API, built entirely with HTML, CSS, and JavaScript. The application uses the Spotify Web API to retrieve data about artists, albums, and tracks, and presents it in a user-friendly way.',
+    mainImg: spotifyImg,
+    video: spotifyVideo,
+    gitLink: 'https://github.com/semklim/SpotifyAPI_Exame_Step',
+    deployed: 'https://semklim.github.io/SpotifyAPI_Exame_Step/',
+    techs: [html, css, javascript, electron],
+    architectPatterns: [],
+    usedApi: ['Spotify Web Api'],
     imgs: [],
   },
 ];
