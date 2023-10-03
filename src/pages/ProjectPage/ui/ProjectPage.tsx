@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { projects, ProjectsInfo } from '@/shared/data/constants';
 import { classNames, instanceOf } from '@/shared/libs';
@@ -17,17 +17,14 @@ type NotFoundProject = {
 };
 
 function getProject(name: string | undefined): ProjectsInfo | NotFoundProject {
-  let result: ProjectsInfo | NotFoundProject = {
-    err: 'It is not my project. Please go back to main page',
-  };
-
-  if (typeof name === 'string') {
-    const project = projects.filter((project) => project.title === name)[0];
-    if (project) {
-      result = project;
-    }
+  if (!name) {
+    return { err: 'It is not my project. Please go back to the main page' };
   }
-  return result;
+  const formattedName = name.replace('_', ' ');
+
+  const project = projects.find((p) => p.title === formattedName);
+
+  return project || { err: 'It is not my project. Please go back to the main page' };
 }
 
 const ProjectPage = ({ className }: ProjectPageProps) => {
@@ -36,7 +33,11 @@ const ProjectPage = ({ className }: ProjectPageProps) => {
   if (instanceOf<ProjectsInfo>(project, 'title')) {
     return (
       <div className={classNames('cls.projectPage', {}, [className])}>
+        <Link to="/">Home</Link>
         <h1 style={{ color: 'black' }}>{project.title}</h1>
+        {project.techs.map((el) => (
+          <img src={el} key={el} alt="" />
+        ))}
       </div>
     );
   }

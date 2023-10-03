@@ -1,4 +1,5 @@
 import { classNames } from './classNames/classNames';
-import { instanceOf } from './typeScipt_InstanceOf/instanceOf';
+import { createRouteParams } from './createRouteParams/createRouteParams';
+import { instanceOf } from './typescript_InstanceOf/instanceOf';
 
-export { classNames, instanceOf };
+export { classNames, createRouteParams, instanceOf };

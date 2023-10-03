@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { memo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { HamburgerButton, ThemeSwitcher } from '@/features';
 import react from '@/shared/assets/techStack/React.svg';
@@ -44,14 +45,16 @@ const Navbar = memo(({ className }: NavbarProps) => {
       <nav className={cls.nav}>
         <div className={cls.nav__logo}>
           <h1>
-            <img src={react} alt="react" width="50" height="50" />
+            <Link to="/">
+              <img src={react} alt="react" width="50" height="50" />
+            </Link>
           </h1>
         </div>
         <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })} onClick={closeMenu}>
           <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#home">
+            <Link className={cls.nav__link} to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className={cls.nav__button}>
             <a className={cls.nav__link} href="#about">
