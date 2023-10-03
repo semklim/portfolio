@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LazyLoad from 'react-lazy-load';
+import { Link } from 'react-router-dom';
 
 import { ProjectsInfo } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
@@ -41,9 +42,9 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         <h4 className={cls.cardFooterTitle}>{title}</h4>
         <p className={cls.cardFooterDescription}>{desc}</p>
         <div className={cls.links}>
-          <a href={`/project/${title}`} className={cls.showMore}>
+          <Link to={`/project/${title}`} className={cls.showMore}>
             <ButtonPushable btnTxt="Show details" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

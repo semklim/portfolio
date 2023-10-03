@@ -43,7 +43,7 @@ export type AboutMe = {
 
 export type ArchitectPatterns = {
   name: string;
-  link: string | null;
+  link: string | undefined;
 };
 
 export type ProjectsInfo = {
@@ -52,7 +52,7 @@ export type ProjectsInfo = {
   title: string;
   desc: string;
   gitLink: string;
-  deployed: string | null;
+  deployed: string | undefined;
   video: string | undefined;
   techs: string[] | [];
   usedApi: string[] | [];
