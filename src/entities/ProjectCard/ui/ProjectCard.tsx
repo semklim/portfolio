@@ -41,7 +41,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         <h4 className={cls.cardFooterTitle}>{title}</h4>
         <p className={cls.cardFooterDescription}>{desc}</p>
         <div className={cls.links}>
-          <a href="/#" className={cls.showMore}>
+          <a href={`/project/${title}`} className={cls.showMore}>
             <ButtonPushable btnTxt="Show details" />
           </a>
         </div>

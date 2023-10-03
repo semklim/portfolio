@@ -1,20 +1,25 @@
 import { RouteProps } from 'react-router-dom';
 
 import MainPage from '@/pages/MainPage';
+import ProjectPage from '@/pages/ProjectPage';
 
 export enum AppRoutes {
   MAIN = 'main',
-  ABOUT = 'about',
+  PROJECT = 'project',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
+  [AppRoutes.PROJECT]: '/project/:name',
 };
 
 export const routeConfig: RouteProps[] = [
   {
     path: RoutePath.main,
     element: <MainPage />,
+  },
+  {
+    path: RoutePath.project,
+    element: <ProjectPage />,
   },
 ];
