@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import { useState } from 'react';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
@@ -42,7 +43,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         <h4 className={cls.cardFooterTitle}>{title}</h4>
         <p className={cls.cardFooterDescription}>{desc}</p>
         <div className={cls.links}>
-          <Link to={`/project/${title}`} className={cls.showMore}>
+          <Link to={`/project/${title}`} className={cls.showMore} preventScrollReset aria-label={title}>
             <ButtonPushable btnTxt="Show details" />
           </Link>
         </div>

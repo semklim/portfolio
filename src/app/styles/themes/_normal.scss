@@ -1,6 +1,6 @@
 :root {
   --bg-color: var(--gray-50);
-  --inverted-bg-color: #374151;
+  --inverted-bg-color: var(--gray-700);
 
   --primary-color: var(--sky-700);
   --secondary-color: var(--gray-700);
@@ -12,12 +12,15 @@
   --introducebg: url(@/shared/assets/bg/cloudBg.webp);
 
   /* -------------------------------- ABOUT ME -------------------------------- */
-  --def-contrast-text-color: black;
+  --def-contrast-text-color: var(--gray-950);
   --accent-color-about: var(--primary-color);
 
   /* -------------------------------- PROJECTS -------------------------------- */
   --projects-bg-color: var(--inverted-bg-color);
   --project-card-bg-color: var(--gray-100);
-  --project-card-text-color: var(--gray-900);
+  --project-card-text-color: var(--gray-950);
   --accent-color-project-card: var(--blue-400);
+
+  /* ------------------------------- BREADCRUMBS ------------------------------ */
+  --breadcrumbs-color: var(--blue-700);
 }

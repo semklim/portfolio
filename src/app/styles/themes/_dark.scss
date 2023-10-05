@@ -1,5 +1,5 @@
 .app.dark {
-  --bg-color: var(--gray-900);
+  --bg-color: var(--gray-950);
   --inverted-bg-color: var(--gray-50);
 
   --primary-color: var(--gray-700);
@@ -7,7 +7,7 @@
   --navbar-links-color: var(--bg-color);
 
   /* ---------------------------- Introduce Section ---------------------------- */
-  --color-description: white;
+  --color-description: var(--inverted-bg-color);
   --introducebg: url(@/shared/assets/bg/cloudDarkBg.webp);
 
   /* -------------------------------- ABOUT ME -------------------------------- */
@@ -19,4 +19,6 @@
   --project-card-bg-color: var(--bg-color);
   --project-card-text-color: var(--inverted-bg-color);
   --accent-color-project-card: var(--sky-700);
+  /* ------------------------------- BREADCRUMBS ------------------------------ */
+  --breadcrumbs-color: var(--inverted-bg-color);
 }

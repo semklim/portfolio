@@ -1,0 +1,40 @@
+.mainTitleWrapper {
+  width: 100%;
+  color: var(--inverted-bg-color);
+}
+
+.mainTitle {
+  // margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: xx-large;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: left;
+}
+
+.mainTitle__supDesc {
+  display: flex;
+}
+
+.mainTitle__supDesc__date,
+.mainTitle__supDesc__tag {
+  display: flex;
+  align-items: center;
+}
+
+.mainTitle__supDesc__date {
+  margin-right: 0.5rem;
+}
+.mainTitle__supDesc__date span,
+.mainTitle__supDesc__tag span {
+  margin-left: 0.5rem;
+}
+
+.mainTitle__supDesc__tag {
+}
+
+.svgClock,
+.svgTag {
+  color: var(--inverted-bg-color);
+}
