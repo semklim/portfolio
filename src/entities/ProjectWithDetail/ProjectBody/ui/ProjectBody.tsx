@@ -40,7 +40,7 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
           </div>
           <ul className={cls.apis}>
             <h2>API that use:</h2>
-            {usedApi.length > 0 ? usedApi.map((el) => <li key={el}>-{el}</li>) : <li>Don&apos;t use</li>}
+            {usedApi.length > 0 ? usedApi.map((el) => <li key={el}>{el}</li>) : <li>Don&apos;t use</li>}
           </ul>
           <ul className={cls.arch}>
             <h2>Architect patterns that use:</h2>

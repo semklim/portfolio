@@ -25,6 +25,7 @@
 
 .mainTitle__supDesc__date {
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 .mainTitle__supDesc__date span,
 .mainTitle__supDesc__tag span {
@@ -37,4 +38,17 @@
 .svgClock,
 .svgTag {
   color: var(--inverted-bg-color);
+}
+
+@media (max-width: 640px) {
+  .mainTitle__supDesc {
+    font-size: unset;
+  }
+}
+@media (max-width: 400px) {
+  .mainTitle__supDesc {
+    font-size: smaller;
+    justify-content: center;
+    gap: 30px;
+  }
 }

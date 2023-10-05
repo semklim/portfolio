@@ -1,7 +1,6 @@
 .projectWithDetail {
-  padding: 0 20px;
   color: white;
-  font-size: calc(14px + (16 - 12) * ((100vw - 320px) / (1500 - 320)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1500 - 320)));
 }
 
 .techs,
@@ -18,16 +17,16 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .tech_img {
   padding: 5px;
   border-radius: 10px;
   background-color: var(--gray-100);
-  width: calc(36px + (36 - 10) * ((100vw - 320px) / (1500 - 320)));
-  height: calc(36px + (36 - 10) * ((100vw - 320px) / (1500 - 320)));
+  width: calc(50px + (50 - 40) * ((100vw - 320px) / (1500 - 320)));
+  height: calc(50px + (50 - 40) * ((100vw - 320px) / (1500 - 320)));
   max-width: calc(41px + 5px);
   max-height: calc(41px + 5px);
-  margin: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,24 +56,24 @@
 
 .desc_tech {
   text-align: left;
-  flex: 33% 1 1;
+  flex: 40% 1 1;
 }
 
 .desc_tech li {
-  width: 50%;
-  margin: 0 auto;
+  margin-left: 40px;
   list-style: disc;
 }
 
 .desc_txt {
   display: grid;
-  flex: 67% 1 1;
+  flex: 60% 1 1;
 }
 .desc_txt h2,
 .desc_tech h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 1.5;
   font-weight: 700;
+  font-size: 18px;
 }
 
 .desc_txt h2 {
@@ -92,8 +91,15 @@
 @media (max-width: 640px) {
   .desc {
     max-width: 640px;
-    padding-right: 2rem;
-    padding-left: 2rem;
     flex-direction: column;
+  }
+  .desc {
+    gap: unset;
+  }
+}
+
+@media (max-width: 400px) {
+  .projectWithDetail {
+    padding: 0;
   }
 }
