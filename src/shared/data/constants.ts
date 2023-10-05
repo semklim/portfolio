@@ -1,7 +1,9 @@
+import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
 import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
+import spotifyBigVideo from '@/shared/assets/projects/spotify/spotify.mp4';
 import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
 import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
 import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle.webp';
@@ -50,10 +52,13 @@ export type ProjectsInfo = {
   mainImg: string;
   imgs: string[] | [];
   title: string;
+  date: string;
+  tags: string[];
   desc: string;
   gitLink: string;
-  deployed: string | undefined;
-  video: string | undefined;
+  deployed?: string;
+  video?: string;
+  bigVideo?: string;
   techs: string[] | [];
   usedApi: string[] | [];
   architectPatterns: ArchitectPatterns[] | [];
@@ -101,8 +106,11 @@ export const projects: ProjectsInfo[] = [
   {
     title: 'BrShoes',
     desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
+    date: 'Aug 08,2023',
+    tags: ['Front-end', 'Shop', 'Pet-project'],
     mainImg: brShoesImg,
     video: brShoesVideo,
+    bigVideo: brShoesBigVideo,
     gitLink: 'https://github.com/semklim/BrShop_angular',
     deployed: 'https://brshoes.pp.ua/',
     techs: [angular, rxjs, bootstrap, firebase, jest, eslint, airbnb],
@@ -122,6 +130,8 @@ export const projects: ProjectsInfo[] = [
   {
     title: 'Currency Convertor',
     desc: 'Simple currency conversion app designed with simplicity in mind. You gain access to a world of 145+ currencies. Powered by FastForex API, it delivers real-time exchange rates. The intuitive Angular interface ensures effortless and precise currency conversion.',
+    date: 'Jun 20,2023',
+    tags: ['Front-end', 'WebApp', 'Test task'],
     mainImg: currencyConvertorImg,
     video: currencyConvertorVideo,
     gitLink: 'https://github.com/semklim/currency-converter-forex',
@@ -134,8 +144,11 @@ export const projects: ProjectsInfo[] = [
   {
     title: 'Spotify Demo',
     desc: 'This project is a exam project that aims to help me and my command learn how to use the Spotify Web API, built entirely with HTML, CSS, and JavaScript. The application uses the Spotify Web API to retrieve data about artists, albums, and tracks, and presents it in a user-friendly way.',
+    date: 'Apr 10,2023',
+    tags: ['Front-end', 'MusicApp', 'Pet-project', 'VanillaJs'],
     mainImg: spotifyImg,
     video: spotifyVideo,
+    bigVideo: spotifyBigVideo,
     gitLink: 'https://github.com/semklim/SpotifyAPI_Exame_Step',
     deployed: 'https://semklim.github.io/SpotifyAPI_Exame_Step/',
     techs: [html, css, javascript, electron],
@@ -146,12 +159,16 @@ export const projects: ProjectsInfo[] = [
   {
     title: 'Towers Battle',
     desc: 'This is a canvas game. All you need is yourself and a friend. Each of you decides which tower to choose and then hits the play button. The winner is the one whose tower survives. The whole game is based on randomness.',
+    date: 'Jan 15,2023',
+    tags: ['Front-end', 'Canvas', 'Game', 'VanillaJs'],
     mainImg: towersBattleImg,
     video: towersBattleVideo,
     gitLink: 'https://github.com/semklim/Towers_Battle',
     deployed: 'https://semklim.github.io/Towers_Battle/',
     techs: [html, css, javascript],
-    architectPatterns: [],
+    architectPatterns: [
+      { name: 'SOLID', link: 'https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898' },
+    ],
     usedApi: [],
     imgs: [],
   },
