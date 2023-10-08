@@ -28,11 +28,9 @@ export default defineConfig({
         entryFileNames: 'js/[name].[hash].js',
 
         assetFileNames: ({ name }) => {
+          
           if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')) {
             return 'assets/images/[name].[hash][extname]';
-          }
-          if (/\.(ico)$/.test(name ?? '')) {
-            return 'assets/ico/[name].[hash][extname]';
           }
           if (/\.(mp4|mkv|m3u8|ts|mov|flv)$/.test(name ?? '')) {
             return 'assets/video/[name].[hash][extname]';
@@ -48,3 +46,5 @@ export default defineConfig({
     },
   },
 });
+
+
