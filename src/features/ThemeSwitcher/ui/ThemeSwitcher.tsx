@@ -14,8 +14,15 @@ const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
   const checked = theme === Theme.DARK;
   return (
-    <label htmlFor="slider" className={classNames(cls.switch, {}, [])}>
-      <input type="checkbox" className={cls.inputSlider} onChange={toggleTheme} id="slider" checked={checked} />
+    <label htmlFor="slider" className={classNames(cls.switch, {}, [])} aria-label="Theme Switcher">
+      <input
+        type="checkbox"
+        className={cls.inputSlider}
+        onChange={toggleTheme}
+        id="slider"
+        checked={checked}
+        aria-label="Theme Switcher"
+      />
       <span className={classNames(cls.slider, {}, [cls.round, className])} />
     </label>
   );

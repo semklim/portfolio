@@ -21,7 +21,8 @@ const HamburgerButton = memo((props: HamburgerButtonProps) => {
     <AppButton
       type="button"
       className={classNames(cls['btn-hamburger'], {}, [className, cls.display_none])}
-      {...otherProps}>
+      {...otherProps}
+      aria-label="Hamburger Menu">
       <div className={cls['hamburger-box']}>
         <div className={classNames(cls['hamburger-inner'], { [cls.close]: open }, [])} />
       </div>

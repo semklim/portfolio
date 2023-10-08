@@ -53,7 +53,7 @@ const About = memo(({ className }: AboutProps) => {
                 <img className={cls.cardImg} src={link} alt={name} />
               </LazyLoad>
             </label>
-            <h4 className={cls.cardTitle}>{name}</h4>
+            <h3 className={cls.cardTitle}>{name}</h3>
           </motion.div>
         ))}
       </section>
