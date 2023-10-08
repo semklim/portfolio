@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <!-- 
+            Don't use <priority> or <changefreq> attributes. Those are typically ignored.
+            Make sure lastmod is always up to date.
+          -->
+        <loc>https://semklim.vercel.app</loc>
+        <lastmod>2023-10-06</lastmod>
+    </url>
+</urlset>
