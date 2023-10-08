@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-boolean-value */
 /* eslint-disable jsx-a11y/media-has-caption */
 import { memo } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 
 import { getProject } from '@/entities/projectByParams';
@@ -43,6 +44,9 @@ const Project = memo(({ className }: ProjectProps) => {
       </div>
       {instanceOf<ProjectsInfo>(project, 'title') ? (
         <div className={classNames(cls.project)}>
+          <Helmet>
+            <title>{formattedName}</title>
+          </Helmet>
           <ProjectHeader project={project} />
           <ProjectBody project={project} />
         </div>
