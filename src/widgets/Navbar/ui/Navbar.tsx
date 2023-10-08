@@ -23,7 +23,7 @@ const Navbar = memo(({ className }: NavbarProps) => {
     if (res) {
       document.addEventListener('click', function clickOutMenu(e: MouseEvent) {
         const { className: currentClass } = e.target as HTMLElement;
-        if (!/(inputSlider|slider|nav__buttons|btn-hamburger)/g.test(currentClass)) {
+        if (!/(nav__buttons|btn-hamburger)/g.test(currentClass)) {
           setIsOpened(false);
           document.removeEventListener('click', clickOutMenu);
         }
