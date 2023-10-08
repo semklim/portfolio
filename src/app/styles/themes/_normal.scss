@@ -16,10 +16,13 @@
   --accent-color-about: var(--primary-color);
 
   /* -------------------------------- PROJECTS -------------------------------- */
-  --projects-bg-color: var(--inverted-bg-color);
+  --projects-bg-color: var(--gray-300);
   --project-card-bg-color: var(--gray-100);
   --project-card-text-color: var(--gray-950);
   --accent-color-project-card: var(--blue-400);
+
+  /* ------------------------------ PROJECT CARD ------------------------------ */
+  --project-card-border-color: var(--sky-700);
 
   /* ------------------------------- BREADCRUMBS ------------------------------ */
   --breadcrumbs-color: var(--blue-700);

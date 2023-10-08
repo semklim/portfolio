@@ -8,7 +8,7 @@
 }
 
 .cardFooter {
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--project-card-border-color);
   border-top: none;
   padding: 10px;
   border-bottom-left-radius: 10px;
@@ -30,7 +30,7 @@
 .cardFooterTitle,
 .cardFooterDescription {
   padding: 10px 0;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--project-card-border-color);
 }
 
 .cardFooterTitle {
