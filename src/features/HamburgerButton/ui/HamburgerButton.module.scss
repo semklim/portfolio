@@ -1,5 +1,9 @@
 @import '../../../app/styles/media/media';
 
+.hamburger-color {
+  --hamburger-bg-color: var(--bg-color);
+}
+
 .btn-hamburger {
   position: relative;
   width: 50px;
@@ -20,7 +24,7 @@
 }
 
 .hamburger-inner {
-  background-color: var(--bg-color);
+  background-color: var(--hamburger-bg-color);
   pointer-events: none;
   transition:
     transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
@@ -37,7 +41,7 @@
 }
 .hamburger-inner::after,
 .hamburger-inner::before {
-  background-color: var(--bg-color);
+  background-color: var(--hamburger-bg-color);
   transition:
     transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
     background-color 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s,
@@ -56,10 +60,6 @@
 
 .hamburger-inner {
   pointer-events: none;
-}
-
-.display_none {
-  display: none;
 }
 
 .close {

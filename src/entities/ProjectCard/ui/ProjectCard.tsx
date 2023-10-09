@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-boolean-value */
 import { useState } from 'react';
-import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 import { ProjectsInfo } from '@/shared/data/constants';
@@ -21,19 +20,17 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
   return (
     <div className={classNames(cls.wrapper, {}, [className])}>
       <div className="header">
-        <LazyLoad>
-          <video
-            src={video}
-            autoPlay
-            muted
-            loop
-            style={{ display: isLoading ? 'none' : 'block' }}
-            onCanPlay={() => setIsLoading(false)}
-          />
-        </LazyLoad>
+        <video
+          src={video}
+          autoPlay
+          muted
+          loop
+          style={{ display: isLoading ? 'none' : 'block' }}
+          onCanPlay={() => setIsLoading(false)}
+        />
         <img
           className={cls.content}
-          loading="lazy"
+          loading="eager"
           src={mainImg}
           alt={title}
           style={{ display: !isLoading ? 'none' : 'block' }}

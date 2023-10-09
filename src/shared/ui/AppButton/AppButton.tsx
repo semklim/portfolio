@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-unneeded-ternary */
 import { ButtonHTMLAttributes, FC } from 'react';
 
 import { classNames } from '@/shared/libs';
@@ -14,9 +16,12 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const AppButton: FC<AppButtonProps> = (props) => {
-  const { className, children, theme = ButtonTheme.CLEAR, ...otherProps } = props;
+  const { className, children, theme = ButtonTheme.CLEAR, type, ...otherProps } = props;
   return (
-    <button type="button" className={classNames(cls.appButton, {}, [className, cls[theme]])} {...otherProps}>
+    <button
+      type={type ? type : 'button'}
+      className={classNames(cls.appButton, {}, [className, cls[theme]])}
+      {...otherProps}>
       {children}
     </button>
   );

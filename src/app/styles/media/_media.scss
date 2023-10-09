@@ -2,9 +2,27 @@
 
 @mixin mobile() {
   @media (max-width: 900px) {
+    .header {
+      top: 0;
+      position: fixed;
+      background-color: transparent;
+      padding: 0;
+    }
+
     .display_none {
       display: block;
     }
+
+    .nav__logo {
+      height: var(--navbar-height);
+      padding: 0 10px 0 var(--header-padding);
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      display: flex;
+      align-items: center;
+      background-color: var(--inverted-bg-color);
+    }
+
     .nav__buttons {
       padding-top: var(--navbar-height);
       top: 0px;
@@ -27,6 +45,10 @@
     }
 
     /* -------------------------------- INTRODUCE ------------------------------- */
+
+    .introduce {
+      height: 100dvh;
+    }
 
     .imgOfLink {
       width: 60px;

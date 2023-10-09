@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-boolean-value */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { memo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { memo, useEffect, useState } from 'react';
+import { Link as LinkRouter } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import { HamburgerButton, ThemeSwitcher } from '@/features';
 import react from '@/shared/assets/techStack/React.svg';
@@ -13,31 +16,50 @@ interface NavbarProps {
   className?: string;
 }
 
-const closeMenuOn = ['nav__button', 'nav__link'];
+interface LinksToSection {
+  name: string;
+  id: string;
+}
+
+const links: LinksToSection[] = [
+  {
+    name: 'Home',
+    id: 'home',
+  },
+  {
+    name: 'About',
+    id: 'about',
+  },
+  {
+    name: 'Projects',
+    id: 'projects',
+  },
+  {
+    name: 'Contact',
+    id: 'contact',
+  },
+];
 
 const Navbar = memo(({ className }: NavbarProps) => {
   const [isOpened, setIsOpened] = useState(false);
-  const toggle = () => {
-    const res = !isOpened;
-    setIsOpened((prev) => !prev);
-    if (res) {
-      document.addEventListener('click', function clickOutMenu(e: MouseEvent) {
-        const { className: currentClass } = e.target as HTMLElement;
-        if (!/(nav__buttons|btn-hamburger)/g.test(currentClass)) {
-          setIsOpened(false);
-          document.removeEventListener('click', clickOutMenu);
-        }
-      });
-    }
-  };
-
-  const closeMenu = (e: React.MouseEvent<HTMLUListElement>) => {
-    const target = e.target as HTMLElement;
-    closeMenuOn.forEach((currentClass) => {
-      if (target.className.includes(currentClass)) {
-        setIsOpened(!isOpened);
+  const [offsetScroll, setOffsetScroll] = useState(-50);
+  useEffect(() => {
+    function checkSize(e) {
+      if (e.currentTarget.outerWidth <= 900 && offsetScroll <= 50) {
+        setOffsetScroll(0);
+      } else {
+        setOffsetScroll(-50);
       }
-    });
+    }
+    window.addEventListener('resize', checkSize);
+
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  }, [offsetScroll]);
+
+  const showOrHideMenu = () => {
+    setIsOpened((prev) => !prev);
   };
 
   return (
@@ -45,42 +67,33 @@ const Navbar = memo(({ className }: NavbarProps) => {
       <nav className={cls.nav}>
         <div className={cls.nav__logo}>
           <h1>
-            <Link to="/">
+            <LinkRouter to="">
               <img src={react} alt="react" width="50" height="50" />
-            </Link>
+            </LinkRouter>
           </h1>
         </div>
-        <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })} onClick={closeMenu}>
-          <li className={cls.nav__button}>
-            <Link className={cls.nav__link} to="/">
-              Home
-            </Link>
-          </li>
-          <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#about">
-              About
-            </a>
-          </li>
-          <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#services">
-              Services
-            </a>
-          </li>
-          <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#projects">
-              Projects
-            </a>
-          </li>
-          <li className={cls.nav__button}>
-            <a className={cls.nav__link} href="#contact">
-              Contact
-            </a>
-          </li>
+        <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })}>
+          {links.map((link) => (
+            <li className={cls.nav__button} key={link.id}>
+              <Link
+                className={cls.nav__link}
+                activeClass={cls.active}
+                offset={offsetScroll}
+                spy={true}
+                smooth={true}
+                to={link.id}
+                onClick={showOrHideMenu}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
           <li className={classNames(cls.nav__button, {}, ['switcher'])}>
-            <ThemeSwitcher />
+            <ThemeSwitcher clickOnSwitcher={showOrHideMenu} />
           </li>
         </ul>
-        <HamburgerButton isOpened={isOpened} onClick={toggle} />
+        <div className={classNames(cls['nav-hamburger'], {}, ['display_none'])}>
+          <HamburgerButton isOpened={isOpened} onClick={showOrHideMenu} />
+        </div>
       </nav>
     </header>
   );

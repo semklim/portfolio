@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { motion } from 'framer-motion';
 import { memo } from 'react';
-import LazyLoad from 'react-lazy-load';
 
 import { aboutMe, techStack } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
@@ -49,9 +48,7 @@ const About = memo(({ className }: AboutProps) => {
             className={cls.card}>
             <input className={cls.cardCheckBox} type="radio" name="showTitle" id={`tech${name}`} />
             <label htmlFor={`tech${name}`}>
-              <LazyLoad>
-                <img className={cls.cardImg} src={link} alt={name} />
-              </LazyLoad>
+              <img className={cls.cardImg} src={link} alt={name} />
             </label>
             <h3 className={cls.cardTitle}>{name}</h3>
           </motion.div>

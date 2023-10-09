@@ -16,11 +16,10 @@ const HamburgerButton = memo((props: HamburgerButtonProps) => {
   useEffect(() => {
     setOpen(isOpened);
   }, [isOpened]);
-
   return (
     <AppButton
       type="button"
-      className={classNames(cls['btn-hamburger'], {}, [className, cls.display_none])}
+      className={classNames(cls['btn-hamburger'], {}, [className, cls.display_none, cls['hamburger-color']])}
       {...otherProps}
       aria-label="Hamburger Menu">
       <div className={cls['hamburger-box']}>

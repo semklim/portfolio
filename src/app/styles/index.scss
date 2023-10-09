@@ -8,7 +8,7 @@
     background var(--transition-color),
     color var(--transition-color),
     fill var(--transition-color);
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 html {
@@ -37,4 +37,14 @@ body {
 
 .main-container {
   display: flex;
+}
+
+.display_none {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .display_none {
+    display: block;
+  }
 }

@@ -1,23 +1,68 @@
 @mixin mediaAbout() {
-  @media (max-width: 550px) {
-    .about {
-      padding: 0 1.2rem;
-    }
-
+  @media (max-width: 736px) {
     .cardsOfTech {
       justify-content: center;
     }
     .card {
-      margin: 1rem 0.5rem;
       width: 10rem;
-      padding-left: 0.5rem;
+      margin: 0.5rem;
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
+    .about {
+      padding: 0 1.2rem;
+    }
+
+    .title {
+      padding: 1rem 20px 0;
+      font: bolder xx-large / normal var(--font-family-main);
+    }
+
+    .subTitleDescription {
+      font-size: medium;
+      line-height: normal;
+    }
+
+    .subTitle {
+      font: bold x-large / normal normal var(--font-family-main);
+    }
+
+    .cardsOfTech {
+      margin-top: 1rem;
+      padding: 0 1.5rem 1.5rem;
+      position: relative;
+    }
+
+    .cardsOfTech::before,
+    .cardsOfTech::after {
+      position: absolute;
+      content: 'Click on img for desc';
+      color: var(--inverted-bg-color);
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-size: 10px;
+      font-weight: 900;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .cardsOfTech::before {
+      left: -5px;
+    }
+    .cardsOfTech::after {
+      left: calc(100% + 5px);
+    }
+
     .card {
       padding: 0.5rem;
       width: auto;
+    }
+
+    .cardImg {
+      width: 36px;
     }
 
     .cardTitle {
@@ -28,8 +73,14 @@
     }
 
     .cardCheckBox:checked ~ .cardTitle {
-      margin-left: 1rem;
-      font-size: 16px;
+      margin-left: 0.2rem;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .cardsOfTech {
+      padding: unset;
     }
   }
 }
