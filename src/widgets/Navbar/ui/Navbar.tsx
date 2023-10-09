@@ -44,13 +44,15 @@ const Navbar = memo(({ className }: NavbarProps) => {
   const [isOpened, setIsOpened] = useState(false);
   const [offsetScroll, setOffsetScroll] = useState(-50);
   useEffect(() => {
-    function checkSize(e) {
-      if (e.currentTarget.outerWidth <= 900 && offsetScroll <= 50) {
+    function checkSize() {
+      if (window.outerWidth <= 900 && offsetScroll <= 50) {
         setOffsetScroll(0);
       } else {
         setOffsetScroll(-50);
       }
     }
+
+    checkSize();
     window.addEventListener('resize', checkSize);
 
     return () => {
