@@ -1,0 +1,28 @@
+@mixin mediaProjects() {
+  @media (max-width: 600px) {
+    .projects {
+      padding: 0.5rem 20px;
+    }
+
+    .projectsCard {
+      margin-top: 1rem;
+    }
+
+    .title {
+      font: bolder xx-large / normal var(--font-family-main);
+    }
+
+    .subTitleDescription {
+      font-size: medium;
+      line-height: normal;
+    }
+
+    .subTitle {
+      font: bold x-large / normal normal var(--font-family-main);
+    }
+
+    .showMoreBtn {
+      margin-top: 1rem;
+    }
+  }
+}

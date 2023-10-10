@@ -1,8 +1,8 @@
 .app.dark {
-  --bg-color: var(--gray-900);
+  --bg-color: var(--gray-950);
   --inverted-bg-color: var(--gray-50);
 
-  --primary-color: var(--gray-700);
+  --primary-color: var(--blue-950);
   --secondary-color: var(--sky-500);
   --navbar-links-color: var(--bg-color);
 
@@ -12,17 +12,27 @@
 
   /* -------------------------------- ABOUT ME -------------------------------- */
   --def-contrast-text-color: var(--inverted-bg-color);
-  --accent-color-about: var(--blue-400);
+  --accent-color-about: var(--blue-500);
 
   /* -------------------------------- PROJECTS -------------------------------- */
-  --projects-bg-color: var(--gray-950);
+  --projects-bg-color: var(--bg-color);
   --project-card-bg-color: var(--sky-950);
   --project-card-text-color: var(--inverted-bg-color);
-  --accent-color-project-card: var(--blue-700);
+  --accent-color-project-card: var(--blue-500);
 
   /* ------------------------------ PROJECT CARD ------------------------------ */
   --project-card-border-color: var(--blue-700);
 
   /* ------------------------------- BREADCRUMBS ------------------------------ */
   --breadcrumbs-color: var(--inverted-bg-color);
+
+  /* ------------------------------ CONTACT FORM ------------------------------ */
+
+  --contactform-boxshadow-color: 0 20px 25px -5px rgba(29, 78, 216, 0.4), 0 10px 10px -5px rgba(29, 78, 216, 0.08);
+
+  --contactform-inputs-border-color: var(--gray-400);
+
+  --contactform-inputs-placeholder-color: var(--gray-300);
+
+  --contactform-boxshadow-inputs-color: 0 10px 18px -5px rgba(29, 78, 216, 0.4), 0 5px 5px -5px rgba(29, 78, 216, 0.08);
 }

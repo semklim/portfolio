@@ -75,3 +75,34 @@
   display: block;
   padding-top: 5px;
 }
+
+@media (max-width: 600px) {
+  .cardFooterTitle {
+    padding-top: 0;
+  }
+
+  .cardFooterDescription {
+    flex-grow: 1;
+  }
+
+  .cardFooterTitle,
+  .cardFooterDescription {
+    padding: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--project-card-border-color);
+  }
+
+  .cardFooterTitle {
+    font-size: 1.4rem;
+  }
+
+  .links {
+    margin-top: 8px;
+  }
+
+  .cardFooterDescription {
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: normal;
+  }
+}

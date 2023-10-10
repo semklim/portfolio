@@ -60,6 +60,7 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
               cols={14}
               rows={6}
               aria-label="Message"
+              placeholder="Write me, your proposal"
             />
           </div>
 

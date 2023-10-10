@@ -43,9 +43,10 @@
 .button-82-front {
   display: block;
   position: relative;
-  padding: 12px 27px;
+  padding: 10px 30px;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 14px;
+  font-weight: 500;
   color: white;
   background: var(--sky-700);
   will-change: transform;
@@ -57,6 +58,7 @@
   .button-82-front {
     font-size: 1.25rem;
     padding: 12px 42px;
+    font-weight: normal;
   }
 }
 

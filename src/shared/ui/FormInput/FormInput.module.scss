@@ -16,8 +16,13 @@
   padding-right: 1.25rem;
   border-radius: 0.375rem;
   border-width: 1px;
-  border-color: #d1d5db;
   border-opacity: 0.5;
   width: 100%;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--bg-color);
+  border-color: var(--contactform-inputs-border-color);
+  box-shadow: var(--contactform-boxshadow-inputs-color);
+}
+
+.inputEl::placeholder {
+  color: var(--contactform-inputs-placeholder-color);
 }
