@@ -1,5 +1,6 @@
 .projectSection {
   padding: 0 1rem;
+  margin-top: 70px;
   padding-bottom: 1.5rem;
   width: 100%;
 }
@@ -59,6 +60,12 @@
 @media (min-width: 768px) {
   .project {
     max-width: 768px;
+  }
+}
+
+@media (min-width: 900px) {
+  .projectSection {
+    margin-top: 0;
   }
 }
 

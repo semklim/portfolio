@@ -1,0 +1,26 @@
+.breadcrumbs {
+  margin-top: 10px;
+  display: flex;
+  align-self: flex-start;
+  color: var(--breadcrumbs-color);
+  font-weight: 400;
+}
+
+.currentPage {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.breadcrumbs > * {
+  vertical-align: top;
+}
+.link_breadcrumbs_icon {
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.link_breadcrumbs_arrow {
+  vertical-align: sub;
+  display: inline-block;
+}

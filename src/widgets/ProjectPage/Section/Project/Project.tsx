@@ -2,12 +2,11 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import { memo } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { getProject } from '@/entities/projectByParams';
 import { ProjectBody, ProjectHeader } from '@/entities/ProjectWithDetail';
-import { ReactComponent as ArrowIcon } from '@/shared/assets/icons/breadcrumbsArrow.svg';
-import homeIcon from '@/shared/assets/icons/home.svg';
+import { Breadcrumbs } from '@/features';
 import { ProjectsInfo } from '@/shared/data/constants';
 import { classNames, instanceOf } from '@/shared/libs';
 
@@ -22,30 +21,16 @@ type RouteParams = {
 };
 
 const Project = memo(({ className }: ProjectProps) => {
-  const params = useParams<RouteParams>();
-  const formattedName = params.name ? params.name.replace('_', ' ') : undefined;
-  const project = getProject(formattedName);
+  const { name } = useParams<RouteParams>();
+  const project = getProject(name);
 
   return (
     <section className={classNames(cls.projectSection, {}, [className])}>
-      <div className={cls.breadcrumbs}>
-        <Link to="/" preventScrollReset aria-label="home">
-          <img src={homeIcon} className={cls.link_breadcrumbs_icon} alt="" width={20} />
-          <span>Home</span>
-          <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
-        </Link>
-        <Link
-          to={`/project/${formattedName}`}
-          className={cls.currentPage}
-          preventScrollReset
-          aria-label={formattedName}>
-          {formattedName}
-        </Link>
-      </div>
+      <Breadcrumbs basePath="/project" />
       {instanceOf<ProjectsInfo>(project, 'title') ? (
         <div className={classNames(cls.project)}>
           <Helmet>
-            <title>{formattedName}</title>
+            <title>{name}</title>
           </Helmet>
           <ProjectHeader project={project} />
           <ProjectBody project={project} />
