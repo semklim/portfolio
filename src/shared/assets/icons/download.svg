@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<defs>
+  <filter id="ldio-18qyka6r0ufh-filter" x="-100%" y="-100%" width="300%" height="300%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3.2"></feGaussianBlur>
+    <feComponentTransfer result="cutoff">
+      <feFuncA type="table" tableValues="0 0 0 0 0 0 1 1 1 1 1"></feFuncA>
+    </feComponentTransfer>
+  </filter>
+</defs>
+<g filter="url(#ldio-18qyka6r0ufh-filter)"><g transform="translate(50 50)">
+<g>
+  <circle cx="20" cy="0" r="5" fill="#1c4595">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="4.8;11.2;4.8" dur="4s" repeatCount="indefinite" begin="-0.25s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="4s" repeatCount="indefinite" begin="0s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="20" cy="0" r="5" fill="#e72424">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="4.8;11.2;4.8" dur="2s" repeatCount="indefinite" begin="-0.2s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="2s" repeatCount="indefinite" begin="-0.05s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="20" cy="0" r="5" fill="#01080a">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="4.8;11.2;4.8" dur="1.3333333333333333s" repeatCount="indefinite" begin="-0.15s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="1.3333333333333333s" repeatCount="indefinite" begin="-0.1s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="20" cy="0" r="5" fill="#e7e5e8">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="4.8;11.2;4.8" dur="1s" repeatCount="indefinite" begin="-0.1s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="1s" repeatCount="indefinite" begin="-0.15s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="20" cy="0" r="5" fill="#fbbc42">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="4.8;11.2;4.8" dur="0.8s" repeatCount="indefinite" begin="-0.05s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="0.8s" repeatCount="indefinite" begin="-0.2s"></animateTransform>
+</g>
+</g></g>
+</svg>

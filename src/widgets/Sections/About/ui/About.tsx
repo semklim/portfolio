@@ -48,7 +48,7 @@ const About = memo(({ className }: AboutProps) => {
             className={cls.card}>
             <input className={cls.cardCheckBox} type="radio" name="showTitle" id={`tech${name}`} />
             <label htmlFor={`tech${name}`}>
-              <img className={cls.cardImg} loading="lazy" src={link} alt={name} />
+              <img className={cls.cardImg} loading="lazy" width={48} height={48} src={link} alt={name} />
             </label>
             <h3 className={cls.cardTitle}>{name}</h3>
           </motion.div>

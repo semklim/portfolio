@@ -3,6 +3,7 @@ import { useState } from 'react';
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
+import { ReactComponent as DownloadSvg } from '@/shared/assets/icons/download.svg';
 import { ProjectsInfo } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
@@ -15,28 +16,25 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ className, project }: ProjectCardProps) => {
-  const { title, desc, mainImg, video } = project;
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isShowImg, setIsShowImg] = useState<boolean>(false);
+  const { title, desc, video } = project;
+  const [isLoadingVideo, setIsLoadingVideo] = useState<boolean>(true);
   return (
     <div className={classNames(cls.wrapper, {}, [className])}>
-      <div className="header">
-        <LazyLoad onContentVisible={() => setIsShowImg(true)}>
+      <LazyLoad className={cls.content}>
+        <>
           <video
             src={video}
             autoPlay
             muted
             loop
-            style={{ display: isLoading ? 'none' : 'block' }}
-            onCanPlay={() => setIsLoading(false)}
+            style={{ display: isLoadingVideo ? 'none' : 'block' }}
+            onCanPlay={() => setIsLoadingVideo(false)}
           />
-        </LazyLoad>
-        {isShowImg && !isLoading ? (
-          <img className={cls.content} src={mainImg} alt={title} style={{ display: !isLoading ? 'none' : 'block' }} />
-        ) : (
-          <div className={cls.content} style={{ aspectRatio: '16 / 9', background: 'var(--gray-500)' }} />
-        )}
-      </div>
+          <div className={cls.loading} style={{ display: isLoadingVideo ? 'flex' : 'none' }}>
+            <DownloadSvg width={120} height={120} />
+          </div>
+        </>
+      </LazyLoad>
       <div className={cls.cardFooter}>
         <h4 className={cls.cardFooterTitle}>{title}</h4>
         <p className={cls.cardFooterDescription}>{desc}</p>
