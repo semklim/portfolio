@@ -6,9 +6,9 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import tsconfigPaths from 'vite-tsconfig-paths';
 import crypto from 'crypto';
 
-const styles = 'https://semklim.vercel.app https://fonts.googleapis.com';
-const scripts = 'https://semklim.vercel.app';
-const fonts ='https://fonts.googleapis.com https://fonts.gstatic.com';
+const styles = 'https://semklim.vercel.app https://fonts.googleapis.com http://semklim.vercel.app http://fonts.googleapis.com';
+const scripts = 'https://semklim.vercel.app http://semklim.vercel.app';
+const fonts ='https://fonts.googleapis.com https://fonts.gstatic.com http://fonts.googleapis.com http://fonts.gstatic.com';
 
 function generateNonce() {
   return crypto.randomBytes(16).toString('base64');
@@ -29,7 +29,7 @@ export default defineConfig({
     minify: true,
     inject: {
       data: {
-        nonce: `"default-src 'self'; script-src 'self' 'nonce-${nonce.script}' 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline'; script-src-elem 'self' ${scripts}; font-src 'self' ${fonts}; img-src 'self' data:;"`
+        nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline'; script-src-elem 'self' ${scripts}; font-src 'self' ${fonts}; img-src 'self' data:;"`
       },
     },
   })
