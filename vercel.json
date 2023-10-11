@@ -11,8 +11,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self' https://semklim.vercel.app; script-src 'self' https://semklim.vercel.app http:;
-          script-src-elem 'self' https://semklim.vercel.app http:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: http:; style-src 'self' https://semklim.vercel.app https://fonts.googleapis.com 'unsafe-inline' http:;"
+          "value": "default-src 'self'; base-uri 'self' https://semklim.vercel.app; script-src 'self' https://semklim.vercel.app http:; script-src-elem 'self' https://semklim.vercel.app http:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: http:; style-src 'self' https://semklim.vercel.app https://fonts.googleapis.com 'unsafe-inline' http:;"
         }
       ]
     }
