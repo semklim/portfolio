@@ -32,6 +32,7 @@ const ThemeSwitcher = memo((props: ThemeSwitcherProps) => {
         className={classNames(cls.slider, {}, [cls.round, className])}
         role="radio"
         aria-checked={checked}
+        aria-label="Theme Switcher"
         onClick={clickOnSwitcher}
       />
     </label>

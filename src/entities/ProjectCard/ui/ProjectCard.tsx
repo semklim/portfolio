@@ -36,7 +36,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         </>
       </LazyLoad>
       <div className={cls.cardFooter}>
-        <h4 className={cls.cardFooterTitle}>{title}</h4>
+        <h3 className={cls.cardFooterTitle}>{title}</h3>
         <p className={cls.cardFooterDescription}>{desc}</p>
         <div className={cls.links}>
           <Link to={`/project/${title}`} className={cls.showMore} preventScrollReset aria-label={title}>
