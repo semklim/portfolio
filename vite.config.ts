@@ -2,11 +2,38 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
+import { createHtmlPlugin } from 'vite-plugin-html'
 import tsconfigPaths from 'vite-tsconfig-paths';
+import crypto from 'crypto';
+
+const styles = 'https://semklim.vercel.app https://fonts.googleapis.com';
+const scripts = 'https://semklim.vercel.app';
+const fonts ='https://fonts.googleapis.com https://fonts.gstatic.com';
+
+function generateNonce() {
+  return crypto.randomBytes(16).toString('base64');
+}
+
+const nonce = {
+  style: generateNonce(),
+  script: generateNonce(),
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svgr(), tsconfigPaths(), react()],
+  plugins: [
+    svgr(),
+    tsconfigPaths(),
+    react(),
+    createHtmlPlugin({
+    minify: true,
+    inject: {
+      data: {
+        nonce: `"default-src 'self'; script-src 'self' 'nonce-${nonce.script}' 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline'; script-src-elem 'self' ${scripts}; font-src 'self' ${fonts}; img-src 'self' data:;"`
+      },
+    },
+  })
+],
   define: {
     __URL__: JSON.stringify('http://localhost::3000'),
     __PORT__: 3000,
