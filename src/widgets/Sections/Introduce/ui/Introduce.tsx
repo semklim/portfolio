@@ -30,7 +30,7 @@ const Introduce = memo((props: IntroduceProps) => {
           <a href="https://github.com/semklim" className={cls.link} title="gitHub">
             <img className={cls.imgOfLink} src={gitHub} width={40} height={40} alt="gitHub" />
           </a>
-          <a href="www.linkedin.com/in/roman-klymashenko-a2a483238" className={cls.link} title="LinkedIn">
+          <a href="https://www.linkedin.com/in/roman-klymashenko-a2a483238/" className={cls.link} title="LinkedIn">
             <img className={cls.imgOfLink} src={linkedin} width={40} height={40} alt="linkedIn" />
           </a>
         </div>
