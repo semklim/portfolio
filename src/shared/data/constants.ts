@@ -136,10 +136,15 @@ export const projects: ProjectsInfo[] = [
     mainImg: expressApiImg,
     video: undefined,
     bigVideo: expressApiBigVideo,
-    gitLink: 'https://github.com/semklim/BrShop_angular',
-    deployed: 'https://brshoes.pp.ua/',
+    gitLink: 'https://github.com/semklim/Expressjs_Mongo_Api_example',
+    deployed: 'https://webapi-example.vercel.app/',
     techs: [express, nodejs, mongodb, thunder, html, css, javascript],
-    architectPatterns: [],
+    architectPatterns: [
+      {
+        name: 'Model-View-Controller',
+        link: 'https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller',
+      },
+    ],
     imgs: [],
     usedApi: [],
   },
