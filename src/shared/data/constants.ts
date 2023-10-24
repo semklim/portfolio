@@ -1,8 +1,11 @@
 import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
+// import expressApiVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
 import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
+import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
+import expressApiImg from '@/shared/assets/projects/expressApi/expressApi.webp';
 import spotifyBigVideo from '@/shared/assets/projects/spotify/spotify.mp4';
 import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
 import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
@@ -55,6 +58,7 @@ export type ProjectsInfo = {
   date: string;
   tags: string[];
   desc: string;
+  descBig?: string;
   gitLink: string;
   deployed?: string;
   video?: string;
@@ -103,6 +107,42 @@ export const aboutMe: AboutMe[] = [
 ];
 
 export const projects: ProjectsInfo[] = [
+  {
+    title: 'Express API',
+    desc: 'This pet project is a Fullstack application with key features including Authentication and Registration API. It utilizes CORS, JSON Web Tokens, nodemailer, Express.js, and MongoDB for seamless functionality.',
+    descBig: `
+    Key Features:
+
+    1) Authentication and Registration API: The project boasts a sophisticated Authentication and Registration API that ensures a seamless and secure onboarding process for users.
+
+    2) CORS with Whitelist: Cross-Origin Resource Sharing (CORS) is implemented with a carefully curated whitelist, enhancing security by controlling which origins are allowed to access the server resources.
+
+    3) JWT for Token-Based Authentication: JSON Web Tokens (JWT) play a pivotal role in ensuring secure communication between the frontend and backend. They are utilized for generating access and refresh tokens, providing a scalable and efficient authentication mechanism.
+
+    4) Nodemailer Integration: FullStack Pet-Project employs Nodemailer to facilitate the sending of activation emails to users upon successful registration. This adds an extra layer of security and verification to the account creation process.
+
+    5) Express.js Backend Framework: The backend runs on Express.js, a powerful framework for Node.js web apps. It makes building APIs a breeze and keeps the conversation between the client and server nice and smooth.
+
+    6) MongoDB Database Integration: MongoDB serves as the project's database, storing user credentials securely. The server performs validation checks on user-provided email and password data before persisting it in the database, ensuring data integrity.
+
+    7) Token Management: After registration, users are issued both access and refresh tokens. The refresh token is securely stored in the browser's cookies with the 'httpOnly' flag, enhancing security by preventing client-side access.
+
+    8) Activation Workflow: Upon registration, users receive an email with an activation link. The server validates the email and password before activating the account, maintaining a stringent registration process.
+
+    On the front-end, users can explore the registration process, activate their accounts through the provided link, and log in to experience the full functionality of the application.
+    `,
+    date: 'Oct 20,2023',
+    tags: ['Front-end', 'Back-end', 'mailer', 'Pet-project'],
+    mainImg: expressApiImg,
+    video: undefined,
+    bigVideo: expressApiBigVideo,
+    gitLink: 'https://github.com/semklim/BrShop_angular',
+    deployed: 'https://brshoes.pp.ua/',
+    techs: [express, nodejs, mongodb, thunder, html, css, javascript],
+    architectPatterns: [],
+    imgs: [],
+    usedApi: [],
+  },
   {
     title: 'BrShoes',
     desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',

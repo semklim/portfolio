@@ -16,20 +16,29 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ className, project }: ProjectCardProps) => {
-  const { title, desc, video } = project;
+  const { title, desc, video, mainImg } = project;
   const [isLoadingVideo, setIsLoadingVideo] = useState<boolean>(true);
   return (
     <div className={classNames(cls.wrapper, {}, [className])}>
       <LazyLoad className={cls.content}>
         <>
-          <video
-            src={video}
-            autoPlay
-            muted
-            loop
-            style={{ display: isLoadingVideo ? 'none' : 'block' }}
-            onCanPlay={() => setIsLoadingVideo(false)}
-          />
+          {video ? (
+            <video
+              src={video}
+              autoPlay
+              muted
+              loop
+              style={{ display: isLoadingVideo ? 'none' : 'block' }}
+              onCanPlay={() => setIsLoadingVideo(false)}
+            />
+          ) : (
+            <img
+              src={mainImg}
+              alt={title}
+              style={{ display: isLoadingVideo ? 'none' : 'block' }}
+              onLoad={() => setIsLoadingVideo(false)}
+            />
+          )}
           <div className={cls.loading} style={{ display: isLoadingVideo ? 'flex' : 'none' }}>
             <DownloadSvg width={120} height={120} />
           </div>

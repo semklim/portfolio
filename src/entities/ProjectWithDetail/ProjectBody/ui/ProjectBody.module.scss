@@ -68,6 +68,12 @@
   display: grid;
   flex: 60% 1 1;
 }
+
+.desc_txt article pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
 .desc_txt h2,
 .desc_tech h2 {
   margin-bottom: 20px;

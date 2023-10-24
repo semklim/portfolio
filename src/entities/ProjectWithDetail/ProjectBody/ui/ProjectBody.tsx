@@ -13,7 +13,8 @@ interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
 }
 
 const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
-  const { title, desc, mainImg, video, bigVideo, techs, usedApi, architectPatterns, gitLink, deployed } = project;
+  const { title, desc, descBig, mainImg, video, bigVideo, techs, usedApi, architectPatterns, gitLink, deployed } =
+    project;
 
   return (
     <section className={classNames(cls.projectWithDetail, {}, [className])}>
@@ -59,6 +60,7 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
           <article>
             <h2>About Project</h2>
             <p>{desc}</p>
+            {descBig ? <pre>{descBig}</pre> : ''}
           </article>
           <div className={cls.readyWorks}>
             <h2>Check this work on:</h2>
