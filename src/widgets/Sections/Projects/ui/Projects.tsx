@@ -4,8 +4,8 @@ import { memo } from 'react';
 import { ProjectCard } from '@/entities';
 import { projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
-import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
+// import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 import cls from './Projects.module.scss';
 
 interface ProjectsProps {
@@ -43,9 +43,9 @@ const Projects = memo(({ className }: ProjectsProps) => {
           ))}
         </motion.div>
       </div>
-      <div className={cls.showMoreBtn}>
+      {/* <div className={cls.showMoreBtn}>
         <ButtonPushable btnTxt="Show More" />
-      </div>
+      </div> */}
     </section>
   );
 });
