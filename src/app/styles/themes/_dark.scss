@@ -1,10 +1,15 @@
 .app.dark {
   --bg-color: var(--gray-950);
-  --inverted-bg-color: var(--gray-50);
+  --inverted-bg-color: var(--gray-100);
 
   --primary-color: var(--blue-950);
   --secondary-color: var(--sky-500);
   --navbar-links-color: var(--bg-color);
+
+  /* ------------------------------- GIT OCTOPUS ------------------------------ */
+
+  --fill-git-octo: #fff;
+  --color-git-octo: #151513;
 
   /* ---------------------------- Introduce Section ---------------------------- */
   --color-description: var(--inverted-bg-color);

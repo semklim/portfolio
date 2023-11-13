@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { GitOctopus } from '@/shared';
 import gitHub from '@/shared/assets/socials/github.svg';
 import instagram from '@/shared/assets/socials/instagram.svg';
 import linkedin from '@/shared/assets/socials/linkedin.svg';
@@ -17,6 +18,7 @@ const Introduce = memo((props: IntroduceProps) => {
   const { className, children, ...otherProps } = props;
   return (
     <section id="home" className={classNames(cls.introduce, {}, [className])} {...otherProps}>
+      <GitOctopus target="_blank" aria-label="View source on GitHub" rel="noreferrer" title="View source on GitHub" />
       <h1 className={cls.descriptionBox}>
         <span className={cls.introduceMe}>Hi, I&rsquo;m Roman</span>
         <span className={cls.introduceMe}>Front End Developer</span>

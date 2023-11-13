@@ -13,12 +13,16 @@
       display: block;
     }
 
+    .nav {
+      justify-content: end;
+    }
+
     .nav__logo {
       height: var(--navbar-height);
       padding: 0 10px 0 var(--header-padding);
       border-top-right-radius: 20%;
       border-bottom-right-radius: 20%;
-      display: flex;
+      display: none;
       align-items: center;
       background-color: var(--inverted-bg-color);
     }

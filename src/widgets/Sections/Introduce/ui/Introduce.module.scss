@@ -1,6 +1,7 @@
 @use '@/app/styles/text-border/text-border' as *;
 @use '@/app/styles/media/media' as *;
 .introduce {
+  position: relative;
   padding: 0 20px;
   width: 100%;
   display: flex;
