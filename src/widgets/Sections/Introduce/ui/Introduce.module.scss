@@ -54,6 +54,11 @@
 
 .imgOfLink {
   width: 40px;
+  transition: 0.5s;
+}
+
+.imgOfLink:hover {
+  transform: scale(1.2);
 }
 
 .getResume a {
@@ -67,6 +72,11 @@
   font-weight: 900;
   font-size: 18px;
   margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.getResume a:hover {
+  transform: scale(1.2);
 }
 
 @include mobile();

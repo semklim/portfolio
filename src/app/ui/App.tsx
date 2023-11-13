@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { ScrollToTop } from '@/features';
 import bgImg from '@/shared/assets/bg/cloudBg.webp';
 import { classNames } from '@/shared/libs';
+import { Footer } from '@/widgets/Footer';
 import { Navbar } from '@/widgets/Navbar';
 
 import { AppRouter } from '../provider/router';
@@ -26,6 +27,7 @@ const App = () => {
         ),
         [],
       )}
+      <Footer />
     </div>
   );
 };

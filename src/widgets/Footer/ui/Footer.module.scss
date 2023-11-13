@@ -1,0 +1,38 @@
+.footer {
+  background: var(--gray-700);
+  min-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  color: var(--gray-50);
+}
+
+.followMe {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+}
+
+.social-links {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgOfLink {
+  width: 40px;
+  transition: 0.5s;
+}
+
+.imgOfLink:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
+  margin: 1rem 0;
+  text-align: center;
+}
