@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-boolean-value */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { memo, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
@@ -40,7 +40,7 @@ const links: LinksToSection[] = [
   },
 ];
 
-const Navbar = memo(({ className }: NavbarProps) => {
+const Navbar = ({ className }: NavbarProps) => {
   const [isOpened, setIsOpened] = useState(false);
   const [offsetScroll, setOffsetScroll] = useState(-50);
   useEffect(() => {
@@ -99,6 +99,6 @@ const Navbar = memo(({ className }: NavbarProps) => {
       </nav>
     </header>
   );
-});
+};
 
 export { Navbar };

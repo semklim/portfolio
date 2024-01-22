@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { ReactComponent as DownloadSvg } from '@/shared/assets/icons/download.svg';
 import { ProjectsInfo } from '@/shared/data/constants';
-import { classNames } from '@/shared/libs';
+import { classNames, createRouteParams } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
 import cls from './ProjectCard.module.scss';
@@ -48,7 +48,11 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         <h3 className={cls.cardFooterTitle}>{title}</h3>
         <p className={cls.cardFooterDescription}>{desc}</p>
         <div className={cls.links}>
-          <Link to={`/project/${title}`} className={cls.showMore} preventScrollReset aria-label={title}>
+          <Link
+            to={`/project/${createRouteParams(title)}`}
+            className={cls.showMore}
+            preventScrollReset
+            aria-label={title}>
             <ButtonPushable btnTxt="Show details" />
           </Link>
         </div>

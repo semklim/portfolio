@@ -36,6 +36,8 @@ import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
 import webpack from '@/shared/assets/techStack/Webpack.svg';
 
+import { createRouteParams } from '../libs';
+
 export type Tech = {
   name: string;
   link: string;
@@ -52,6 +54,7 @@ export type ArchitectPatterns = {
 };
 
 export type ProjectsInfo = {
+  id: string;
   mainImg: string;
   imgs: string[] | [];
   title: string;
@@ -108,6 +111,9 @@ export const aboutMe: AboutMe[] = [
 
 export const projects: ProjectsInfo[] = [
   {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'Express API',
     desc: 'This pet project is a Fullstack application with key features including Authentication and Registration API. It utilizes CORS, JSON Web Tokens, nodemailer, Express.js, and MongoDB for seamless functionality.',
     descBig: `
@@ -149,8 +155,18 @@ export const projects: ProjectsInfo[] = [
     usedApi: [],
   },
   {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'BrShoes',
     desc: 'This is a pet-project of internet shop where you can buy a shoes, admin can add new shoes and clients can add comment for each product and buy it. All data about products refresh in real time and clients always see actual information.',
+    descBig: `
+      This is a small online store I've been working on! It's a place where you can easily buy shoes. The person in charge can update the shoe options, and customers can leave comments and purchase their favorite pairs. Everything about the products is updated instantly, so customers always get the latest info.
+
+      I've also made sure the website shows up well on Google by making it SEO-friendly. To help with loading speed, I've included a feature that loads images only when needed, keeping things quick and smooth.
+
+      And to make sure everything runs smoothly, I've tested it using a framework called Jest.
+    `,
     date: 'Aug 08,2023',
     tags: ['Front-end', 'Shop', 'Pet-project'],
     mainImg: brShoesImg,
@@ -173,6 +189,9 @@ export const projects: ProjectsInfo[] = [
     imgs: [],
   },
   {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'Currency Convertor',
     desc: 'Simple currency conversion app designed with simplicity in mind. You gain access to a world of 145+ currencies. Powered by FastForex API, it delivers real-time exchange rates. The intuitive Angular interface ensures effortless and precise currency conversion.',
     date: 'Jun 20,2023',
@@ -187,6 +206,9 @@ export const projects: ProjectsInfo[] = [
     imgs: [],
   },
   {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'Spotify Demo',
     desc: 'This project is a exam project that aims to help me and my command learn how to use the Spotify Web API, built entirely with HTML, CSS, and JavaScript. The application uses the Spotify Web API to retrieve data about artists, albums, and tracks, and presents it in a user-friendly way.',
     date: 'Apr 10,2023',
@@ -202,6 +224,9 @@ export const projects: ProjectsInfo[] = [
     imgs: [],
   },
   {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'Towers Battle',
     desc: 'This is a canvas game. All you need is yourself and a friend. Each of you decides which tower to choose and then hits the play button. The winner is the one whose tower survives. The whole game is based on randomness.',
     date: 'Jan 15,2023',

@@ -17,12 +17,12 @@ interface ProjectProps {
 }
 
 type RouteParams = {
-  name: string;
+  id: string;
 };
 
 const Project = memo(({ className }: ProjectProps) => {
-  const { name } = useParams<RouteParams>();
-  const project = getProject(name);
+  const { id } = useParams<RouteParams>();
+  const project = getProject(id);
 
   return (
     <section className={classNames(cls.projectSection, {}, [className])}>
@@ -30,7 +30,7 @@ const Project = memo(({ className }: ProjectProps) => {
       {instanceOf<ProjectsInfo>(project, 'title') ? (
         <div className={classNames(cls.project)}>
           <Helmet>
-            <title>{name}</title>
+            <title>{project.title}</title>
           </Helmet>
           <ProjectHeader project={project} />
           <ProjectBody project={project} />
