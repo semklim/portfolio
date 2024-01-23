@@ -3,20 +3,20 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useState } from 'react';
-import { Link as LinkRouter } from 'react-router-dom';
-import { Link } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
 
 import { HamburgerButton, ThemeSwitcher } from '@/features';
 import react from '@/shared/assets/techStack/React.svg';
 import { classNames } from '@/shared/libs';
 
 import cls from './Navbar.module.scss';
+import { NavLinks } from './NavLinks/NavLinks';
 
 interface NavbarProps {
   className?: string;
 }
 
-interface LinksToSection {
+export interface LinksToSection {
   name: string;
   id: string;
 }
@@ -41,8 +41,10 @@ const links: LinksToSection[] = [
 ];
 
 const Navbar = ({ className }: NavbarProps) => {
+  const location = useLocation();
   const [isOpened, setIsOpened] = useState(false);
   const [offsetScroll, setOffsetScroll] = useState(-50);
+
   useEffect(() => {
     function checkSize() {
       if (window.outerWidth <= 900 && offsetScroll <= 50) {
@@ -69,26 +71,13 @@ const Navbar = ({ className }: NavbarProps) => {
       <nav className={cls.nav}>
         <div className={cls.nav__logo}>
           <h1>
-            <LinkRouter to="/">
+            <Link to="/">
               <img src={react} alt="react" width="50" height="50" />
-            </LinkRouter>
+            </Link>
           </h1>
         </div>
         <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })}>
-          {links.map((link) => (
-            <li className={cls.nav__button} key={link.id}>
-              <Link
-                className={classNames(cls.nav__link)}
-                activeClass={cls.active}
-                offset={offsetScroll}
-                spy={true}
-                smooth={true}
-                to={link.id}
-                onClick={showOrHideMenu}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
+          <NavLinks links={links} offsetScroll={offsetScroll} handleOnClick={showOrHideMenu} location={location} />
           <li className={classNames(cls.nav__button, {}, ['switcher'])}>
             <ThemeSwitcher clickOnSwitcher={showOrHideMenu} />
           </li>

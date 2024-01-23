@@ -1,0 +1,18 @@
+@import '../../../../app/styles/media/media';
+
+.nav__button {
+  color: var(--bg-color);
+}
+
+.nav__link {
+  color: inherit;
+  cursor: pointer;
+}
+.active {
+  padding: 6px 10px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--blue-500);
+}
+@include mobile();

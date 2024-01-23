@@ -15,6 +15,7 @@ interface BreadcrumbsProps {
 const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
   const { pathname } = useLocation();
   const arrOfPaths: PathData[] = createBreadcrumbs(pathname, basePath);
+
   return (
     <div className={classNames(cls.breadcrumbs, {}, [className])}>
       <Link to="/" preventScrollReset aria-label="home">
@@ -22,6 +23,7 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
         <span>Home</span>
         <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
       </Link>
+
       {arrOfPaths.map(({ title, link }, i) => {
         if (i < arrOfPaths.length - 1) {
           return (
@@ -31,6 +33,7 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
             </Link>
           );
         }
+
         return (
           <Link key={title} to={link} className={cls.currentPage} aria-label={title}>
             {title}

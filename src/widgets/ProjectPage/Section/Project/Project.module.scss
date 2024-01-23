@@ -3,6 +3,10 @@
   margin-top: 70px;
   padding-bottom: 1.5rem;
   width: 100%;
+
+  @media (max-width: 900px) {
+    margin-top: 50px;
+  }
 }
 
 .project {

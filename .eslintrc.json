@@ -40,12 +40,7 @@
         "usePrettierrc": true
       }
     ],
-    "react/jsx-props-no-spreading": [
-      1,
-      {
-        "explicitSpread": "ignore"
-      }
-    ],
+    "react/jsx-props-no-spreading": "ignore",
     "react/require-default-props": "off",
     "import/extensions": "off",
     "jsx-a11y/interactive-supports-focus": "off",
