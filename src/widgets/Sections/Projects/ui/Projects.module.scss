@@ -2,7 +2,7 @@
 
 .projects {
   width: 100%;
-  padding: 2rem 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,10 +25,6 @@
   margin-top: 1rem;
   font: var(--font-sub-title);
   color: var(--accent-color-project-card);
-}
-
-.subTitle__txt {
-  border-bottom: 2px solid var(--gray-50);
 }
 
 .projectsCard {
