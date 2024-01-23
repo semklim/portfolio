@@ -12,6 +12,7 @@ interface ButtonPushableProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const ButtonPushable = memo((props: ButtonPushableProps) => {
   const { className, btnTxt, type, ...otherProps } = props;
+
   return (
     <AppButton type={type || 'button'} className={classNames(cls.buttonPushable, {}, [className])} {...otherProps}>
       <span className={cls['button-82-shadow']} />

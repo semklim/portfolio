@@ -1,4 +1,4 @@
-export type PathData = {
+export type Paths = {
   title: string;
   link: string;
 };
@@ -8,11 +8,11 @@ export type PathData = {
  *
  * Breadcrumbs provide a navigational trail for users to understand their current location
  * within the application. This function takes a path and an optional base path, then
- * parses them to create an array of `PathData` objects representing each level of the breadcrumb.
+ * parses them to create an array of `Paths` objects representing each level of the breadcrumb.
  *
  * @param {string} path - The current path for which breadcrumbs are generated.
  * @param {string} [basePath=''] - An optional base path to be removed from the beginning of the provided path.
- * @returns {PathData[]} - An array of `PathData` objects representing each level of the breadcrumb.
+ * @returns {Paths[]} - An array of `Paths` objects representing each level of the breadcrumb.
  *
  * @example
  * createBreadcrumbs(
@@ -42,19 +42,15 @@ export type PathData = {
  *   { title: "roman", link: "/project/Currency Convertor/test/test TEST/roman" }
  * ]
  */
-export function createBreadcrumbs(path: string, basePath: string = ''): PathData[] {
-  // Formatting the base path and decoding the provided path
+export function createBreadcrumbs(path: string, basePath: string = ''): Paths[] {
+  const arrOfPaths: Paths[] = [];
   const basePathFormatted = basePath.trim() === '/' ? '' : basePath;
   const decoded = decodeURI(path);
-
-  // Extracting individual crumbs from the path
   const arrOfCrumbs = decoded
     .replace(basePathFormatted, '')
     .split('/')
     .filter((el) => el);
 
-  // Generating breadcrumb data based on the crumbs
-  const arrOfPaths: PathData[] = [];
   arrOfCrumbs.forEach((el, i) => {
     if (i) {
       arrOfPaths.push({
@@ -74,7 +70,7 @@ export function createBreadcrumbs(path: string, basePath: string = ''): PathData
 }
 
 /**
- * @typedef {Object} PathData - Represents a single level of breadcrumb data.
+ * @typedef {Object} Paths - Represents a single level of breadcrumb data.
  * @property {string} title - The title or label for the breadcrumb level.
  * @property {string} link - The link or URL associated with the breadcrumb level.
  */

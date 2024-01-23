@@ -17,6 +17,7 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const AppButton: FC<AppButtonProps> = (props) => {
   const { className, children, theme = ButtonTheme.CLEAR, type, ...otherProps } = props;
+
   return (
     <button
       type={type ? type : 'button'}

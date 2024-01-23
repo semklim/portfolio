@@ -4,41 +4,27 @@ import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as DownloadSvg } from '@/shared/assets/icons/download.svg';
-import { ProjectsInfo } from '@/shared/data/constants';
+import { Projects } from '@/shared/data/constants';
 import { classNames, createRouteParams } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
 import cls from './ProjectCard.module.scss';
+import { LoadingVideo } from './LoadingVideo';
 
 interface ProjectCardProps {
   className?: string;
-  project: ProjectsInfo;
+  project: Projects;
 }
 
 const ProjectCard = ({ className, project }: ProjectCardProps) => {
-  const { title, desc, video, mainImg } = project;
+  const { title, desc } = project;
   const [isLoadingVideo, setIsLoadingVideo] = useState<boolean>(true);
+
   return (
     <div className={classNames(cls.wrapper, {}, [className])}>
       <LazyLoad className={cls.content}>
         <>
-          {video ? (
-            <video
-              src={video}
-              autoPlay
-              muted
-              loop
-              style={{ display: isLoadingVideo ? 'none' : 'block' }}
-              onCanPlay={() => setIsLoadingVideo(false)}
-            />
-          ) : (
-            <img
-              src={mainImg}
-              alt={title}
-              style={{ display: isLoadingVideo ? 'none' : 'block' }}
-              onLoad={() => setIsLoadingVideo(false)}
-            />
-          )}
+          <LoadingVideo isLoading={isLoadingVideo} project={project} onLoad={() => setIsLoadingVideo(false)} />
           <div className={cls.loading} style={{ display: isLoadingVideo ? 'flex' : 'none' }}>
             <DownloadSvg width={120} height={120} />
           </div>

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import { HTMLAttributes, memo } from 'react';
 
-import { ProjectsInfo } from '@/shared/data/constants';
+import { Projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
@@ -9,7 +9,7 @@ import cls from './ProjectBody.module.scss';
 
 interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
   className?: string;
-  project: ProjectsInfo;
+  project: Projects;
 }
 
 const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
@@ -41,26 +41,26 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
           </div>
           <ul className={cls.apis}>
             <h2>API that use:</h2>
-            {usedApi.length > 0 ? usedApi.map((el) => <li key={el}>{el}</li>) : <li>Don&apos;t use</li>}
+
+            {usedApi.length > 0 && usedApi.map((el) => <li key={el}>{el}</li>)}
           </ul>
           <ul className={cls.arch}>
             <h2>Architect patterns that use:</h2>
-            {architectPatterns.length > 0 ? (
+
+            {architectPatterns.length > 0 &&
               architectPatterns.map((el) => (
                 <li key={el.name}>
                   <a href={el.link}>{el.name}</a>
                 </li>
-              ))
-            ) : (
-              <li>Don&apos;t use</li>
-            )}
+              ))}
           </ul>
         </div>
         <div className={cls.desc_txt}>
           <article>
             <h2>About Project</h2>
             <p>{desc}</p>
-            {descBig ? <pre>{descBig}</pre> : ''}
+
+            {descBig && <pre>{descBig}</pre>}
           </article>
           <div className={cls.readyWorks}>
             <h2>Check this work on:</h2>
@@ -68,12 +68,11 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
               <a href={gitLink}>
                 <ButtonPushable btnTxt="GitHub" />
               </a>
-              {deployed ? (
+
+              {deployed && (
                 <a href={deployed}>
                   <ButtonPushable btnTxt="Live" />
                 </a>
-              ) : (
-                ''
               )}
             </div>
           </div>

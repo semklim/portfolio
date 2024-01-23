@@ -12,6 +12,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = (props) => {
   const { className } = props;
+
   return (
     <footer id="contact" className={classNames(cls.contactForm, {}, [className])}>
       <div className={cls['leading-loose']}>

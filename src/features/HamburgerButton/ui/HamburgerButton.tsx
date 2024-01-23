@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, memo, useEffect, useState } from 'react';
+import { ButtonHTMLAttributes, useEffect, useState } from 'react';
 
 import { classNames } from '@/shared/libs';
 import { AppButton } from '@/shared/ui/AppButton/AppButton';
@@ -10,12 +10,14 @@ interface HamburgerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isOpened: boolean;
 }
 
-const HamburgerButton = memo((props: HamburgerButtonProps) => {
+const HamburgerButton = (props: HamburgerButtonProps) => {
   const { className, isOpened, ...otherProps } = props;
   const [open, setOpen] = useState(isOpened);
+
   useEffect(() => {
     setOpen(isOpened);
   }, [isOpened]);
+
   return (
     <AppButton
       type="button"
@@ -27,6 +29,6 @@ const HamburgerButton = memo((props: HamburgerButtonProps) => {
       </div>
     </AppButton>
   );
-});
+};
 
 export { HamburgerButton };

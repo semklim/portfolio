@@ -4,8 +4,9 @@ import { ReactComponent as ArrowIcon } from '@/shared/assets/icons/breadcrumbsAr
 import homeIcon from '@/shared/assets/icons/home.svg';
 import { classNames } from '@/shared/libs';
 
-import { createBreadcrumbs, PathData } from '../api/createArrayLinks';
+import { createBreadcrumbs, Paths } from '../api/createArrayLinks';
 import cls from './Breadcrumbs.module.scss';
+import { projects } from '@/shared/data/constants';
 
 interface BreadcrumbsProps {
   className?: string;
@@ -14,7 +15,7 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
   const { pathname } = useLocation();
-  const arrOfPaths: PathData[] = createBreadcrumbs(pathname, basePath);
+  const paths: Paths[] = createBreadcrumbs(pathname, basePath);
 
   return (
     <div className={classNames(cls.breadcrumbs, {}, [className])}>
@@ -24,11 +25,13 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
         <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
       </Link>
 
-      {arrOfPaths.map(({ title, link }, i) => {
-        if (i < arrOfPaths.length - 1) {
+      {paths.map(({ title, link }, i) => {
+        const projectName = projects.find((el) => el.id === title);
+
+        if (i < paths.length - 1) {
           return (
             <Link key={title} to={link} className={cls.currentPage} aria-label={title}>
-              {title}
+              {projectName?.title}
               <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
             </Link>
           );
@@ -36,7 +39,7 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
 
         return (
           <Link key={title} to={link} className={cls.currentPage} aria-label={title}>
-            {title}
+            {projectName?.title}
           </Link>
         );
       })}

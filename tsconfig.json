@@ -5,9 +5,9 @@
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
     "noImplicitAny": true,
-    "target": "ES2020",
+    "target": "ES2017",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 

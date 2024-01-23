@@ -16,6 +16,7 @@ interface IntroduceProps extends React.HTMLProps<HTMLElement> {
 
 const Introduce = memo((props: IntroduceProps) => {
   const { className, children, ...otherProps } = props;
+
   return (
     <section id="home" className={classNames(cls.introduce, {}, [className])} {...otherProps}>
       <GitOctopus target="_blank" aria-label="View source on GitHub" rel="noreferrer" title="View source on GitHub" />

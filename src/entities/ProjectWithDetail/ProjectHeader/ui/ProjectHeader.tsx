@@ -3,14 +3,14 @@ import { HTMLAttributes, memo } from 'react';
 
 import { ReactComponent as ClockSvg } from '@/shared/assets/icons/clock.svg';
 import { ReactComponent as TagSvg } from '@/shared/assets/icons/tag.svg';
-import { ProjectsInfo } from '@/shared/data/constants';
+import { Projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
 
 import cls from './ProjectHeader.module.scss';
 
 interface ProjectHeaderProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
-  project: ProjectsInfo;
+  project: Projects;
 }
 
 const ProjectHeader = memo((props: ProjectHeaderProps) => {
@@ -19,6 +19,7 @@ const ProjectHeader = memo((props: ProjectHeaderProps) => {
     project: { title, date, tags },
     ...otherProps
   } = props;
+
   return (
     <div className={classNames(cls.mainTitleWrapper, {}, [className])} {...otherProps}>
       <h1 className={cls.mainTitle}>{title}</h1>

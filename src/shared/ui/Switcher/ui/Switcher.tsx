@@ -11,15 +11,14 @@ interface SwitcherProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const Switcher: FC<SwitcherProps> = ({ className, checked = false, ...otherProps }) => {
   const [isChecked, setChecked] = useState(checked);
-  const change = () => {
-    return () => {
-      setChecked((prev) => !prev);
-    };
+
+  const onChange = () => {
+    setChecked((prev) => !prev);
   };
 
   return (
     <div className={classNames(cls.button, {}, [className, cls.b2])} id={cls['button-16']}>
-      <input type="checkbox" onChange={change} className={cls.checkbox} checked={isChecked} {...otherProps} />
+      <input type="checkbox" onChange={onChange} className={cls.checkbox} checked={isChecked} {...otherProps} />
       <div className={cls.knobs} />
       <div className={cls.layer} />
     </div>

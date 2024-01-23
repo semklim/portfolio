@@ -12,6 +12,7 @@ interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const FormInput: React.FC<FormInputProps> = (props) => {
   const { className, labelTxt, labelFor, ...otherProps } = props;
+
   return (
     <div className={classNames(cls.formInput, {}, [className])}>
       <label className={cls.input_label} htmlFor={labelFor}>

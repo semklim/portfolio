@@ -17,6 +17,7 @@ const ThemeSwitcher = memo((props: ThemeSwitcherProps) => {
   const { className, clickOnSwitcher, ...otherProps } = props;
   const { theme, toggleTheme } = useTheme();
   const checked = theme === Theme.DARK;
+
   return (
     <label htmlFor="slider" className={classNames(cls.switch, {}, [])} aria-label="Theme Switcher">
       <input

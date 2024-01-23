@@ -1,5 +1,5 @@
 import { classNames } from './classNames/classNames';
 import { createRouteParams } from './createRouteParams/createRouteParams';
-import { instanceOf } from './typescript_InstanceOf/instanceOf';
+import { isProject } from './typescript_isProject/isProject';
 
-export { classNames, createRouteParams, instanceOf };
+export { classNames, createRouteParams, isProject };

@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { ScrollToTop } from '@/features';
@@ -20,12 +19,7 @@ const App = () => {
       </Helmet>
       <ScrollToTop />
       <Navbar />
-      {useMemo(
-        () => (
-          <AppRouter />
-        ),
-        [],
-      )}
+      <AppRouter />
     </div>
   );
 };

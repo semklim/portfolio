@@ -53,7 +53,7 @@ export type ArchitectPatterns = {
   link: string | undefined;
 };
 
-export type ProjectsInfo = {
+export type Projects = {
   id: string;
   mainImg: string;
   imgs: string[] | [];
@@ -109,7 +109,7 @@ export const aboutMe: AboutMe[] = [
   },
 ];
 
-export const projects: ProjectsInfo[] = [
+export const projects: Projects[] = [
   {
     get id() {
       return createRouteParams(this.title);
