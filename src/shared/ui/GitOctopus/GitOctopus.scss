@@ -6,11 +6,16 @@
   fill: var(--fill-git-octo);
   color: var(--color-git-octo);
   position: absolute;
-  top: 0;
+  top: var(--navbar-height);
   border: 0;
   left: 0;
   transform: scale(-1, 1);
   z-index: 998;
+
+  @media (max-width: 900px) {
+    top: 0;
+    z-index: 1000;
+  }
 }
 
 .octo-arm {

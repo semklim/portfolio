@@ -2,7 +2,7 @@
 
 .header {
   top: 0;
-  position: sticky;
+  position: fixed;
   padding: 0 var(--header-padding);
   width: 100%;
   height: var(--navbar-height);

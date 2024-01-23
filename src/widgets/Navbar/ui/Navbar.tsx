@@ -46,7 +46,7 @@ const Navbar = ({ className }: NavbarProps) => {
   useEffect(() => {
     function checkSize() {
       if (window.outerWidth <= 900 && offsetScroll <= 50) {
-        setOffsetScroll(0);
+        setOffsetScroll(2);
       } else {
         setOffsetScroll(-50);
       }
@@ -69,7 +69,7 @@ const Navbar = ({ className }: NavbarProps) => {
       <nav className={cls.nav}>
         <div className={cls.nav__logo}>
           <h1>
-            <LinkRouter to="">
+            <LinkRouter to="/">
               <img src={react} alt="react" width="50" height="50" />
             </LinkRouter>
           </h1>
@@ -78,7 +78,7 @@ const Navbar = ({ className }: NavbarProps) => {
           {links.map((link) => (
             <li className={cls.nav__button} key={link.id}>
               <Link
-                className={cls.nav__link}
+                className={classNames(cls.nav__link)}
                 activeClass={cls.active}
                 offset={offsetScroll}
                 spy={true}
