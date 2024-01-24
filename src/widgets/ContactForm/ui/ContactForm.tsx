@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { FC, FormEventHandler } from 'react';
 import { classNames } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 import { FormInput } from '@/shared/ui/FormInput/FormInput';
@@ -10,17 +11,63 @@ interface ContactFormProps {
   className?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = (props) => {
+type ContactForm = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+interface FromElements extends EventTarget {
+  name: HTMLInputElement;
+  email: HTMLInputElement;
+  subject: HTMLInputElement;
+  message: HTMLTextAreaElement;
+}
+
+async function postMail(url: string, body: ContactForm): Promise<string | unknown> {
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message);
+    }
+    return res.json();
+  } catch (e) {
+    return e;
+  }
+}
+
+const ContactForm: FC<ContactFormProps> = (props) => {
   const { className } = props;
+
+  const sendMail: FormEventHandler<HTMLFormElement> = async (event) => {
+    event.preventDefault();
+    const form = event.target as FromElements;
+
+    const body: ContactForm = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    const res = await postMail('https://myemail.vercel.app/api/send-email', body);
+
+    console.log(res);
+  };
 
   return (
     <footer id="contact" className={classNames(cls.contactForm, {}, [className])}>
       <div className={cls['leading-loose']}>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-          className={cls.formEl}>
+        <form onSubmit={sendMail} className={cls.formEl}>
           <p className={cls.formEl_title}>Contact Form</p>
           <FormInput
             labelTxt="Full Name"
