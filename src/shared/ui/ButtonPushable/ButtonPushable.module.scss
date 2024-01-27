@@ -90,3 +90,27 @@
 .buttonPushable:focus:not(:focus-visible) {
   outline: none;
 }
+
+.buttonPushable:disabled {
+  width: 211.46px;
+  transition: 250ms;
+
+  .button-82-front {
+    display: grid;
+    place-items: center center;
+    background: var(--gray-500);
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+
+  .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+
+  .button-82-edge {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    transition: transform 34ms;
+  }
+}

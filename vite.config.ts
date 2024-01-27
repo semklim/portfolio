@@ -28,7 +28,7 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://myemail.vercel.app;"`,
+          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://api.emailjs.com/api/v1.0/email/send-form;"`,
         },
       },
     }),

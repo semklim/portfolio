@@ -1,73 +1,82 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { FC, FormEventHandler } from 'react';
+import { FC, FormEventHandler, useRef, useState } from 'react';
 import { classNames } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 import { FormInput } from '@/shared/ui/FormInput/FormInput';
-
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 import cls from './ContactForm.module.scss';
 
 interface ContactFormProps {
   className?: string;
 }
 
-type ContactForm = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
-interface FromElements extends EventTarget {
+interface ContactFormElements {
   name: HTMLInputElement;
   email: HTMLInputElement;
   subject: HTMLInputElement;
   message: HTMLTextAreaElement;
+  submitButton: HTMLButtonElement;
 }
 
-async function postMail(url: string, body: ContactForm): Promise<string | unknown> {
-  try {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    });
-    if (!res.ok) {
-      const err = await res.json();
-      throw new Error(err.message);
-    }
-    return res.json();
-  } catch (e) {
-    return e;
-  }
-}
+const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
 const ContactForm: FC<ContactFormProps> = (props) => {
   const { className } = props;
+  const form = useRef<ContactFormElements & HTMLFormElement>(null);
+  const [showLoader, setShowLoader] = useState(false);
 
-  const sendMail: FormEventHandler<HTMLFormElement> = async (event) => {
+  const sendEmail: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    const form = event.target as FromElements;
 
-    const body: ContactForm = {
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value,
-    };
+    setShowLoader(true);
 
-    const res = await postMail('https://myemail.vercel.app/api/send-email', body);
+    if (form.current) {
+      emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+        (result) => {
+          Swal.fire({
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            toast: true,
+            background: '#151515',
+            padding: '0.5rem',
+            color: 'white',
+            icon: 'success',
+            title: 'Success',
+            text: 'You are send email. Please wait for answer.',
+          });
 
-    console.log(res);
+          form.current!.reset();
+          setShowLoader(false);
+        },
+        (error) => {
+          Swal.fire({
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            toast: true,
+            background: '#151515',
+            padding: '0.5rem',
+            color: 'white',
+            icon: 'error',
+            title: 'Something going wrong. Please try later.',
+            text: `${error.text}`,
+          });
+
+          setShowLoader(false);
+        },
+      );
+    }
   };
 
   return (
     <footer id="contact" className={classNames(cls.contactForm, {}, [className])}>
       <div className={cls['leading-loose']}>
-        <form onSubmit={sendMail} className={cls.formEl}>
+        <form ref={form} onSubmit={sendEmail} className={cls.formEl}>
           <p className={cls.formEl_title}>Contact Form</p>
           <FormInput
             labelTxt="Full Name"
@@ -77,6 +86,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
             name="name"
             placeholder="Your Name"
             aria-label="Name"
+            required
           />
           <FormInput
             labelTxt="Email"
@@ -86,6 +96,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
             name="email"
             placeholder="Your email"
             aria-label="Email"
+            required
           />
           <FormInput
             labelTxt="Subject"
@@ -95,6 +106,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
             name="subject"
             placeholder="Subject"
             aria-label="Subject"
+            required
           />
 
           <div className={cls.wrapper_message}>
@@ -109,11 +121,20 @@ const ContactForm: FC<ContactFormProps> = (props) => {
               rows={6}
               aria-label="Message"
               placeholder="Write me, your proposal"
+              required
             />
           </div>
 
           <div className={cls.btn_submit}>
-            <ButtonPushable btnTxt="Send Message" type="submit" aria-label="Send Message" />
+            <ButtonPushable
+              name="submitButton"
+              id="submitButton"
+              btnTxt="Send Message"
+              loading={showLoader}
+              disabled={showLoader}
+              type="submit"
+              aria-label="Send Message"
+            />
           </div>
         </form>
       </div>

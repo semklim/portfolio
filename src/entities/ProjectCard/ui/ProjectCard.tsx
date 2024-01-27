@@ -24,8 +24,14 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
     <div className={classNames(cls.wrapper, {}, [className])}>
       <LazyLoad className={cls.content}>
         <>
-          <LoadingVideo isLoading={isLoadingVideo} project={project} onLoad={() => setIsLoadingVideo(false)} />
-          <div className={cls.loading} style={{ display: isLoadingVideo ? 'flex' : 'none' }}>
+          <LoadingVideo
+            isLoading={isLoadingVideo}
+            project={project}
+            onLoad={() => setIsLoadingVideo(false)}
+          />
+          <div
+            className={cls.loading}
+            style={{ display: isLoadingVideo ? 'flex' : 'none' }}>
             <DownloadSvg width={120} height={120} />
           </div>
         </>
