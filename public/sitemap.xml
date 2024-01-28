@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <!-- 
-            Don't use <priority> or <changefreq> attributes. Those are typically ignored.
-            Make sure lastmod is always up to date.
-          -->
-        <loc>https://semklim.vercel.app</loc>
-        <lastmod>2023-10-06</lastmod>
-    </url>
+  <url>
+    <loc>https://semklim.vercel.app</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://semklim.vercel.app/project/express-api</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app/project/express-api" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app/project/express-api" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://semklim.vercel.app/project/brshoes</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app/project/brshoes" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app/project/brshoes" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://semklim.vercel.app/project/currency-convertor</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app/project/currency-convertor" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app/project/currency-convertor" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://semklim.vercel.app/project/spotify-demo</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app/project/spotify-demo" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app/project/spotify-demo" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://semklim.vercel.app/project/towers-battle</loc>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://semklim.vercel.app/project/towers-battle" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="x-default" href="https://semklim.vercel.app/project/towers-battle" />
+    <lastmod>2024-01-27T15:20:29+00:00</lastmod>
+  </url>
 </urlset>
