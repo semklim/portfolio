@@ -12,6 +12,7 @@ interface PageProps {
 
 export const Page = memo((props: PageProps) => {
   const { className, children } = props;
+
   return (
     <main className={classNames(cls.Page, {}, [className])}>
       {children}

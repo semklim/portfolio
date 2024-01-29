@@ -15,7 +15,7 @@ export type Paths = {
  * @returns {Paths[]} - An array of `Paths` objects representing each level of the breadcrumb.
  *
  * @example
- * createBreadcrumbs(
+ * breadcrumbsLinks(
  * "/project/Currency%20Convertor/test/test%20TEST/roman"
  * );
  *
@@ -29,7 +29,7 @@ export type Paths = {
  * ]
  *
  * @example
- * createBreadcrumbs(
+ * breadcrumbsLinks(
  * "/project/Currency%20Convertor/test/test%20TEST/roman",
  * '/project'
  * );
@@ -42,7 +42,7 @@ export type Paths = {
  *   { title: "roman", link: "/project/Currency Convertor/test/test TEST/roman" }
  * ]
  */
-export function createBreadcrumbs(path: string, basePath: string = ''): Paths[] {
+export function breadcrumbsLinks(path: string, basePath: string = ''): Paths[] {
   const arrOfPaths: Paths[] = [];
   const basePathFormatted = basePath.trim() === '/' ? '' : basePath;
   const decoded = decodeURI(path);

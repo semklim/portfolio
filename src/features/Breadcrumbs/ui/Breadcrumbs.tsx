@@ -2,9 +2,8 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { ReactComponent as ArrowIcon } from '@/shared/assets/icons/breadcrumbsArrow.svg';
 import homeIcon from '@/shared/assets/icons/home.svg';
-import { classNames } from '@/shared/libs';
+import { classNames, breadcrumbsLinks, Paths } from '@/shared/libs';
 
-import { createBreadcrumbs, Paths } from '../api/createArrayLinks';
 import cls from './Breadcrumbs.module.scss';
 import { projects } from '@/shared/data/constants';
 
@@ -15,12 +14,17 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
   const { pathname } = useLocation();
-  const paths: Paths[] = createBreadcrumbs(pathname, basePath);
+  const paths: Paths[] = breadcrumbsLinks(pathname, basePath);
 
   return (
     <div className={classNames(cls.breadcrumbs, {}, [className])}>
       <Link to="/" preventScrollReset aria-label="home">
-        <img src={homeIcon} className={cls.link_breadcrumbs_icon} alt="Home page" width={20} />
+        <img
+          src={homeIcon}
+          className={cls.link_breadcrumbs_icon}
+          alt="Home page"
+          width={20}
+        />
         <span>Home</span>
         <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
       </Link>

@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-boolean-value */
 /* eslint-disable jsx-a11y/media-has-caption */
-import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 
 import { getProject } from '@/entities/projectByParams';
@@ -10,6 +9,7 @@ import { Projects } from '@/shared/data/constants';
 import { classNames, isProject } from '@/shared/libs';
 
 import cls from './Project.module.scss';
+import { Helmet } from 'react-helmet';
 
 interface ProjectProps {
   className?: string;
@@ -25,16 +25,18 @@ const Project = ({ className }: ProjectProps) => {
 
   if (isProject<Projects>(project, 'title')) {
     return (
-      <section className={classNames(cls.projectSection, {}, [className])}>
-        <Breadcrumbs basePath="/project" />
-        <div className={classNames(cls.project)}>
-          <Helmet>
-            <title>{project.title}</title>
-          </Helmet>
-          <ProjectHeader project={project} />
-          <ProjectBody project={project} />
-        </div>
-      </section>
+      <>
+        <Helmet>
+          <title>{project.title}</title>
+        </Helmet>
+        <section className={classNames(cls.projectSection, {}, [className])}>
+          <Breadcrumbs basePath="/project" />
+          <div className={classNames(cls.project)}>
+            <ProjectHeader project={project} />
+            <ProjectBody project={project} />
+          </div>
+        </section>
+      </>
     );
   } else {
     return (
