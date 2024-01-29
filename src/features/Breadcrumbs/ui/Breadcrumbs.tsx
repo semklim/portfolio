@@ -17,37 +17,72 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
   const paths: Paths[] = breadcrumbsLinks(pathname, basePath);
 
   return (
-    <div className={classNames(cls.breadcrumbs, {}, [className])}>
-      <Link to="/" preventScrollReset aria-label="home">
-        <img
-          src={homeIcon}
-          className={cls.link_breadcrumbs_icon}
-          alt="Home page"
-          width={20}
-        />
-        <span>Home</span>
-        <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
-      </Link>
-
-      {paths.map(({ title, link }, i) => {
-        const projectName = projects.find((el) => el.id === title);
-
-        if (i < paths.length - 1) {
-          return (
-            <Link key={title} to={link} className={cls.currentPage} aria-label={title}>
-              {projectName?.title}
-              <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
-            </Link>
-          );
-        }
-
-        return (
-          <Link key={title} to={link} className={cls.currentPage} aria-label={title}>
-            {projectName?.title}
+    <nav>
+      <ul
+        className={classNames(cls.breadcrumbs, {}, [className])}
+        itemscope
+        itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <Link to="/" preventScrollReset aria-label="home" title="Home" itemprop="item">
+            <img
+              src={homeIcon}
+              className={cls.link_breadcrumbs_icon}
+              alt="Home page"
+              width={20}
+            />
+            <span itemprop="name">Home</span>
+            <meta itemprop="position" content="0" />
+            <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
           </Link>
-        );
-      })}
-    </div>
+        </li>
+
+        {paths.map(({ title, link }, i) => {
+          const projectName = projects.find((el) => el.id === title);
+
+          if (i < paths.length - 1) {
+            return (
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem">
+                <Link
+                  key={title}
+                  to={link}
+                  title={projectName?.title}
+                  itemprop="item"
+                  className={cls.currentPage}
+                  aria-label={projectName?.title}>
+                  <span itemprop="name">{projectName?.title}</span>
+                  <meta itemprop="position" content={`${i + 1}`} />
+                  <ArrowIcon
+                    className={cls.link_breadcrumbs_arrow}
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </li>
+            );
+          }
+
+          return (
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="http://schema.org/ListItem">
+              <div
+                key={title}
+                title={projectName?.title}
+                itemprop="item"
+                className={cls.currentPage}
+                aria-label={projectName?.title}>
+                <span itemprop="name">{projectName?.title}</span>
+                <meta itemprop="position" content={`${i + 1}`} />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 
