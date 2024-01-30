@@ -139,7 +139,7 @@ export const projects: Projects[] = [
     mainImg: sharmImg,
     video: sharmVideo,
     bigVideo: sharmBigVideo,
-    techs: [nextjs, sass, framerMotion, gsap, html, sass, typescript],
+    techs: [nextjs, sass, framerMotion, gsap, html, typescript],
     architectPatterns: [],
     imgs: [],
     usedApi: [],
