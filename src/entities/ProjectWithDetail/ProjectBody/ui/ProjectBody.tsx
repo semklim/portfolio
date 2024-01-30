@@ -6,6 +6,7 @@ import { classNames } from '@/shared/libs';
 import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
 import cls from './ProjectBody.module.scss';
+import { IsRender } from './IsRender/IsRender';
 
 interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
   className?: string;
@@ -50,28 +51,54 @@ const ProjectBody: FC<ProjectBodyProps> = memo(({ className, project }) => {
               ))}
             </div>
           </div>
-          <ul className={cls.apis}>
-            <h2>API that use:</h2>
+          <IsRender isRender={usedApi.length > 0}>
+            <ul className={cls.apis}>
+              <h2>API that use:</h2>
 
-            {usedApi.length > 0 && usedApi.map((el) => <li key={el}>{el}</li>)}
-          </ul>
-          <ul className={cls.arch}>
-            <h2>Architect patterns that use:</h2>
+              {usedApi!.map((el) => (
+                <li key={el}>{el}</li>
+              ))}
+            </ul>
+          </IsRender>
+          <IsRender isRender={architectPatterns.length > 0}>
+            <ul className={cls.arch}>
+              <h2>Architect patterns that use:</h2>
 
-            {architectPatterns.length > 0 &&
-              architectPatterns.map((el) => (
+              {architectPatterns!.map((el) => (
                 <li key={el.name}>
                   <a href={el.link}>{el.name}</a>
                 </li>
               ))}
-          </ul>
+            </ul>
+          </IsRender>
         </div>
         <div className={cls.desc_txt}>
           <article>
             <h2>About Project</h2>
             {descBig ? <pre>{descBig}</pre> : <p>{desc}</p>}
           </article>
-          <Works gitLink={gitLink} deployed={deployed} />
+          <IsRender isRender={!!gitLink || !!deployed}>
+            <div className={cls.readyWorks}>
+              <h2>Check this work on:</h2>
+              <ul className={cls.links}>
+                {gitLink && (
+                  <li>
+                    <a href={gitLink}>
+                      <ButtonPushable btnTxt="GitHub" />
+                    </a>
+                  </li>
+                )}
+
+                {deployed && (
+                  <li>
+                    <a href={deployed}>
+                      <ButtonPushable btnTxt="Live" />
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </IsRender>
         </div>
       </section>
     </section>
@@ -79,32 +106,3 @@ const ProjectBody: FC<ProjectBodyProps> = memo(({ className, project }) => {
 });
 
 export { ProjectBody };
-
-type WorksProps = { gitLink: string | undefined; deployed: string | undefined };
-
-const Works: FC<WorksProps> = ({ gitLink, deployed }) => {
-  if (!gitLink && !deployed) return '';
-
-  return (
-    <div className={cls.readyWorks}>
-      <h2>Check this work on:</h2>
-      <ul className={cls.links}>
-        {gitLink && (
-          <li>
-            <a href={gitLink}>
-              <ButtonPushable btnTxt="GitHub" />
-            </a>
-          </li>
-        )}
-
-        {deployed && (
-          <li>
-            <a href={deployed}>
-              <ButtonPushable btnTxt="Live" />
-            </a>
-          </li>
-        )}
-      </ul>
-    </div>
-  );
-};
