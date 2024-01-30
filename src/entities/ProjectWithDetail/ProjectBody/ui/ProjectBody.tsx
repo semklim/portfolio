@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import { HTMLAttributes, memo } from 'react';
+import { FC, HTMLAttributes, memo } from 'react';
 
 import { Projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
@@ -12,9 +12,20 @@ interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
   project: Projects;
 }
 
-const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
-  const { title, desc, descBig, mainImg, video, bigVideo, techs, usedApi, architectPatterns, gitLink, deployed } =
-    project;
+const ProjectBody: FC<ProjectBodyProps> = memo(({ className, project }) => {
+  const {
+    title,
+    desc,
+    descBig,
+    mainImg,
+    video,
+    bigVideo,
+    techs,
+    usedApi,
+    architectPatterns,
+    gitLink,
+    deployed,
+  } = project;
 
   return (
     <section className={classNames(cls.projectWithDetail, {}, [className])}>
@@ -58,24 +69,9 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
         <div className={cls.desc_txt}>
           <article>
             <h2>About Project</h2>
-            <p>{desc}</p>
-
-            {descBig && <pre>{descBig}</pre>}
+            {descBig ? <pre>{descBig}</pre> : <p>{desc}</p>}
           </article>
-          <div className={cls.readyWorks}>
-            <h2>Check this work on:</h2>
-            <div className={cls.links}>
-              <a href={gitLink}>
-                <ButtonPushable btnTxt="GitHub" />
-              </a>
-
-              {deployed && (
-                <a href={deployed}>
-                  <ButtonPushable btnTxt="Live" />
-                </a>
-              )}
-            </div>
-          </div>
+          <Works gitLink={gitLink} deployed={deployed} />
         </div>
       </section>
     </section>
@@ -83,3 +79,32 @@ const ProjectBody = memo(({ className, project }: ProjectBodyProps) => {
 });
 
 export { ProjectBody };
+
+type WorksProps = { gitLink: string | undefined; deployed: string | undefined };
+
+const Works: FC<WorksProps> = ({ gitLink, deployed }) => {
+  if (!gitLink && !deployed) return '';
+
+  return (
+    <div className={cls.readyWorks}>
+      <h2>Check this work on:</h2>
+      <ul className={cls.links}>
+        {gitLink && (
+          <li>
+            <a href={gitLink}>
+              <ButtonPushable btnTxt="GitHub" />
+            </a>
+          </li>
+        )}
+
+        {deployed && (
+          <li>
+            <a href={deployed}>
+              <ButtonPushable btnTxt="Live" />
+            </a>
+          </li>
+        )}
+      </ul>
+    </div>
+  );
+};

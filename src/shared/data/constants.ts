@@ -1,7 +1,12 @@
 import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
-// import expressApiVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
+import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
+import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
+import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
+import sharmBigVideo from '@/shared/assets/projects/sharm/sharm.mp4';
+import sharmImg from '@/shared/assets/projects/sharm/sharm.webp';
+import sharmVideo from '@/shared/assets/projects/sharm/sharm-light.mp4';
 import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
 import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
@@ -35,6 +40,11 @@ import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
 import webpack from '@/shared/assets/techStack/Webpack.svg';
+import laravel from '@/shared/assets/techStack/Laravel.svg';
+import tailwind from '@/shared/assets/techStack/Tailwind.svg';
+import gsap from '@/shared/assets/techStack/Gsap.svg';
+import nextjs from '@/shared/assets/techStack/NextJs.svg';
+import framerMotion from '@/shared/assets/techStack/FramerMotion.svg';
 
 import { createRouteParams } from '../libs';
 
@@ -62,7 +72,7 @@ export type Projects = {
   tags: string[];
   desc: string;
   descBig?: string;
-  gitLink: string;
+  gitLink?: string;
   deployed?: string;
   video?: string;
   bigVideo?: string;
@@ -73,6 +83,7 @@ export type Projects = {
 
 export const techStack: Tech[] = [
   { name: 'Angular', link: angular },
+  { name: 'Next.js', link: nextjs },
   { name: 'React', link: react },
   { name: 'Redux', link: redux },
   { name: 'Redux-Saga', link: reduxSaga },
@@ -86,6 +97,8 @@ export const techStack: Tech[] = [
   { name: 'CSS', link: css },
   { name: 'Bootstrap', link: bootstrap },
   { name: 'SASS', link: sass },
+  { name: 'Framer Motion', link: framerMotion },
+  { name: 'GSAP', link: gsap },
   { name: 'Javascript', link: javascript },
   { name: 'Typescript', link: typescript },
   { name: 'ESLint', link: eslint },
@@ -110,6 +123,47 @@ export const aboutMe: AboutMe[] = [
 ];
 
 export const projects: Projects[] = [
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Sharmbeauty',
+    desc: ' This website, based in Ukraine, specializes in selling household goods and cosmetics. It stands as a robust platform, offering a vast array of categories and products. Presently, the site is undergoing upgrades and transitioning to new technologies to enhance the overall customer experience.',
+    descBig: `SharmBeauty is an operational website specializing in the sale of household goods and cosmetics. However, recognizing the need for enhancements, we are currently in the process of revamping and improving the platform.
+
+    Our dedicated team, consisting of front-end developers, back-end specialists, designers, and testers, is actively engaged in the development of an updated version. This collaborative effort incorporates cutting-edge solutions to ensure a seamless and modernized user experience.
+    
+    Rest assured, the development process is in full swing, and we anticipate unveiling the fruits of our labor in the near future.`,
+    date: 'In Work',
+    tags: ['Front-end', 'Back-end', 'Next.js', 'Framer-motion', 'Gsap'],
+    mainImg: sharmImg,
+    video: sharmVideo,
+    bigVideo: sharmBigVideo,
+    techs: [nextjs, sass, framerMotion, gsap, html, sass, typescript],
+    architectPatterns: [],
+    imgs: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Yavorska Photography',
+    desc: " This site is a visual business card, showcasing diverse works and the photographer's approach. The user-friendly interface simplifies navigation and bookings. Discover a range of styles, from timeless black and white to vibrant palettes, ensuring a seamless experience from creative works.",
+    descBig: `  The website has been meticulously crafted using the Laravel framework, built entirely from the ground up. We've ensured comprehensive site adaptability, integrated SEO practices to optimize its visibility across search engines, and successfully indexed it for efficient online discovery. Supporting a bilingual experience, the website boasts a dynamic database and an intuitive admin panel.
+
+    The admin panel provides clients with the ability to effortlessly modify sections, manage tags, customize content for each section individually, and fine-tune meta tags for specific pages. Additionally, clients can easily introduce new pages and selectively conceal certain sections as needed, granting them unprecedented control over the website's dynamic content.`,
+    date: 'Dec 22,2023',
+    tags: ['Front-end', 'Back-end', 'Laravel', 'Real-Project'],
+    mainImg: yavorskaphotographyImg,
+    video: yavorskaphotographyVideo,
+    bigVideo: yavorskaphotographyBigVideo,
+    deployed: 'https://yavorskaphotography.com/',
+    techs: [laravel, tailwind, bootstrap, html, sass, javascript],
+    architectPatterns: [],
+    imgs: [],
+    usedApi: [],
+  },
   {
     get id() {
       return createRouteParams(this.title);
@@ -237,7 +291,10 @@ export const projects: Projects[] = [
     deployed: 'https://semklim.github.io/Towers_Battle/',
     techs: [html, css, javascript],
     architectPatterns: [
-      { name: 'SOLID', link: 'https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898' },
+      {
+        name: 'SOLID',
+        link: 'https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898',
+      },
     ],
     usedApi: [],
     imgs: [],

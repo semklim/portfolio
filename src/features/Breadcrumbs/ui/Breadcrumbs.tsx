@@ -20,18 +20,18 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
     <nav>
       <ul
         className={classNames(cls.breadcrumbs, {}, [className])}
-        itemscope
-        itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <Link to="/" preventScrollReset aria-label="home" title="Home" itemprop="item">
+        itemScope
+        itemType="http://schema.org/BreadcrumbList">
+        <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+          <Link to="/" preventScrollReset aria-label="home" title="Home" itemProp="item">
             <img
               src={homeIcon}
               className={cls.link_breadcrumbs_icon}
               alt="Home page"
               width={20}
             />
-            <span itemprop="name">Home</span>
-            <meta itemprop="position" content="0" />
+            <span itemProp="name">Home</span>
+            <meta itemProp="position" content="0" />
             <ArrowIcon className={cls.link_breadcrumbs_arrow} width={20} height={20} />
           </Link>
         </li>
@@ -42,18 +42,18 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
           if (i < paths.length - 1) {
             return (
               <li
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem">
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/ListItem"
+                key={title}>
                 <Link
-                  key={title}
                   to={link}
                   title={projectName?.title}
-                  itemprop="item"
+                  itemProp="item"
                   className={cls.currentPage}
                   aria-label={projectName?.title}>
-                  <span itemprop="name">{projectName?.title}</span>
-                  <meta itemprop="position" content={`${i + 1}`} />
+                  <span itemProp="name">{projectName?.title}</span>
+                  <meta itemProp="position" content={`${i + 1}`} />
                   <ArrowIcon
                     className={cls.link_breadcrumbs_arrow}
                     width={20}
@@ -66,17 +66,17 @@ const Breadcrumbs = ({ className, basePath = '' }: BreadcrumbsProps) => {
 
           return (
             <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="http://schema.org/ListItem">
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+              key={title}>
               <div
-                key={title}
                 title={projectName?.title}
-                itemprop="item"
+                itemProp="item"
                 className={cls.currentPage}
                 aria-label={projectName?.title}>
-                <span itemprop="name">{projectName?.title}</span>
-                <meta itemprop="position" content={`${i + 1}`} />
+                <span itemProp="name">{projectName?.title}</span>
+                <meta itemProp="position" content={`${i + 1}`} />
               </div>
             </li>
           );
