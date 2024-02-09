@@ -46,11 +46,23 @@ const About = memo(({ className }: AboutProps) => {
             viewport={{ once: true }}
             key={name}
             className={cls.card}>
-            <input className={cls.cardCheckBox} type="radio" name="showTitle" id={`tech${name}`} />
+            <input
+              className={cls.cardCheckBox}
+              type="radio"
+              name="showTitle"
+              id={`tech${name}`}
+            />
             <label htmlFor={`tech${name}`}>
-              <img className={cls.cardImg} loading="lazy" width={48} height={48} src={link} alt={name} />
+              <img
+                className={cls.cardImg}
+                loading="lazy"
+                width={48}
+                height={48}
+                src={link}
+                alt={name}
+              />
             </label>
-            <h3 className={cls.cardTitle}>{name}</h3>
+            <p className={cls.cardTitle}>{name}</p>
           </motion.div>
         ))}
       </section>

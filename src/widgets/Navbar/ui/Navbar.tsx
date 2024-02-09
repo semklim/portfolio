@@ -70,14 +70,18 @@ const Navbar = ({ className }: NavbarProps) => {
     <header className={classNames(cls.header, {}, [className])}>
       <nav className={cls.nav}>
         <div className={cls.nav__logo}>
-          <h1>
-            <Link to="/">
-              <img src={react} alt="react" width="50" height="50" />
-            </Link>
-          </h1>
+          <Link to="/">
+            <img src={react} alt="react" width="50" height="50" />
+          </Link>
         </div>
-        <ul className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })}>
-          <NavLinks links={links} offsetScroll={offsetScroll} handleOnClick={showOrHideMenu} location={location} />
+        <ul
+          className={classNames(cls.nav__buttons, { [cls.show__nav_buttons]: isOpened })}>
+          <NavLinks
+            links={links}
+            offsetScroll={offsetScroll}
+            handleOnClick={showOrHideMenu}
+            location={location}
+          />
           <li className={classNames(cls.nav__button, {}, ['switcher'])}>
             <ThemeSwitcher clickOnSwitcher={showOrHideMenu} />
           </li>

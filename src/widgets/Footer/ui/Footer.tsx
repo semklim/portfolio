@@ -9,7 +9,7 @@ interface FooterProps {
 const Footer = ({ className }: FooterProps) => {
   return (
     <footer className={classNames(cls.footer, {}, [className])}>
-      <h5 className={cls.followMe}>Follow Me</h5>
+      <h4 className={cls.followMe}>Follow Me</h4>
       <div className={cls['social-links']}>
         <a
           href="https://www.instagram.com/roman_klimashenko/"
