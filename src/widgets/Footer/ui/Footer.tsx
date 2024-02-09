@@ -1,6 +1,3 @@
-import gitHub from '@/shared/assets/socials/github.svg';
-import instagram from '@/shared/assets/socials/instagram.svg';
-import linkedin from '@/shared/assets/socials/linkedin.svg';
 import { classNames } from '@/shared/libs';
 
 import cls from './Footer.module.scss';
@@ -19,17 +16,39 @@ const Footer = ({ className }: FooterProps) => {
           target="_blank"
           rel="noopener noreferrer"
           title="Instagram">
-          <img className={cls.imgOfLink} src={instagram} width={40} height={40} alt="Instagram" />
-        </a>
-        <a href="https://github.com/semklim" target="_blank" rel="noopener noreferrer" title="gitHub">
-          <img className={cls.imgOfLink} src={gitHub} width={40} height={40} alt="gitHub" />
+          <img
+            className={cls.imgOfLink}
+            src="/socials/instagram.svg"
+            width={40}
+            height={40}
+            alt="Instagram"
+          />
         </a>
         <a
-          href="https://www.linkedin.com/in/roman-klymashenko-a2a483238/"
+          href="https://github.com/semklim"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="gitHub">
+          <img
+            className={cls.imgOfLink}
+            src="/socials/github.svg"
+            width={40}
+            height={40}
+            alt="gitHub"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/roman-klymashenko/"
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn">
-          <img className={cls.imgOfLink} src={linkedin} width={40} height={40} alt="linkedIn" />
+          <img
+            className={cls.imgOfLink}
+            src="/socials/linkedin.svg"
+            width={40}
+            height={40}
+            alt="linkedIn"
+          />
         </a>
       </div>
       <div className={cls.copyright}>
