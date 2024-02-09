@@ -68,7 +68,9 @@ const Introduce = memo((props: IntroduceProps) => {
           </a>
         </div>
         <div className={cls.getResume}>
-          <a href="/cv-roman-klymashenko.pdf" download="Front-end CV Roman Klymashenko">
+          <a
+            href="/Front-end CV Roman Klymashenko.pdf"
+            download="Front-end CV Roman Klymashenko">
             Resume
           </a>
         </div>
