@@ -113,7 +113,7 @@ export const techStack: Tech[] = [
 export const aboutMe: AboutMe[] = [
   {
     title: 'A bit of me',
-    desc: "I'm a Front end developer with experience in designing new features from ideation to production. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.",
+    desc: "My name Roman Klymashenko and I'm a Front end developer with experience in designing new features from ideation to production. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.",
   },
 
   {
@@ -169,7 +169,7 @@ export const projects: Projects[] = [
       return createRouteParams(this.title);
     },
     title: 'Express API',
-    desc: 'This pet project is a Fullstack application with key features including Authentication and Registration API. It utilizes CORS, JSON Web Tokens, nodemailer, Express.js, and MongoDB for seamless functionality.',
+    desc: 'This pet project is a Full-stack application with key features including Authentication and Registration API. It utilizes CORS, JSON Web Tokens, nodemailer, Express.js, and MongoDB for seamless functionality.',
     descBig: `
     Key Features:
 

@@ -29,7 +29,7 @@ const Introduce = memo((props: IntroduceProps) => {
         <span className={cls.introduceMe}>Hi, I&rsquo;m Roman</span>
         <span className={cls.introduceMe}>Front End Developer</span>
         <p className={cls.descriptionMe}>
-          I am currently search ability to get works at the intresting project as a
+          I am currently search ability to get works at the interesting project as a
           Front-End Developer.
         </p>
         <div className={cls.linksToSocial}>
