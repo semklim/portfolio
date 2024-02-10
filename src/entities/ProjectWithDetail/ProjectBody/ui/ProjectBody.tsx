@@ -7,6 +7,7 @@ import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 
 import cls from './ProjectBody.module.scss';
 import { IsRender } from './IsRender/IsRender';
+import { Carousel } from '@/shared/ui/Carousel/Carousel';
 
 interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
   className?: string;
@@ -26,18 +27,24 @@ const ProjectBody: FC<ProjectBodyProps> = memo(({ className, project }) => {
     architectPatterns,
     gitLink,
     deployed,
+    imgs,
+    infoLinks,
   } = project;
 
   return (
     <section className={classNames(cls.projectWithDetail, {}, [className])}>
       <section className={cls.video}>
-        <video
-          src={bigVideo || video}
-          controls
-          poster={mainImg}
-          controlsList="nodownload"
-          title={`Video about ${title}`}
-        />
+        {imgs ? (
+          <Carousel images={imgs} />
+        ) : (
+          <video
+            src={bigVideo || video}
+            controls
+            poster={mainImg}
+            controlsList="nodownload"
+            title={`Video about ${title}`}
+          />
+        )}
       </section>
       <section className={cls.desc}>
         <div className={cls.desc_tech}>
@@ -76,6 +83,15 @@ const ProjectBody: FC<ProjectBodyProps> = memo(({ className, project }) => {
           <article>
             <h2>About Project</h2>
             {descBig ? <pre>{descBig}</pre> : <p>{desc}</p>}
+            <p className={cls.subtitle}>Additional Links</p>
+            <div className={cls.additionalLinks}>
+              {infoLinks &&
+                infoLinks.map((el) => (
+                  <a href={el.link} key={el.name}>
+                    {el.name}
+                  </a>
+                ))}
+            </div>
           </article>
           <IsRender isRender={!!gitLink || !!deployed}>
             <div className={cls.readyWorks}>

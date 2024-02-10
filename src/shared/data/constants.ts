@@ -1,6 +1,9 @@
 import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
+import portfolioMain from '@/shared/assets/projects/portfolio/main.png';
+import portfolioSeo from '@/shared/assets/projects/portfolio/seo.png';
+import portfolioPageSpeed from '@/shared/assets/projects/portfolio/pagespeed.png';
 import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
 import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
 import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
@@ -63,14 +66,20 @@ export type ArchitectPatterns = {
   link: string | undefined;
 };
 
+export type infoLinks = {
+  name: string;
+  link: string;
+};
+
 export type Projects = {
   id: string;
   mainImg: string;
-  imgs: string[] | [];
+  imgs?: string[];
   title: string;
   date: string;
   tags: string[];
   desc: string;
+  infoLinks?: infoLinks[];
   descBig?: string;
   gitLink?: string;
   deployed?: string;
@@ -141,7 +150,7 @@ export const projects: Projects[] = [
     bigVideo: sharmBigVideo,
     techs: [nextjs, sass, framerMotion, gsap, html, typescript],
     architectPatterns: [],
-    imgs: [],
+
     usedApi: [],
   },
   {
@@ -149,7 +158,7 @@ export const projects: Projects[] = [
       return createRouteParams(this.title);
     },
     title: 'Yavorska Photography',
-    desc: " This site is a visual business card, showcasing diverse works and the photographer's approach. The user-friendly interface simplifies navigation and bookings. Discover a range of styles, from timeless black and white to vibrant palettes, ensuring a seamless experience from creative works.",
+    desc: "This site is a visual business card, showcasing diverse works and the photographer's approach. The user-friendly interface simplifies navigation and bookings. Discover a range of styles, from timeless black and white to vibrant palettes, ensuring a seamless experience from creative works.",
     descBig: `  The website has been meticulously crafted using the Laravel framework, built entirely from the ground up. We've ensured comprehensive site adaptability, integrated SEO practices to optimize its visibility across search engines, and successfully indexed it for efficient online discovery. Supporting a bilingual experience, the website boasts a dynamic database and an intuitive admin panel.
 
     The admin panel provides clients with the ability to effortlessly modify sections, manage tags, customize content for each section individually, and fine-tune meta tags for specific pages. Additionally, clients can easily introduce new pages and selectively conceal certain sections as needed, granting them unprecedented control over the website's dynamic content.`,
@@ -161,8 +170,43 @@ export const projects: Projects[] = [
     deployed: 'https://yavorskaphotography.com/',
     techs: [laravel, tailwind, bootstrap, html, sass, javascript],
     architectPatterns: [],
-    imgs: [],
+
     usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Portfolio',
+    desc: "This website presents my projects and demonstrates my skills. It includes a Content Security Policy (CSP), SEO optimization with microformatting and structured data, and a user-friendly interface. Also, there's a contact form to easily contact me via email.",
+    descBig: `    This website serves as a comprehensive portfolio showcasing my various projects and expertise in programming. Built on a robust tech stack it offers a dynamic and visually appealing user experience.
+
+    Utilizing lazy-loading techniques for content and React components, the website achieves an impressive page speed score of 92 for mobile devices, ensuring optimal performance. Additionally, meticulous SEO optimization has resulted in an 86 score, enhancing the website's visibility and reach on search engines.
+    
+    The architecture of the project is based on the principles of Feature-Slice Design, providing a structured and scalable foundation for seamless development and maintenance. With a focus on both technical excellence and user experience, this website serves as a testament to my skills and dedication to delivering high-quality web solutions.`,
+    date: 'Oct 15,2023',
+    tags: ['Front-end', 'React', 'Feature-Slice Design', 'CSP', 'SEO'],
+    mainImg: 'https://semklim.vercel.app/ogImg/defaultImg1200-min.webp',
+    gitLink: 'https://github.com/semklim/portfolio',
+    infoLinks: [
+      {
+        name: 'PageSpeed',
+        link: 'https://pagespeed.web.dev/analysis/https-semklim-vercel-app/ugefvxtg3c?form_factor=mobile',
+      },
+      {
+        name: 'Prefect SEO',
+        link: 'https://sitechecker.perfect-seo.com.ua/en/inner-optimization/analyzer/?url=semklim.vercel.app',
+      },
+    ],
+    techs: [react, framerMotion, html, sass, typescript, eslint],
+    architectPatterns: [
+      {
+        name: 'Feature-Slice Design',
+        link: 'https://feature-sliced.design/',
+      },
+    ],
+    imgs: [portfolioMain, portfolioPageSpeed, portfolioSeo],
+    usedApi: ['Emailjs'],
   },
   {
     get id() {
@@ -205,7 +249,7 @@ export const projects: Projects[] = [
         link: 'https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller',
       },
     ],
-    imgs: [],
+
     usedApi: [],
   },
   {
@@ -240,7 +284,6 @@ export const projects: Projects[] = [
       },
     ],
     usedApi: ['Intersection Web Api'],
-    imgs: [],
   },
   {
     get id() {
@@ -257,7 +300,6 @@ export const projects: Projects[] = [
     techs: [angular, rxjs, firebase, eslint, airbnb],
     architectPatterns: [],
     usedApi: ['fastforex API'],
-    imgs: [],
   },
   {
     get id() {
@@ -275,7 +317,6 @@ export const projects: Projects[] = [
     techs: [html, css, javascript, electron],
     architectPatterns: [],
     usedApi: ['Spotify Web Api'],
-    imgs: [],
   },
   {
     get id() {
@@ -297,6 +338,5 @@ export const projects: Projects[] = [
       },
     ],
     usedApi: [],
-    imgs: [],
   },
 ];
