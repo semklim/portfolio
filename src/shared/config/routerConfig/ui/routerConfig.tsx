@@ -2,6 +2,7 @@ import { RouteProps } from 'react-router-dom';
 
 import MainPage from '@/pages/MainPage';
 import ProjectPage from '@/pages/ProjectPage';
+import Page404 from '@/pages/Page404';
 
 export enum AppRoutes {
   MAIN = 'main',
@@ -21,5 +22,9 @@ export const routeConfig: RouteProps[] = [
   {
     path: RoutePath.project,
     element: <ProjectPage />,
+  },
+  {
+    path: '*',
+    element: <Page404 />,
   },
 ];

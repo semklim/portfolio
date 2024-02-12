@@ -18,11 +18,6 @@ interface NavLinksProps {
 const NavLinks: FC<NavLinksProps> = (props) => {
   const { className, links, location, offsetScroll = 0, handleOnClick } = props;
 
-  const onClickGoBack = () => {
-    if (handleOnClick) handleOnClick();
-    window.history.go(-1);
-  };
-
   if (!location || location.pathname === '/') {
     return (
       <>
@@ -45,7 +40,7 @@ const NavLinks: FC<NavLinksProps> = (props) => {
   } else {
     return (
       <li className={cls.nav__button}>
-        <LinkRouter className={classNames(cls.nav__link, {}, [cls.active])} to="/" onClick={onClickGoBack}>
+        <LinkRouter className={classNames(cls.nav__link, {}, [cls.active])} to="..">
           Go Back
         </LinkRouter>
       </li>
