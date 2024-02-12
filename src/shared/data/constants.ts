@@ -173,41 +173,41 @@ export const projects: Projects[] = [
 
     usedApi: [],
   },
-  {
-    get id() {
-      return createRouteParams(this.title);
-    },
-    title: 'Portfolio',
-    desc: "This website presents my projects and demonstrates my skills. It includes a Content Security Policy (CSP), SEO optimization with microformatting and structured data, and a user-friendly interface. Also, there's a contact form to easily contact me via email.",
-    descBig: `    This website serves as a comprehensive portfolio showcasing my various projects and expertise in programming. Built on a robust tech stack it offers a dynamic and visually appealing user experience.
+  // {
+  //   get id() {
+  //     return createRouteParams(this.title);
+  //   },
+  //   title: 'Portfolio',
+  //   desc: "This website presents my projects and demonstrates my skills. It includes a Content Security Policy (CSP), SEO optimization with microformatting and structured data, and a user-friendly interface. Also, there's a contact form to easily contact me via email.",
+  //   descBig: `    This website serves as a comprehensive portfolio showcasing my various projects and expertise in programming. Built on a robust tech stack it offers a dynamic and visually appealing user experience.
 
-    Utilizing lazy-loading techniques for content and React components, the website achieves an impressive page speed score of 92 for mobile devices, ensuring optimal performance. Additionally, meticulous SEO optimization has resulted in an 86 score, enhancing the website's visibility and reach on search engines.
-    
-    The architecture of the project is based on the principles of Feature-Slice Design, providing a structured and scalable foundation for seamless development and maintenance. With a focus on both technical excellence and user experience, this website serves as a testament to my skills and dedication to delivering high-quality web solutions.`,
-    date: 'Oct 15,2023',
-    tags: ['Front-end', 'React', 'Feature-Slice Design', 'CSP', 'SEO'],
-    mainImg: 'https://semklim.vercel.app/ogImg/defaultImg1200-min.webp',
-    gitLink: 'https://github.com/semklim/portfolio',
-    infoLinks: [
-      {
-        name: 'PageSpeed',
-        link: 'https://pagespeed.web.dev/analysis/https-semklim-vercel-app/ugefvxtg3c?form_factor=mobile',
-      },
-      {
-        name: 'Prefect SEO',
-        link: 'https://sitechecker.perfect-seo.com.ua/en/inner-optimization/analyzer/?url=semklim.vercel.app',
-      },
-    ],
-    techs: [react, framerMotion, html, sass, typescript, eslint],
-    architectPatterns: [
-      {
-        name: 'Feature-Slice Design',
-        link: 'https://feature-sliced.design/',
-      },
-    ],
-    imgs: [portfolioMain, portfolioPageSpeed, portfolioSeo],
-    usedApi: ['Emailjs'],
-  },
+  //   Utilizing lazy-loading techniques for content and React components, the website achieves an impressive page speed score of 92 for mobile devices, ensuring optimal performance. Additionally, meticulous SEO optimization has resulted in an 86 score, enhancing the website's visibility and reach on search engines.
+
+  //   The architecture of the project is based on the principles of Feature-Slice Design, providing a structured and scalable foundation for seamless development and maintenance. With a focus on both technical excellence and user experience, this website serves as a testament to my skills and dedication to delivering high-quality web solutions.`,
+  //   date: 'Oct 15,2023',
+  //   tags: ['Front-end', 'React', 'Feature-Slice Design', 'CSP', 'SEO'],
+  //   mainImg: 'https://semklim.vercel.app/ogImg/defaultImg1200-min.webp',
+  //   gitLink: 'https://github.com/semklim/portfolio',
+  //   infoLinks: [
+  //     {
+  //       name: 'PageSpeed',
+  //       link: 'https://pagespeed.web.dev/analysis/https-semklim-vercel-app/ugefvxtg3c?form_factor=mobile',
+  //     },
+  //     {
+  //       name: 'Prefect SEO',
+  //       link: 'https://sitechecker.perfect-seo.com.ua/en/inner-optimization/analyzer/?url=semklim.vercel.app',
+  //     },
+  //   ],
+  //   techs: [react, framerMotion, html, sass, typescript, eslint],
+  //   architectPatterns: [
+  //     {
+  //       name: 'Feature-Slice Design',
+  //       link: 'https://feature-sliced.design/',
+  //     },
+  //   ],
+  //   imgs: [portfolioMain, portfolioPageSpeed, portfolioSeo],
+  //   usedApi: ['Emailjs'],
+  // },
   {
     get id() {
       return createRouteParams(this.title);
