@@ -1,5 +1,5 @@
 import { lazy } from 'react';
 
-const Project = lazy(() => import('./Section/Project/Project'));
+const ProjectDetails = lazy(() => import('./Section/ProjectDetails/ProjectDetails'));
 
-export { Project };
+export { ProjectDetails };

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as DownloadSvg } from '@/shared/assets/icons/download.svg';
 import { Projects } from '@/shared/data/constants';
 import { classNames, createRouteParams } from '@/shared/libs';
-import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
+import { ButtonPushable } from '@/shared/ui';
 
 import cls from './ProjectCard.module.scss';
 import { LoadingVideo } from './LoadingVideo';

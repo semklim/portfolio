@@ -2,16 +2,15 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import { useParams } from 'react-router-dom';
 
-import { getProject } from '@/entities/projectByParams';
-import { ProjectBody, ProjectHeader } from '@/entities/ProjectWithDetail';
+import { ProjectBody, ProjectHeader } from '@/entities/Project';
 import { Breadcrumbs } from '@/features';
-import { Projects } from '@/shared/data/constants';
+import { projects, Projects } from '@/shared/data/constants';
 import { classNames, isProject } from '@/shared/libs';
 
-import cls from './Project.module.scss';
+import cls from './ProjectDetails.module.scss';
 import { Helmet } from 'react-helmet';
 
-interface ProjectProps {
+interface ProjectDetailsProps {
   className?: string;
 }
 
@@ -19,7 +18,13 @@ type RouteParams = {
   id: string;
 };
 
-const Project = ({ className }: ProjectProps) => {
+export function getProject(id: string | undefined): Projects | { err: string } {
+  const project = projects.find((p) => p.id === id);
+
+  return project || { err: 'It is not my project. Please go back to the main page' };
+}
+
+const ProjectDetails = ({ className }: ProjectDetailsProps) => {
   const { id } = useParams<RouteParams>();
   const project = getProject(id);
 
@@ -48,4 +53,4 @@ const Project = ({ className }: ProjectProps) => {
   }
 };
 
-export default Project;
+export default ProjectDetails;

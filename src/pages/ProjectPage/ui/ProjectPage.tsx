@@ -1,10 +1,10 @@
 import { Page } from '@/widgets/Page';
-import { Project } from '@/widgets/ProjectPage';
+import { ProjectDetails } from '@/widgets/ProjectPage';
 
 const ProjectPage = () => {
   return (
     <Page>
-      <Project />
+      <ProjectDetails />
     </Page>
   );
 };

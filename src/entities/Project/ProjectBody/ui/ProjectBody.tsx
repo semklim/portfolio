@@ -3,11 +3,10 @@ import { FC, HTMLAttributes, memo } from 'react';
 
 import { Projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
-import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
+import { ButtonPushable, Carousel } from '@/shared/ui';
 
 import cls from './ProjectBody.module.scss';
 import { IsRender } from './IsRender/IsRender';
-import { Carousel } from '@/shared/ui/Carousel/Carousel';
 
 interface ProjectBodyProps extends HTMLAttributes<HTMLElement> {
   className?: string;

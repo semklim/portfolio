@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { classNames } from '@/shared';
+import { classNames } from '@/shared/libs';
 
 import cls from './NavLinks.module.scss';
 import { LinksToSection } from '../Navbar';

@@ -2,8 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { FC, FormEventHandler, useRef, useState } from 'react';
 import { classNames } from '@/shared/libs';
-import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
-import { FormInput } from '@/shared/ui/FormInput/FormInput';
+import { ButtonPushable, FormInput } from '@/shared/ui';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import cls from './ContactForm.module.scss';

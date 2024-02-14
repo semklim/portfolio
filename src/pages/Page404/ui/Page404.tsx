@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import './Page404.scss';
-import { ButtonPushable } from '@/shared';
+import { ButtonPushable } from '@/shared/ui';
 import { useNavigate } from 'react-router-dom';
 
 const Page404: FC = () => {

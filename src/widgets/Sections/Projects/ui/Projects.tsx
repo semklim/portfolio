@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import { memo } from 'react';
 
-import { ProjectCard } from '@/entities';
+import { ProjectCard } from '@/entities/ProjectCard';
 import { projects } from '@/shared/data/constants';
 import { classNames } from '@/shared/libs';
 
-// import { ButtonPushable } from '@/shared/ui/ButtonPushable/ButtonPushable';
 import cls from './Projects.module.scss';
 
 interface ProjectsProps {
@@ -39,13 +38,14 @@ const Projects = memo(({ className }: ProjectsProps) => {
           variants={animation}
           className={cls.projectsCard}>
           {projects.map((project) => (
-            <ProjectCard project={project} key={project.title} className={classNames(cls.projectCard)} />
+            <ProjectCard
+              project={project}
+              key={project.title}
+              className={classNames(cls.projectCard)}
+            />
           ))}
         </motion.div>
       </div>
-      {/* <div className={cls.showMoreBtn}>
-        <ButtonPushable btnTxt="Show More" />
-      </div> */}
     </section>
   );
 });

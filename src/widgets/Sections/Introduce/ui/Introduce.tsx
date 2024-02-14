@@ -1,8 +1,7 @@
 import { memo } from 'react';
 
-import { GitOctopus } from '@/shared';
+import { GitOctopus, IntroduceImg } from '@/shared/ui';
 import { classNames } from '@/shared/libs';
-import { IntroduceImg } from '@/shared/ui/IntroduceImg';
 
 import cls from './Introduce.module.scss';
 

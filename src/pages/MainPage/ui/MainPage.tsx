@@ -1,4 +1,4 @@
-import { HrLine } from '@/shared';
+import { HrLine } from '@/shared/ui';
 import { ContactForm } from '@/widgets/ContactForm';
 import { Page } from '@/widgets/Page';
 import { About, Introduce, Projects } from '@/widgets/Sections';
