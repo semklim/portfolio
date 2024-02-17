@@ -1,9 +1,12 @@
 import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
-import portfolioMain from '@/shared/assets/projects/portfolio/main.png';
-import portfolioSeo from '@/shared/assets/projects/portfolio/seo.png';
-import portfolioPageSpeed from '@/shared/assets/projects/portfolio/pagespeed.png';
+// import portfolioMain from '@/shared/assets/projects/portfolio/main.png';
+// import portfolioSeo from '@/shared/assets/projects/portfolio/seo.png';
+// import portfolioPageSpeed from '@/shared/assets/projects/portfolio/pagespeed.png';
+import waxomMainImg from '@/shared/assets/projects/waxom/image_original.jpg';
+import waxomPhoneImg from '@/shared/assets/projects/waxom/phone.jpg';
+import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
 import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
 import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
 import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
@@ -338,5 +341,21 @@ export const projects: Projects[] = [
       },
     ],
     usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Waxom layout',
+    desc: 'A web site was created based on the picture, with all the animations, sliders. The site structure consists of section, header, footer, main. On the page, where possible, svg pictures were used. Work was also carried out to adapt the website for all types of devices and it is provided that the site can be opened in different browsers.',
+    date: 'Sep 20,2021',
+    tags: ['Front-end', 'HTML', 'CSS', 'SVG'],
+    mainImg: waxomMainImg,
+    gitLink: 'https://github.com/semklim/Waxom_ITStep_Landing',
+    deployed: 'https://semklim.github.io/Waxom_ITStep_Landing/',
+    techs: [html, css],
+    architectPatterns: [],
+    usedApi: [],
+    imgs: [waxomMainImg, waxomPhoneImg, waxomPhoneHImg],
   },
 ];
