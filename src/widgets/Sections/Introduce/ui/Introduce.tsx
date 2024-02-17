@@ -34,6 +34,7 @@ const Introduce = memo((props: IntroduceProps) => {
         <div className={cls.linksToSocial}>
           <a
             href="https://www.instagram.com/roman_klimashenko/"
+            target="_blank"
             className={cls.link}
             title="Instagram">
             <img
@@ -41,20 +42,25 @@ const Introduce = memo((props: IntroduceProps) => {
               src="/socials/instagram.svg"
               width={40}
               height={40}
-              alt="Instagram"
+              alt="Instagram Roman Klymashenko"
             />
           </a>
-          <a href="https://github.com/semklim" className={cls.link} title="gitHub">
+          <a
+            href="https://github.com/semklim"
+            target="_blank"
+            className={cls.link}
+            title="gitHub">
             <img
               className={cls.imgOfLink}
               src="/socials/github.svg"
               width={40}
               height={40}
-              alt="gitHub"
+              alt="gitHub semklim"
             />
           </a>
           <a
             href="https://www.linkedin.com/in/roman-klymashenko/"
+            target="_blank"
             className={cls.link}
             title="LinkedIn">
             <img
@@ -62,7 +68,20 @@ const Introduce = memo((props: IntroduceProps) => {
               src="/socials/linkedin.svg"
               width={40}
               height={40}
-              alt="linkedIn"
+              alt="LinkedIn Roman Klymashenko"
+            />
+          </a>
+          <a
+            href="https://t.me/semklim/"
+            target="_blank"
+            className={cls.link}
+            title="Telegram">
+            <img
+              className={cls.imgOfLink}
+              src="/socials/telegram.svg"
+              width={40}
+              height={40}
+              alt="Telegram semklim"
             />
           </a>
         </div>

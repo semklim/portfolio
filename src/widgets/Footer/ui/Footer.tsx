@@ -21,7 +21,7 @@ const Footer = ({ className }: FooterProps) => {
             src="/socials/instagram.svg"
             width={40}
             height={40}
-            alt="Instagram"
+            alt="Instagram Roman Klymashenko"
           />
         </a>
         <a
@@ -34,7 +34,7 @@ const Footer = ({ className }: FooterProps) => {
             src="/socials/github.svg"
             width={40}
             height={40}
-            alt="gitHub"
+            alt="gitHub semklim"
           />
         </a>
         <a
@@ -47,12 +47,25 @@ const Footer = ({ className }: FooterProps) => {
             src="/socials/linkedin.svg"
             width={40}
             height={40}
-            alt="linkedIn"
+            alt="LinkedIn Roman Klymashenko"
+          />
+        </a>
+        <a
+          href="https://t.me/semklim/"
+          target="_blank"
+          className={cls.link}
+          title="Telegram">
+          <img
+            className={cls.imgOfLink}
+            src="/socials/telegram.svg"
+            width={40}
+            height={40}
+            alt="Telegram semklim"
           />
         </a>
       </div>
       <div className={cls.copyright}>
-        <small>© 2023 Roman Kymashenko</small>
+        <small>© {new Date().getFullYear()} Roman Kymashenko</small>
       </div>
     </footer>
   );
