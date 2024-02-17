@@ -28,12 +28,20 @@
   font-size: 3.75rem;
   line-height: 1;
   text-shadow: stroke(2, #fff);
+
+  @media (max-width: 375px) {
+    font-size: 2.5rem;
+  }
 }
 
 .introduceMe:nth-child(2) {
   color: var(--secondary-color);
   margin-top: 30px;
   text-shadow: none;
+
+  @media (max-width: 375px) {
+    margin-top: 10px;
+  }
 }
 
 .descriptionMe {
@@ -43,18 +51,33 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-shadow: stroke(1, var(--bg-color));
+
+  @media (max-width: 375px) {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.25rem 0;
+  }
 }
 
 .linksToSocial {
   display: flex;
+  @media (max-width: 375px) {
+    padding: 0;
+    margin: 1.25rem 0;
+  }
 }
 
 .link {
-  margin: 2rem 1.25rem 0 0;
+  margin: 2rem 1.25rem 2rem 0;
+
+  @media (max-width: 375px) {
+    margin: 2rem 1.25rem 2rem 0;
+  }
 }
 
 .imgOfLink {
-  width: 40px;
+  width: 50px;
   transition: 0.5s;
 }
 

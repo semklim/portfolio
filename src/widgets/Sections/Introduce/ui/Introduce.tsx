@@ -40,8 +40,8 @@ const Introduce = memo((props: IntroduceProps) => {
             <img
               className={cls.imgOfLink}
               src="/socials/instagram.svg"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="Instagram Roman Klymashenko"
             />
           </a>
@@ -53,8 +53,8 @@ const Introduce = memo((props: IntroduceProps) => {
             <img
               className={cls.imgOfLink}
               src="/socials/github.svg"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="gitHub semklim"
             />
           </a>
@@ -66,8 +66,8 @@ const Introduce = memo((props: IntroduceProps) => {
             <img
               className={cls.imgOfLink}
               src="/socials/linkedin.svg"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="LinkedIn Roman Klymashenko"
             />
           </a>
@@ -79,8 +79,8 @@ const Introduce = memo((props: IntroduceProps) => {
             <img
               className={cls.imgOfLink}
               src="/socials/telegram.svg"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="Telegram semklim"
             />
           </a>
