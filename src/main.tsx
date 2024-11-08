@@ -8,6 +8,7 @@ import App from '@/app/ui/App';
 import WebApp from '@twa-dev/sdk';
 
 WebApp.ready();
+WebApp.expand();
 
 const rootElement = ReactDOM.createRoot(document.getElementById('root')!);
 
