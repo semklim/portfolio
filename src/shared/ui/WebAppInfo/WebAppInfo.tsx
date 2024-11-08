@@ -21,7 +21,7 @@ export default function WebAppInfo(props: WebAppInfoProps) {
           <strong>Auth Date:</strong> {new Date(data.auth_date * 1000).toLocaleString()}
         </p>
         <p>
-          <strong>Hash:</strong> {data.hash}
+          <strong>Hash:</strong> {data.hash || 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}
         </p>
       </section>
 
