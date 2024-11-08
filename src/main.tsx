@@ -7,6 +7,8 @@ import { ThemeProvider } from '@/app/provider/theme';
 import App from '@/app/ui/App';
 import WebApp from '@twa-dev/sdk';
 
+// @ts-ignore
+eruda.init();
 WebApp.ready();
 WebApp.expand();
 
