@@ -5,10 +5,10 @@ import { About, Introduce, Projects } from '@/widgets/Sections';
 import WebApp from '@twa-dev/sdk';
 
 const MainPage = () => {
-  const data = JSON.parse(WebApp.initData);
+  const data = WebApp.initData;
   return (
     <Page>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <pre>{data}</pre>
       <Introduce />
       <About />
       <HrLine />
