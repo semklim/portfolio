@@ -4,21 +4,23 @@ import { ScrollToTop } from '@/features';
 import { classNames } from '@/shared/libs';
 import { Navbar } from '@/widgets/Navbar';
 
+import WebAppInfo from '@/shared/ui/WebAppInfo/WebAppInfo';
 import WebApp from '@twa-dev/sdk';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AppRouter } from '../provider/router';
 import { useTheme } from '../provider/theme';
 
 const App = () => {
   const { theme } = useTheme();
   const location = useLocation();
+  const navigate = useNavigate();
   const [canGoBack, setCanGoBack] = useState(false);
 
   useEffect(() => {
     // Function to check if we can go back
     const updateCanGoBack = () => {
-      setCanGoBack(window.history.length > 1);
+      setCanGoBack(navigate.length > 1);
     };
 
     // Initial check on mount
@@ -43,7 +45,7 @@ const App = () => {
 
     // Set up back button click handler
     const goBack = () => {
-      window.history.back();
+      navigate(-1);
     };
     WebApp.BackButton.onClick(goBack);
 
@@ -61,6 +63,7 @@ const App = () => {
       </Helmet>
       <ScrollToTop />
       <Navbar />
+      <WebAppInfo data={WebApp.initDataUnsafe}/>
       <AppRouter />
     </div>
   );
