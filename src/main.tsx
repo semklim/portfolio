@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from '@/app/provider/theme';
 import App from '@/app/ui/App';
+import WebApp from '@twa-dev/sdk';
+
+WebApp.ready();
 
 const rootElement = ReactDOM.createRoot(document.getElementById('root')!);
 
