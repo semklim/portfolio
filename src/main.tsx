@@ -9,6 +9,21 @@ import WebApp from '@twa-dev/sdk';
 
 WebApp.ready();
 WebApp.expand();
+WebApp.BackButton.show();
+WebApp.BackButton.onClick(() => {
+  WebApp.showPopup({
+    title: "POPUP",
+    message: "THIS IS POPUP",
+    buttons: [
+      {
+        type: 'ok'
+      },
+      {
+        type: 'close'
+      }
+    ]
+  })
+})
 
 const rootElement = ReactDOM.createRoot(document.getElementById('root')!);
 
