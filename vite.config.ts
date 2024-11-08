@@ -7,7 +7,7 @@ import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 const styles = 'https://semklim.vercel.app https://fonts.googleapis.com';
-const scripts = 'https://semklim.vercel.app';
+const scripts = 'https://semklim.vercel.app https://cdn.jsdelivr.net';
 const fonts = 'https://fonts.googleapis.com https://fonts.gstatic.com';
 
 function generateNonce() {
@@ -28,7 +28,7 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic' https://cdn.jsdelivr.net; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} https://cdn.jsdelivr.net http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://api.emailjs.com/api/v1.0/email/send-form;"`,
+          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://api.emailjs.com/api/v1.0/email/send-form;"`,
         },
       },
     }),
