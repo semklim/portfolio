@@ -1,10 +1,10 @@
+import react from '@vitejs/plugin-react';
+import crypto from 'crypto';
 import path from 'path';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import svgr from 'vite-plugin-svgr';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import crypto from 'crypto';
 
 const styles = 'https://semklim.vercel.app https://fonts.googleapis.com';
 const scripts = 'https://semklim.vercel.app';
@@ -28,7 +28,7 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic'; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://api.emailjs.com/api/v1.0/email/send-form;"`,
+          nonce: `"default-src 'self'; base-uri 'self' ${scripts}; script-src 'self' 'nonce-${nonce.script}' http: 'strict-dynamic' https://cdn.jsdelivr.net; style-src 'self' ${styles} 'unsafe-inline' http:; script-src-elem 'self' ${scripts} https://cdn.jsdelivr.net http:; font-src 'self' ${fonts}; img-src 'self' data: http:; connect-src https://api.emailjs.com/api/v1.0/email/send-form;"`,
         },
       },
     }),
