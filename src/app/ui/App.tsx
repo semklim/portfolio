@@ -11,6 +11,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AppRouter } from '../provider/router';
 import { useTheme } from '../provider/theme';
 
+
+WebApp.SettingsButton.show();
+
 const App = () => {
   const { theme } = useTheme();
   const location = useLocation();
@@ -20,7 +23,7 @@ const App = () => {
   useEffect(() => {
     // Function to check if we can go back
     const updateCanGoBack = () => {
-      setCanGoBack(navigate.length > 1);
+      setCanGoBack(location.pathname !== '/');
     };
 
     // Initial check on mount
@@ -32,8 +35,6 @@ const App = () => {
     };
 
     window.addEventListener('popstate', handlePopState);
-
-    console.log('IS Can go back? -> ', canGoBack);
     // Show or hide the back button based on history length
     if (canGoBack) {
       console.log('SHOW BTN', canGoBack);
