@@ -1,27 +1,27 @@
+import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
 import brShoesBigVideo from '@/shared/assets/projects/brShoes/brshoes.mp4';
 import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
-import brShoesVideo from '@/shared/assets/projects/brShoes/brshoes-light.mp4';
 // import portfolioMain from '@/shared/assets/projects/portfolio/main.png';
 // import portfolioSeo from '@/shared/assets/projects/portfolio/seo.png';
 // import portfolioPageSpeed from '@/shared/assets/projects/portfolio/pagespeed.png';
-import waxomMainImg from '@/shared/assets/projects/waxom/image_original.jpg';
-import waxomPhoneImg from '@/shared/assets/projects/waxom/phone.jpg';
-import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
-import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
-import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
-import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
-import sharmBigVideo from '@/shared/assets/projects/sharm/sharm.mp4';
-import sharmImg from '@/shared/assets/projects/sharm/sharm.webp';
-import sharmVideo from '@/shared/assets/projects/sharm/sharm-light.mp4';
 import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
 import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
 import expressApiImg from '@/shared/assets/projects/expressApi/expressApi.webp';
+import sharmVideo from '@/shared/assets/projects/sharm/sharm-light.mp4';
+import sharmBigVideo from '@/shared/assets/projects/sharm/sharm.mp4';
+import sharmImg from '@/shared/assets/projects/sharm/sharm.webp';
 import spotifyBigVideo from '@/shared/assets/projects/spotify/spotify.mp4';
 import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
 import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
 import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle.webp';
 import towersBattleVideo from '@/shared/assets/projects/towersBattle/towersBattle_light.mp4';
+import waxomMainImg from '@/shared/assets/projects/waxom/image_original.jpg';
+import waxomPhoneImg from '@/shared/assets/projects/waxom/phone.jpg';
+import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
+import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
+import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
+import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -30,27 +30,27 @@ import electron from '@/shared/assets/techStack/Electronjs.svg';
 import eslint from '@/shared/assets/techStack/ESLint.svg';
 import express from '@/shared/assets/techStack/Express.svg';
 import firebase from '@/shared/assets/techStack/Firebase.svg';
+import framerMotion from '@/shared/assets/techStack/FramerMotion.svg';
 import git from '@/shared/assets/techStack/Git.svg';
+import gsap from '@/shared/assets/techStack/Gsap.svg';
 import html from '@/shared/assets/techStack/HTML.svg';
 import javascript from '@/shared/assets/techStack/Javascript.svg';
 import jest from '@/shared/assets/techStack/Jest.svg';
+import laravel from '@/shared/assets/techStack/Laravel.svg';
 import mongodb from '@/shared/assets/techStack/MongoDb.svg';
+import nextjs from '@/shared/assets/techStack/NextJs.svg';
 import nodejs from '@/shared/assets/techStack/Nodejs.svg';
 import npm from '@/shared/assets/techStack/npm.svg';
 import react from '@/shared/assets/techStack/React.svg';
-import redux from '@/shared/assets/techStack/Redux.svg';
 import reduxSaga from '@/shared/assets/techStack/Redux-Saga.svg';
+import redux from '@/shared/assets/techStack/Redux.svg';
 import rxjs from '@/shared/assets/techStack/Rxjs.svg';
 import sass from '@/shared/assets/techStack/SASS.svg';
+import tailwind from '@/shared/assets/techStack/Tailwind.svg';
 import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
 import webpack from '@/shared/assets/techStack/Webpack.svg';
-import laravel from '@/shared/assets/techStack/Laravel.svg';
-import tailwind from '@/shared/assets/techStack/Tailwind.svg';
-import gsap from '@/shared/assets/techStack/Gsap.svg';
-import nextjs from '@/shared/assets/techStack/NextJs.svg';
-import framerMotion from '@/shared/assets/techStack/FramerMotion.svg';
 
 import { createRouteParams } from '../libs';
 
@@ -125,7 +125,7 @@ export const techStack: Tech[] = [
 export const aboutMe: AboutMe[] = [
   {
     title: 'A bit of me',
-    desc: "My name Roman Klymashenko and I'm a Front end developer with experience in designing new features from ideation to production. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.",
+    desc: "My name Roman Klymashenko and I'm a Web developer with experience in designing new features from ideation to production. I take into consideration the user experience while writing reusable and efficient code. I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release.",
   },
 
   {

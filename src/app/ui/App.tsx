@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Helmet>
-        <title>Semklim | Klymashenko Roman - Front-end Developer</title>
+        <title>Semklim | Klymashenko Roman - Web Developer</title>
       </Helmet>
       <ScrollToTop />
       <Navbar />

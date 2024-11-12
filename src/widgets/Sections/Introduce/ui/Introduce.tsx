@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import { GitOctopus, IntroduceImg } from '@/shared/ui';
 import { classNames } from '@/shared/libs';
+import { GitOctopus, IntroduceImg } from '@/shared/ui';
 
 import cls from './Introduce.module.scss';
 
@@ -26,10 +26,10 @@ const Introduce = memo((props: IntroduceProps) => {
       />
       <h1 className={cls.descriptionBox}>
         <span className={cls.introduceMe}>Hi, I&rsquo;m Roman</span>
-        <span className={cls.introduceMe}>Front End Developer</span>
+        <span className={cls.introduceMe}>Web Developer</span>
         <p className={cls.descriptionMe}>
           I am currently search ability to get works at the interesting project as a
-          Front-End Developer.
+          Web Developer.
         </p>
         <div className={cls.linksToSocial}>
           <a
@@ -87,8 +87,8 @@ const Introduce = memo((props: IntroduceProps) => {
         </div>
         <div className={cls.getResume}>
           <a
-            href="/Front-end CV Roman Klymashenko.pdf"
-            download="Front-end CV Roman Klymashenko">
+            href="/Web Developer CV Roman Klymashenko.pdf"
+            download="Web Developer CV Roman Klymashenko">
             Resume
           </a>
         </div>
