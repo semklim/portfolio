@@ -4,6 +4,9 @@ import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 // import portfolioMain from '@/shared/assets/projects/portfolio/main.png';
 // import portfolioSeo from '@/shared/assets/projects/portfolio/seo.png';
 // import portfolioPageSpeed from '@/shared/assets/projects/portfolio/pagespeed.png';
+import astayHomeBigVideo from '@/shared/assets/projects/astayhome/astayhome.mp4';
+import astayHomeImg from '@/shared/assets/projects/astayhome/astayhome.webp';
+import astayHomeVideo from '@/shared/assets/projects/astayhome/astayhome_light.mp4';
 import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
 import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
 import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
@@ -37,6 +40,7 @@ import html from '@/shared/assets/techStack/HTML.svg';
 import javascript from '@/shared/assets/techStack/Javascript.svg';
 import jest from '@/shared/assets/techStack/Jest.svg';
 import laravel from '@/shared/assets/techStack/Laravel.svg';
+import loopback from '@/shared/assets/techStack/loopback.svg';
 import mongodb from '@/shared/assets/techStack/MongoDb.svg';
 import nextjs from '@/shared/assets/techStack/NextJs.svg';
 import nodejs from '@/shared/assets/techStack/Nodejs.svg';
@@ -135,6 +139,27 @@ export const aboutMe: AboutMe[] = [
 ];
 
 export const projects: Projects[] = [
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'AstayHome',
+    desc: 'astayHome is a bilingual platform offering apartment and car rentals in Thailand. Built with Next.js 14, Tailwind CSS, TypeScript, Next-Intl, and LoopBack for the backend, it ensures a seamless user experience.',
+    descBig: `astayHome is a dynamic platform designed to facilitate apartment and car rentals across Thailand. The website is bilingual, catering to both Russian and English-speaking users, ensuring accessibility for a diverse clientele.
+  
+    The development process involved modern technologies such as Next.js 14, Tailwind CSS, and TypeScript for the front end, while LoopBack powers the backend and nodemailer for sending emails, ensuring a scalable and efficient API structure. Additionally, bilingual email templates were created to enhance user communication.
+  
+    The project encompassed setting up VPS hosting, domain configuration, and establishing an email sending service, culminating in a smooth deployment. astayHome is poised to significantly benefit users seeking rental options throughout Thailand.`,
+    date: 'Aug 10,2024',
+    tags: ['Front-end', 'Back-end', 'Loopback', 'Next.js', 'Next-Intl', 'React Email'],
+    mainImg: astayHomeImg,
+    video: astayHomeVideo,
+    bigVideo: astayHomeBigVideo,
+    deployed: 'https://astayhome.com/',
+    techs: [nextjs, tailwind, typescript, loopback],
+    architectPatterns: [],
+    usedApi: [],
+  },
   {
     get id() {
       return createRouteParams(this.title);
