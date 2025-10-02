@@ -7,31 +7,19 @@ import brShoesImg from '@/shared/assets/projects/brShoes/brshoes_light.webp';
 import astayHomeBigVideo from '@/shared/assets/projects/astayhome/astayhome.mp4';
 import astayHomeImg from '@/shared/assets/projects/astayhome/astayhome.webp';
 import astayHomeVideo from '@/shared/assets/projects/astayhome/astayhome_light.mp4';
-import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
-import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
-import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
-import expressApiImg from '@/shared/assets/projects/expressApi/expressApi.webp';
-import sharmVideo from '@/shared/assets/projects/sharm/sharm-light.mp4';
-import sharmBigVideo from '@/shared/assets/projects/sharm/sharm.mp4';
-import sharmImg from '@/shared/assets/projects/sharm/sharm.webp';
-import spotifyBigVideo from '@/shared/assets/projects/spotify/spotify.mp4';
-import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
-import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
-import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle.webp';
-import towersBattleVideo from '@/shared/assets/projects/towersBattle/towersBattle_light.mp4';
-import waxomMainImg from '@/shared/assets/projects/waxom/image_original.jpg';
-import waxomPhoneImg from '@/shared/assets/projects/waxom/phone.jpg';
-import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
-import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
-import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
-import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
-// TODO: Add new project assets
 import calendarPlannerVideo from '@/shared/assets/projects/calendar-planner/calendar-planner-light.mp4';
 import calendarPlannerImg from '@/shared/assets/projects/calendar-planner/calendar-planner.webp';
 import calendarPlannerBigVideo from '@/shared/assets/projects/calendarplanner/calendarplanner.mp4';
 import countryHolidaysVideo from '@/shared/assets/projects/country-holidays/country-holidays-light.mp4';
 import countryHolidaysBigVideo from '@/shared/assets/projects/country-holidays/country-holidays.mp4';
 import countryHolidaysImg from '@/shared/assets/projects/country-holidays/country-holidays.webp';
+import currencyConvertorVideo from '@/shared/assets/projects/currencyConvertor/currencyConvertor.mp4';
+import currencyConvertorImg from '@/shared/assets/projects/currencyConvertor/currencyConvertor.webp';
+import exchangeBotVideo from '@/shared/assets/projects/exchange-tg-mini-app/exchange-tg-mini-app-light.mp4';
+import exchangeBotBigVideo from '@/shared/assets/projects/exchange-tg-mini-app/exchange-tg-mini-app.mp4';
+import exchangeBotImg from '@/shared/assets/projects/exchange-tg-mini-app/exchange-tg-mini-app.webp';
+import expressApiBigVideo from '@/shared/assets/projects/expressApi/expressApi.mp4';
+import expressApiImg from '@/shared/assets/projects/expressApi/expressApi.webp';
 import m113Video from '@/shared/assets/projects/m113/m113-light.mp4';
 import m113BigVideo from '@/shared/assets/projects/m113/m113.mp4';
 import m113Img from '@/shared/assets/projects/m113/m113.webp';
@@ -41,9 +29,23 @@ import newWaveConfImg from '@/shared/assets/projects/newwaveconf/newwaveconf.web
 import odesaMafiaVideo from '@/shared/assets/projects/odesamafia/odesamafia-light.mp4';
 import odesaMafiaBigVideo from '@/shared/assets/projects/odesamafia/odesamafia.mp4';
 import odesaMafiaImg from '@/shared/assets/projects/odesamafia/odesamafia.webp';
+import sharmVideo from '@/shared/assets/projects/sharm/sharm-light.mp4';
+import sharmBigVideo from '@/shared/assets/projects/sharm/sharm.mp4';
+import sharmImg from '@/shared/assets/projects/sharm/sharm.webp';
+import spotifyBigVideo from '@/shared/assets/projects/spotify/spotify.mp4';
+import spotifyImg from '@/shared/assets/projects/spotify/spotify.webp';
+import spotifyVideo from '@/shared/assets/projects/spotify/spotify_2mb.mp4';
+import towersBattleImg from '@/shared/assets/projects/towersBattle/towersBattle.webp';
+import towersBattleVideo from '@/shared/assets/projects/towersBattle/towersBattle_light.mp4';
 import vueTaskMasterVideo from '@/shared/assets/projects/vue-task-master/vue-task-master-light.mp4';
 import vueTaskMasterBigVideo from '@/shared/assets/projects/vue-task-master/vue-task-master.mp4';
 import vueTaskMasterImg from '@/shared/assets/projects/vue-task-master/vue-task-master.webp';
+import waxomMainImg from '@/shared/assets/projects/waxom/image_original.jpg';
+import waxomPhoneImg from '@/shared/assets/projects/waxom/phone.jpg';
+import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
+import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
+import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
+import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -68,6 +70,7 @@ import redux from '@/shared/assets/techStack/Redux.svg';
 import rxjs from '@/shared/assets/techStack/Rxjs.svg';
 import sass from '@/shared/assets/techStack/SASS.svg';
 import shadcnUi from '@/shared/assets/techStack/shadcn-ui.svg';
+import socketIo from '@/shared/assets/techStack/Socket-io.svg';
 import tailwind from '@/shared/assets/techStack/Tailwind.svg';
 import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
@@ -155,6 +158,77 @@ export const projects: Projects[] = [
     get id() {
       return createRouteParams(this.title);
     },
+    title: 'Currency Exchange Bot',
+    desc: 'A Telegram mini-app for currency exchange with role-based access control, real-time chat between staff and customers. Designed for professional exchange offices.',
+    descBig: `Developed a professional-grade Telegram mini app for currency exchange, enabling daily operations, transactions, and comprehensive reporting.
+
+Technical Implementation:
+• Platform: Telegram Mini App with React 18 and TypeScript using Vite
+• State Management: React Context API for efficient state management across the application
+• Real-time Communication: Socket.IO integration for live chat between staff and clients
+• Data Fetching: TanStack React Query for efficient server state management and caching
+• Form Handling: React Hook Form with Zod validation for type-safe form management
+• UI Components: shadcn/ui component library with Tailwind CSS for consistent design
+• Monitoring: Sentry integration for error tracking and performance monitoring
+• Internationalization: Support for three languages with i18next (Ukrainian, English, Russian)
+• Testing: Comprehensive test coverage with Vitest and jsdom
+• Access Control: Role-based permissions system for secure operations
+
+Key Features:
+• Currency exchange transaction management with multiple currencies
+• Live chat system for staff-client communication
+• Transaction history with advanced filtering and search capabilities
+• Department and employee management system
+• Client management with complete transaction history
+• Expense tracking and financial reporting
+• Balance monitoring across all currencies
+• Role-based access control with personalized dashboards
+• Detailed audit logs and analytics
+• Secure JWT-based authentication
+• Configurable session management with flexible expiration times`,
+    date: 'Feb 2025 - Present',
+    tags: ['Front-end', 'Real-Project', 'Telegram Mini App', 'WebSocket'],
+    mainImg: exchangeBotImg,
+    video: exchangeBotVideo,
+    bigVideo: exchangeBotBigVideo,
+    deployed: 'https://t.me/obmen_top_bot',
+    techs: [react, typescript, socketIo, vite, tailwind, shadcnUi],
+    architectPatterns: [],
+    usedApi: ['Telegram Mini App SDK', 'Socket.IO', 'REST API', 'JWT'],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'M113 Spare Parts',
+    desc: 'Built a bilingual (Ukrainian/English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.',
+    descBig: `(EN)
+
+• Built a bilingual (Ukrainian / English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.
+• Added structured data (JSON-LD Organization, Website & OrderAction) for 100% SEO Lighthouse score and rich snippets.
+• Implemented a spare parts request form.
+• Optimized performance.
+
+(UA)
+
+• Розробив двомовний (UA / EN) e-commerce-сайт для продажу запчастин до БТР M113 на Next.js 14.
+• Додав структуровані дані (JSON-LD Organization, Website, OrderAction) для 100% SEO та відображення в розширених сніпетах у Google.
+• Реалізував форму запиту на запчастини.
+• Оптимізував продуктивність.`,
+    date: 'Feb 2025 - Present',
+    tags: ['Front-end', 'Next.js', 'SEO', 'Real-Project', 'I18n'],
+    mainImg: m113Img,
+    video: m113Video,
+    bigVideo: m113BigVideo,
+    deployed: 'https://m113.com/',
+    techs: [nextjs, tailwind, typescript, react],
+    architectPatterns: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
     title: 'New Wave Conference',
     desc: 'Modern landing page for a business conference featuring speakers information, event schedule, partner showcases, and contact details. Built with Next.js 14 App Router, TypeScript, and Tailwind CSS.',
     descBig: `Developed a contemporary, fully responsive landing page for New Wave - a professional business conference.
@@ -183,35 +257,6 @@ Key Features:
     bigVideo: newWaveConfBigVideo,
     deployed: 'https://newwaveconf.com.ua/',
     techs: [nextjs, react, typescript, tailwind, framerMotion],
-    architectPatterns: [],
-    usedApi: [],
-  },
-  {
-    get id() {
-      return createRouteParams(this.title);
-    },
-    title: 'M113 Spare Parts',
-    desc: 'Built a bilingual (Ukrainian/English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.',
-    descBig: `(EN)
-
-• Built a bilingual (Ukrainian / English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.
-• Added structured data (JSON-LD Organization, Website & OrderAction) for 100% SEO Lighthouse score and rich snippets.
-• Implemented a spare parts request form.
-• Optimized performance.
-
-(UA)
-
-• Розробив двомовний (UA / EN) e-commerce-сайт для продажу запчастин до БТР M113 на Next.js 14.
-• Додав структуровані дані (JSON-LD Organization, Website, OrderAction) для 100% SEO та відображення в розширених сніпетах у Google.
-• Реалізував форму запиту на запчастини.
-• Оптимізував продуктивність.`,
-    date: 'Feb 2025 - Present',
-    tags: ['Front-end', 'Next.js', 'SEO', 'Real-Project', 'I18n'],
-    mainImg: m113Img,
-    video: m113Video,
-    bigVideo: m113BigVideo,
-    deployed: 'https://m113.com/',
-    techs: [nextjs, tailwind, typescript, react],
     architectPatterns: [],
     usedApi: [],
   },
