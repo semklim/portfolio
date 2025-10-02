@@ -26,18 +26,18 @@ import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotograp
 import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
 import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
 // TODO: Add new project assets
-import m113Video from '@/shared/assets/projects/m113/m113-light.mp4';
-import m113BigVideo from '@/shared/assets/projects/m113/m113.mp4';
-import m113Img from '@/shared/assets/projects/m113/m113.webp';
-// import newWaveConfVideo from '@/shared/assets/projects/newwaveconf/newwaveconf-light.mp4';
-// import newWaveConfBigVideo from '@/shared/assets/projects/newwaveconf/newwaveconf.mp4';
-// import newWaveConfImg from '@/shared/assets/projects/newwaveconf/newwaveconf.webp';
 import calendarPlannerVideo from '@/shared/assets/projects/calendar-planner/calendar-planner-light.mp4';
 import calendarPlannerImg from '@/shared/assets/projects/calendar-planner/calendar-planner.webp';
 import calendarPlannerBigVideo from '@/shared/assets/projects/calendarplanner/calendarplanner.mp4';
 import countryHolidaysVideo from '@/shared/assets/projects/country-holidays/country-holidays-light.mp4';
 import countryHolidaysBigVideo from '@/shared/assets/projects/country-holidays/country-holidays.mp4';
 import countryHolidaysImg from '@/shared/assets/projects/country-holidays/country-holidays.webp';
+import m113Video from '@/shared/assets/projects/m113/m113-light.mp4';
+import m113BigVideo from '@/shared/assets/projects/m113/m113.mp4';
+import m113Img from '@/shared/assets/projects/m113/m113.webp';
+import newWaveConfVideo from '@/shared/assets/projects/newwaveconf/newwaveconf-light.mp4';
+import newWaveConfBigVideo from '@/shared/assets/projects/newwaveconf/newwaveconf.mp4';
+import newWaveConfImg from '@/shared/assets/projects/newwaveconf/newwaveconf.webp';
 import odesaMafiaVideo from '@/shared/assets/projects/odesamafia/odesamafia-light.mp4';
 import odesaMafiaBigVideo from '@/shared/assets/projects/odesamafia/odesamafia.mp4';
 import odesaMafiaImg from '@/shared/assets/projects/odesamafia/odesamafia.webp';
@@ -63,18 +63,16 @@ import loopback from '@/shared/assets/techStack/loopback.svg';
 import mongodb from '@/shared/assets/techStack/MongoDb.svg';
 import nextjs from '@/shared/assets/techStack/NextJs.svg';
 import nodejs from '@/shared/assets/techStack/Nodejs.svg';
-import npm from '@/shared/assets/techStack/npm.svg';
 import react from '@/shared/assets/techStack/React.svg';
-import reduxSaga from '@/shared/assets/techStack/Redux-Saga.svg';
 import redux from '@/shared/assets/techStack/Redux.svg';
 import rxjs from '@/shared/assets/techStack/Rxjs.svg';
 import sass from '@/shared/assets/techStack/SASS.svg';
+import shadcnUi from '@/shared/assets/techStack/shadcn-ui.svg';
 import tailwind from '@/shared/assets/techStack/Tailwind.svg';
 import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
 import vue from '@/shared/assets/techStack/Vue.svg';
-import webpack from '@/shared/assets/techStack/Webpack.svg';
 
 import { createRouteParams } from '../libs';
 
@@ -118,33 +116,26 @@ export type Projects = {
 };
 
 export const techStack: Tech[] = [
-  { name: 'Angular', link: angular },
   { name: 'Next.js', link: nextjs },
-  { name: 'Vue.js', link: vue },
   { name: 'React', link: react },
+  { name: 'Shadcn ui', link: shadcnUi },
+  { name: 'Angular', link: angular },
+  { name: 'Typescript', link: typescript },
   { name: 'Redux', link: redux },
-  { name: 'Redux-Saga', link: reduxSaga },
-  { name: 'npm', link: npm },
-  { name: 'Nodejs', link: nodejs },
-  { name: 'Webpack', link: webpack },
-  { name: 'Express', link: express },
-  { name: 'Vite', link: vite },
-  { name: 'Electronjs', link: electron },
+  { name: 'Vue.js', link: vue },
+  // { name: 'npm', link: npm },
   { name: 'HTML', link: html },
   { name: 'CSS', link: css },
-  { name: 'Bootstrap', link: bootstrap },
+  { name: 'Javascript', link: javascript },
+  { name: 'Nodejs', link: nodejs },
+  { name: 'Vite', link: vite },
   { name: 'SASS', link: sass },
   { name: 'Framer Motion', link: framerMotion },
-  { name: 'GSAP', link: gsap },
-  { name: 'Javascript', link: javascript },
-  { name: 'Typescript', link: typescript },
-  { name: 'ESLint', link: eslint },
-  { name: 'AirBnB', link: airbnb },
+  // { name: 'ESLint', link: eslint },
+  // { name: 'AirBnB', link: airbnb },
   { name: 'Jest', link: jest },
   { name: 'Git', link: git },
-  { name: 'MongoDb', link: mongodb },
-  { name: 'Firebase', link: firebase },
-  { name: 'Thunder', link: thunder },
+  // { name: 'MongoDb', link: mongodb },
 ];
 
 export const aboutMe: AboutMe[] = [
@@ -160,6 +151,41 @@ export const aboutMe: AboutMe[] = [
 ];
 
 export const projects: Projects[] = [
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'New Wave Conference',
+    desc: 'Modern landing page for a business conference featuring speakers information, event schedule, partner showcases, and contact details. Built with Next.js 14 App Router, TypeScript, and Tailwind CSS.',
+    descBig: `Developed a contemporary, fully responsive landing page for New Wave - a professional business conference.
+
+Technical Implementation:
+• Architecture: Built with Next.js 14 App Router for optimal performance and SEO
+• Type Safety: Full TypeScript implementation for robust code quality
+• Styling: Tailwind CSS with custom design system (elegant purple, soft pink, and gold accent colors)
+• Animations: Smooth, professional animations using Framer Motion
+• SEO Optimization: Implemented comprehensive JSON-LD structured data, Open Graph, and Twitter Cards meta tags
+• Mobile-First: Responsive design optimized for all device sizes
+• Performance: Image optimization, code splitting, and resource preloading for excellent Core Web Vitals
+
+Key Features:
+• Hero section with main conference information
+• Detailed speaker profiles with photos and biographies
+• Interactive event schedule with timing and session details
+• Partner and sponsor showcase
+• Contact information section
+• Fixed bottom CTA for improved conversions
+• Success page for payment confirmations`,
+    date: 'Jul 2025',
+    tags: ['Front-end', 'Next.js', 'Landing Page', 'Real-Project', 'SEO'],
+    mainImg: newWaveConfImg,
+    video: newWaveConfVideo,
+    bigVideo: newWaveConfBigVideo,
+    deployed: 'https://newwaveconf.com.ua/',
+    techs: [nextjs, react, typescript, tailwind, framerMotion],
+    architectPatterns: [],
+    usedApi: [],
+  },
   {
     get id() {
       return createRouteParams(this.title);
