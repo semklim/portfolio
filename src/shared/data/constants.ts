@@ -8,8 +8,8 @@ import astayHomeBigVideo from '@/shared/assets/projects/astayhome/astayhome.mp4'
 import astayHomeImg from '@/shared/assets/projects/astayhome/astayhome.webp';
 import astayHomeVideo from '@/shared/assets/projects/astayhome/astayhome_light.mp4';
 import calendarPlannerVideo from '@/shared/assets/projects/calendar-planner/calendar-planner-light.mp4';
+import calendarPlannerBigVideo from '@/shared/assets/projects/calendar-planner/calendar-planner.mp4';
 import calendarPlannerImg from '@/shared/assets/projects/calendar-planner/calendar-planner.webp';
-import calendarPlannerBigVideo from '@/shared/assets/projects/calendarplanner/calendarplanner.mp4';
 import countryHolidaysVideo from '@/shared/assets/projects/country-holidays/country-holidays-light.mp4';
 import countryHolidaysBigVideo from '@/shared/assets/projects/country-holidays/country-holidays.mp4';
 import countryHolidaysImg from '@/shared/assets/projects/country-holidays/country-holidays.webp';
