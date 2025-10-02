@@ -25,6 +25,25 @@ import waxomPhoneHImg from '@/shared/assets/projects/waxom/phoneH.jpg';
 import yavorskaphotographyVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography-light.mp4';
 import yavorskaphotographyBigVideo from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.mp4';
 import yavorskaphotographyImg from '@/shared/assets/projects/yavorskaphotography/yavorskaphotography.webp';
+// TODO: Add new project assets
+import m113Video from '@/shared/assets/projects/m113/m113-light.mp4';
+import m113BigVideo from '@/shared/assets/projects/m113/m113.mp4';
+import m113Img from '@/shared/assets/projects/m113/m113.webp';
+// import newWaveConfVideo from '@/shared/assets/projects/newwaveconf/newwaveconf-light.mp4';
+// import newWaveConfBigVideo from '@/shared/assets/projects/newwaveconf/newwaveconf.mp4';
+// import newWaveConfImg from '@/shared/assets/projects/newwaveconf/newwaveconf.webp';
+import calendarPlannerVideo from '@/shared/assets/projects/calendar-planner/calendar-planner-light.mp4';
+import calendarPlannerImg from '@/shared/assets/projects/calendar-planner/calendar-planner.webp';
+import calendarPlannerBigVideo from '@/shared/assets/projects/calendarplanner/calendarplanner.mp4';
+import countryHolidaysVideo from '@/shared/assets/projects/country-holidays/country-holidays-light.mp4';
+import countryHolidaysBigVideo from '@/shared/assets/projects/country-holidays/country-holidays.mp4';
+import countryHolidaysImg from '@/shared/assets/projects/country-holidays/country-holidays.webp';
+import odesaMafiaVideo from '@/shared/assets/projects/odesamafia/odesamafia-light.mp4';
+import odesaMafiaBigVideo from '@/shared/assets/projects/odesamafia/odesamafia.mp4';
+import odesaMafiaImg from '@/shared/assets/projects/odesamafia/odesamafia.webp';
+import vueTaskMasterVideo from '@/shared/assets/projects/vue-task-master/vue-task-master-light.mp4';
+import vueTaskMasterBigVideo from '@/shared/assets/projects/vue-task-master/vue-task-master.mp4';
+import vueTaskMasterImg from '@/shared/assets/projects/vue-task-master/vue-task-master.webp';
 import airbnb from '@/shared/assets/techStack/Airbnb.svg';
 import angular from '@/shared/assets/techStack/Angular.svg';
 import bootstrap from '@/shared/assets/techStack/Bootstrap.svg';
@@ -54,6 +73,7 @@ import tailwind from '@/shared/assets/techStack/Tailwind.svg';
 import thunder from '@/shared/assets/techStack/Thunder.svg';
 import typescript from '@/shared/assets/techStack/Typescript.svg';
 import vite from '@/shared/assets/techStack/Vite.svg';
+import vue from '@/shared/assets/techStack/Vue.svg';
 import webpack from '@/shared/assets/techStack/Webpack.svg';
 
 import { createRouteParams } from '../libs';
@@ -100,6 +120,7 @@ export type Projects = {
 export const techStack: Tech[] = [
   { name: 'Angular', link: angular },
   { name: 'Next.js', link: nextjs },
+  { name: 'Vue.js', link: vue },
   { name: 'React', link: react },
   { name: 'Redux', link: redux },
   { name: 'Redux-Saga', link: reduxSaga },
@@ -139,6 +160,146 @@ export const aboutMe: AboutMe[] = [
 ];
 
 export const projects: Projects[] = [
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'M113 Spare Parts',
+    desc: 'Built a bilingual (Ukrainian/English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.',
+    descBig: `(EN)
+
+• Built a bilingual (Ukrainian / English) e-commerce site for M113 APC spare-parts buyers, delivering fast, mobile-first UX with Next.js 14.
+• Added structured data (JSON-LD Organization, Website & OrderAction) for 100% SEO Lighthouse score and rich snippets.
+• Implemented a spare parts request form.
+• Optimized performance.
+
+(UA)
+
+• Розробив двомовний (UA / EN) e-commerce-сайт для продажу запчастин до БТР M113 на Next.js 14.
+• Додав структуровані дані (JSON-LD Organization, Website, OrderAction) для 100% SEO та відображення в розширених сніпетах у Google.
+• Реалізував форму запиту на запчастини.
+• Оптимізував продуктивність.`,
+    date: 'Feb 2025 - Present',
+    tags: ['Front-end', 'Next.js', 'SEO', 'Real-Project', 'I18n'],
+    mainImg: m113Img,
+    video: m113Video,
+    bigVideo: m113BigVideo,
+    deployed: 'https://m113.com/',
+    techs: [nextjs, tailwind, typescript, react],
+    architectPatterns: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Odesa Mafia',
+    desc: 'Developed and deployed a website for Odesa Mafia Club, a professional role-playing game organization operating since 2020 that hosts Mafia game events at premium venues in Odesa.',
+    descBig: `Developed and deployed a website for Odesa Mafia Club, a professional role-playing game organization operating since 2020 that hosts Mafia game events at premium venues in Odesa.
+
+Technical Implementation:
+• Designed and implemented a responsive, user-friendly website that effectively showcases the club's services
+• SEO: Implemented comprehensive schema.org structured data and meta tags for enhanced search visibility
+• Responsive Design: Created fully responsive layouts optimized for both desktop and mobile users
+• Performance Optimization: Implemented image lazy loading, code splitting, and resource preloading for optimal Core Web Vitals scores
+• Security: Implemented comprehensive security headers including Content-Security-Policy, Strict-Transport-Security (HSTS), X-Frame-Options, X-Content-Type-Options, and Permissions-Policy`,
+    date: 'Apr 2025 - May 2025',
+    tags: ['Front-end', 'Next.js', 'SEO', 'Real-Project', 'REST APIs'],
+    mainImg: odesaMafiaImg,
+    video: odesaMafiaVideo,
+    bigVideo: odesaMafiaBigVideo,
+    deployed: 'https://odesamafia.com/',
+    techs: [nextjs, tailwind, typescript],
+    architectPatterns: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Vue Task Master',
+    desc: 'Developed a task management SPA using Vue 3, TypeScript, and Pinia, with localStorage-based persistence and responsive layout.',
+    descBig: `🇬🇧 English
+• Developed a task management SPA using Vue 3, TypeScript, and Pinia, with localStorage-based persistence and responsive layout.
+• Implemented full CRUD functionality for tasks with optional due dates, completion toggle, and real-time filtering.
+• Used Pinia store and Composition API for clean state management and code modularity.
+• Styled with Tailwind CSS and added mobile support and helpful UI states.
+• All state persists in localStorage, rehydrated on load via watch() and reactive syncing.
+
+🇺🇦 Українською
+• Створив SPA для керування завданнями на Vue 3 з використанням TypeScript, Pinia та збереженням даних у localStorage.
+• Реалізовано повний CRUD: створення, редагування, виконання, видалення задач із можливістю встановлення дедлайнів.
+• Стан додатку централізовано через Pinia, з використанням Composition API.
+• Інтерфейс адаптивний, з використанням Tailwind CSS і підказками у випадку порожнього списку.
+• Дані автоматично зберігаються в localStorage і оновлюються через watch().`,
+    date: 'Feb 2025',
+    tags: ['Front-end', 'Vue.js', 'Test task', 'SPA'],
+    mainImg: vueTaskMasterImg,
+    video: vueTaskMasterVideo,
+    bigVideo: vueTaskMasterBigVideo,
+    gitLink: 'https://github.com/semklim/Vue-Task-Master',
+    deployed: 'https://vue-task-master.vercel.app/',
+    techs: [vue, tailwind, typescript],
+    architectPatterns: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Calendar Planner',
+    desc: 'Built a Calendar app from scratch using React, TypeScript. Users can create, move (drag & drop), edit, and delete appointments with a title, description, date.',
+    descBig: `🇬🇧 English
+• Built a Calendar app from scratch using React, TypeScript.
+• Users can create, move (drag & drop), edit, and delete appointments with a title, description, date.
+• Designed a custom week-based calendar grid.
+• Used React Context to manage state across the app in a scalable, maintainable way.
+
+⚙️ Stack: React, TypeScript, React Context, localStorage, date-fns
+
+🇺🇦 Українською
+• Розробив веб-додаток Calendar на React + TypeScript.
+• Користувач може додавати, редагувати, перетягувати (drag & drop) і видаляти події з назвою, описом, датою.
+• Для глобального стану використано React Context, що дозволяє легко масштабувати додаток.
+
+⚙️ Технології: React, TypeScript, Context, localStorage, date-fns`,
+    date: 'Jan 2025',
+    tags: ['Front-end', 'React', 'Test task', 'Calendar'],
+    mainImg: calendarPlannerImg,
+    video: calendarPlannerVideo,
+    bigVideo: calendarPlannerBigVideo,
+    gitLink: 'https://github.com/semklim/calendar-planner',
+    deployed: 'https://the-calendar-planner.vercel.app/',
+    techs: [react, typescript],
+    architectPatterns: [],
+    usedApi: [],
+  },
+  {
+    get id() {
+      return createRouteParams(this.title);
+    },
+    title: 'Country Holidays App',
+    desc: 'Built a responsive Angular 15 SPA that shows upcoming public holidays by country using the Nager.Date API.',
+    descBig: `English
+• Built a responsive Angular 15 SPA that shows upcoming public holidays by country using the Nager.Date API.
+• Used RxJS, HttpClient, and async pipes for efficient and reactive data flow.
+• Validated user input and displayed helpful messages on invalid requests.
+
+Українською
+• Створив адаптивний SPA на Angular 15, який показує свята в обраній країні через Nager.Date API.
+• Реалізував реактивну логіку через RxJS, HttpClient та async pipes.
+• Валідував введення користувача, відображав повідомлення про помилки.`,
+    date: 'Sep 2024',
+    tags: ['Front-end', 'Angular', 'Test task', 'SPA'],
+    mainImg: countryHolidaysImg,
+    video: countryHolidaysVideo,
+    bigVideo: countryHolidaysBigVideo,
+    gitLink: 'https://github.com/semklim/calendar-planner',
+    deployed: 'https://holidays-country.vercel.app',
+    techs: [angular, typescript, rxjs],
+    architectPatterns: [],
+    usedApi: ['Nager.Date API'],
+  },
   {
     get id() {
       return createRouteParams(this.title);
